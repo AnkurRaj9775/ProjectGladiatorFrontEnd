@@ -1,0 +1,96 @@
+.header {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #d84f57;
+  font-size: 16px;
+  width: 100%;
+  margin: 0;
+  padding: 15px;
+}
+
+.header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.bus-booking__nav-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 200px;
+  justify-content: space-between;
+}
+
+.bus-booking__home {
+  color: #fff;
+  text-align: left;
+  text-decoration: none;
+}
+
+.ecologo {
+  cursor: pointer;
+  height: 100%;
+}
+
+.footer {
+  padding-top: 20px;
+  padding-right: 0px;
+  padding-bottom: 20px;
+  width: 100%;
+  margin: auto;
+  background-color: #dd5c66;
+  color: #f2f2f2;
+  text-align: center;
+}
+.bus-booking__mb-dropdown {
+  /* float: right; */
+  position: relative;
+  min-width: 150px;
+}
+
+.bus-booking__mb {
+  background-color: inherit;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  margin: 0;
+  width: 100%;
+}
+
+/* Add a red background color to navbar links on hover */
+.bus-booking__mb-dropdown:hover .bus-booking__mb {
+  background-color: rgb(175, 24, 24);
+}
+
+/* Dropdown content (hidden by default) */
+.bus-booking__mb-options {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 140px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+.bus-booking__brand-logo {
+  height: 100px;
+}
+/* Add a grey background color to dropdown links on hover */
+.bus-booking__mb-options a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.bus-booking__mb-dropdown:hover .bus-booking__mb-options {
+  display: block;
+}
+
+.bus-booking__mb-list {
+  padding: 10px;
+  color: black;
+  text-align: left;
+  display: block;
+}
