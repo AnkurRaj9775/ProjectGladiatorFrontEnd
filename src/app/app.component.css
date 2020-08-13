@@ -1,0 +1,60 @@
+.header {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #d84f57;
+    font-size: 16px;
+    width: 100%;
+    margin: 0;
+    height: 80px;
+    padding: 10px;
+  }
+  
+  .header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .bus-booking__brand-name {
+    font-family: inherit;
+    color: #fff;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .bus-booking__nav-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 200px;
+    justify-content: space-between;
+  }
+  
+  .bus-booking__home {
+    color: #fff;
+    text-align: left;
+    text-decoration: none;
+  }
+  
+  .ecologo {
+    cursor: pointer;
+    height: 100%;
+  }
+  
+  .bus-booking__brand-logo {
+    height: 100%;
+  }
+  
+  .footer {
+    padding-top: 20px;
+    padding-right: 0px;
+    padding-bottom: 20px;
+    width: 100%;
+    margin: auto;
+    background-color: #dd5c66;
+    color: #f2f2f2;
+    text-align: center;
+  }
