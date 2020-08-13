@@ -15,12 +15,12 @@ export class RegisterComponent implements OnInit {
     console.log(data);
     //console.log(mobile);
 
-    var gold = (<HTMLInputElement>document.getElementById("Male"));
-    var titanium = (<HTMLInputElement>document.getElementById("Female"));
-    if (gold.checked)
-      console.log(gold.value);
+    var male = (<HTMLInputElement>document.getElementById("Male"));
+    var female = (<HTMLInputElement>document.getElementById("Female"));
+    if (male.checked)
+      console.log(male.value);
     else
-      console.log(titanium.value);
+      console.log(female.value);
   }
   
 
