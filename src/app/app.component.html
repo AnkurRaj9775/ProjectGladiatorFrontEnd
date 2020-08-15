@@ -1,37 +1,13 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <title>Online Bus Booking</title>
-  </head>
-  <body> -->
 <div class="header">
   <div class="bus-booking__brand-logo">
-    <img class="ecologo" src="assets/bus.png" alt="Image not Found" />
+    <a class="bus-booking__home" [routerLink]="['/homeLink']">
+      <img class="ecologo" src="assets/bus.png" alt="Brand Logo" />
+    </a>
   </div>
-  <div class="bus-booking__nav-wrapper">
-    <ul>
-      <li class="bus-booking__nav-options">
-        <a class="bus-booking__home" [routerLink]="['/homeLink']">Home</a>
-      </li>
-    </ul>
-    <div class="bus-booking__mb-dropdown">
-      <!---dropdown-->
-      <button class="bus-booking__mb">
-        <!--manageHeaderLbl-->
-        Manage Booking
-        <i class="fa fa-caret-down"></i>
-      </button>
+<div class="bus-booking__brand-name">
+  <h1>EcoBus.com</h1>
+</div>
 
-      <div class="bus-booking__mb-options">
-        <!--dropdownoptions-->
-        <a class="bus-booking__mb-list" href="/Cancellation">Cancel</a>
-        <a class="bus-booking__mb-list" href="/Reschedule">Reschedule</a>
-      </div>
-    </div>
-  </div>
 </div>
 <div class="row">
   <div class="main">
