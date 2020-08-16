@@ -10,10 +10,15 @@
   
   .XCN {
     margin-bottom: 20px;
-    padding-top: 40px;
+    padding-top: 10px;
   }
   .Red {
     color: #d02025;
+  }
+
+  .head{
+    color: #d02025;
+    padding-top:30px;
   }
   h3 {
     font-size: 24.5px;
@@ -43,18 +48,22 @@
     padding: 2px 16px;
   }
   
-  .t-western,
-  ol li {
-    text-align: justify;
-    padding-left: 60px;
+  
+  .ol, li {
+    text-align: left;
+    padding-left: 50px;
     padding-right: 30px;
-    padding-bottom: 60px;
+    padding-bottom: 30px;
   }
   
   .t-western {
     margin-bottom: 1%;
     background: #fff;
     line-height: 1.5;
+    text-align: justify;
+    padding-left: 50px;
+    padding-right: 30px;
+    padding-bottom: 10px;
   }
   p {
     margin: 1% 0;

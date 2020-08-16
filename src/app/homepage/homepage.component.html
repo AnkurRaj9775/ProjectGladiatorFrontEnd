@@ -3,7 +3,7 @@
     <li class="bus-booking__nav-contact">
       <a class="bus-booking__about" [routerLink]="['/about']">About</a>
       <a class="bus-booking__terms" [routerLink]="['/terms']">Terms Of Use</a>
-      <a class="bus-booking__contact" [routerLink]="['/contact']">Contact Us</a>
+      <a class="bus-booking__contact" [routerLink]="['/contact-us']">Contact Us</a>
       <a class="bus-booking__dashboard" [routerLink]="['/dashboard']">Dashboard</a>
     </li>
   </ul>
@@ -25,8 +25,8 @@
 
         <div class="bus-booking__mb-options">
           <!--dropdownoptions-->
-          <a class="bus-booking__mb-list" href="/Cancellation">Cancel</a>
-          <a class="bus-booking__mb-list" href="/Reschedule">Reschedule</a>
+          <a class="bus-booking__mb-list" [routerLink]="['/cancellation']">Cancel</a>
+          <a class="bus-booking__mb-list" [routerLink]="['/reschedule']">Reschedule</a>
         </div>
       </div>
     </li>

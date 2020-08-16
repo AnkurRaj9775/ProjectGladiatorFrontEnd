@@ -22,6 +22,10 @@ import { MatButtonModule} from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { CancelComponent } from './cancel/cancel.component';
+import { RescheduleComponent } from './reschedule/reschedule.component';
+import { ShowMyTicketComponent } from './show-my-ticket/show-my-ticket.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +36,11 @@ import { MatIconModule } from '@angular/material/icon';
     TACComponent,
     LoginComponent,
     ForgotPassComponent,
-    DashboardComponent
+    DashboardComponent,
+    ContactUsComponent,
+    CancelComponent,
+    RescheduleComponent,
+    ShowMyTicketComponent
   ],
   imports: [
     BrowserModule,
@@ -43,8 +51,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatIconModule,
     MatSidenavModule,
     MatListModule,
-    MatButtonModule,
-    HttpClientModule
+    MatButtonModule  
   ],
   providers: [],
   bootstrap: [AppComponent]
