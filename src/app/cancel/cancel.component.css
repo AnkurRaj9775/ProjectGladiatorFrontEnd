@@ -1,0 +1,109 @@
+.about-card {
+    width: 60%;
+    height: 50%;
+    position: relative;
+    left: 450px;
+    background-color: #fff;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .input-component .input-text {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .3px;
+    color: #3e3e52;
+    position: relative;
+    left: 50px;
+    padding-left: 300px;
+    padding-top: 100px;
+    padding-right: 100px;
+    margin-left: 30px;
+    margin-right: auto;
+}
+
+.input-component {
+    width: 328px;
+    border-top: 10px;
+    border-right: 10px;
+    border-left: 0;
+    border-bottom: 1px solid #747f8d;
+    background: #f0f1f2;
+    padding: 11px;
+    padding-left: 300px;
+    padding-right: 40px;
+    padding-top: 150px;
+    height: 36px;
+    position: relative;
+    left: 450px;
+}
+
+.input-box {
+    width: 328px;
+    border-top: 10px;
+    border-right: 10px;
+    border-left: 0;
+    border-bottom: 1px solid #747f8d;
+    background: #f0f1f2;
+    height: 36px;
+    position: relative;
+    left: -5px;
+    top:-50px;
+
+   
+}
+
+.bg-color-d84e55 {
+    background-color: #d84e55;
+}
+.button-comp-lbl {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.43;
+    letter-spacing: .88px;
+    text-align: center;
+    color: #fff;
+    border-radius: 2px;
+    padding: 11px 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 60px;
+    min-height: 20px;
+    margin-left: 400px;
+   
+    box-shadow: inset 1px 1px 0 #aaa, inset 0 -1px 0 #aaa;
+}
+
+
+  
+  .XCN {
+    margin-bottom: 20px;
+  }
+  .Red {
+    color: #d02025;
+  }
+  h2 {
+    font-size: 27.5px;
+    text-align: center;
+    padding-top: 25px;
+  }
+
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  }
+  .bg_bus{
+    background-color: #ca5d63;
+    height: 600px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-size: 100% 100%;
+  }
+  
+  

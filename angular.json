@@ -20,7 +20,7 @@
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "assets": [
-              "src/favicon.ico",
+              "src/favicon.png",
               "src/assets"
             ],
             "styles": [
@@ -124,5 +124,8 @@
       }
     }
   },
-  "defaultProject": "ProjectGladiator"
+  "defaultProject": "ProjectGladiator",
+  "cli": {
+    "analytics": "ec1c357e-d5de-46f5-818d-8455a1ed8c2b"
+  }
 }

@@ -1,12 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
+<div class="header">
+  <div class="bus-booking__brand-logo">
+    <a class="bus-booking__home" [routerLink]="['/homeLink']">
+      <img class="ecologo" src="assets/bus.png" alt="Brand Logo" />
+    </a>
+  </div>
+<div class="bus-booking__brand-name">
+  <h1>EcoBus.com</h1>
+</div>
 
-<head>
-  <meta charset="UTF-8">
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
+</div>
+<div class="row">
+  <div class="main">
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
 
 <body>
   <!-- <app-login></app-login> -->
@@ -16,3 +25,8 @@
 </body>
 
 </html>
+<div class="footer">
+  <p>© 2020 EcoBus All rights reserved</p>
+</div>
+<!-- </body>
+</html> -->

@@ -8,7 +8,7 @@
           <input class="un"  align="center" placeholder="Password" required ngModel minlength="8" >
           <button type="submit" class="submit" align="center" [disabled]="!loginForm.valid ">Sign In</button>
           <p  align="center"><a class="forgot" [routerLink]="['/forgetLink']">Forgot Password? </a></p>
-          <p  align="center"><a class="forgot" href="#">Not a member? Sign up now </a></p>
+          <p  align="center"><a class="forgot" [routerLink]="['/register']">Not a member? Sign up now </a></p>
         </form>     
                   
     </div>
