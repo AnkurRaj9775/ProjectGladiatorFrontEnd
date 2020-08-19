@@ -1,9 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnChanges } from "@angular/core";
+import { HttpService } from "../shared/http.service";
+import { FormControl, Validators } from "@angular/forms";
 
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AngularFireDatabaseModule } from 'angularfire2/database';
-import { AngularFireDatabase} from 'angularfire2/database';
-import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth';
+
+
 
 @Component({
   selector: 'app-contact-us',
@@ -12,29 +12,68 @@ import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth';
 })
 
 export class ContactUsComponent{
-  form: FormGroup;
-  constructor(private fb: FormBuilder, private db: AngularFireDatabase,private afAuth:AngularFireAuth) {
-    this.createForm();
+  image =
+    "https://images.freeimages.com/images/large-previews/7bc/bald-eagle-1-1400106.jpg";
+  name1;
+  age;
+  loading = false;
+  buttionText = "Submit";
+
+  emailFormControl = new FormControl("", [
+    Validators.required,
+    Validators.email
+  ]);
+
+  nameFormControl = new FormControl("", [
+    Validators.required,
+    Validators.minLength(4)
+  ]);
+
+  
+
+  constructor(public http: HttpService) {}
+
+  ngOnInit() {
+    console.log(this.http.test);
   }
-  createForm() {
-    this.form = this.fb.group({
-      name: ['', Validators.required],
-      email: ['', Validators.required],
-      message: ['', Validators.required],
-    });
+
+  
+
+  changeImage() {
+    this.http.test = "changed";
+    this.image =
+      "https://images.pexels.com/photos/635529/pexels-photo-635529.jpeg?auto=compress&cs=tinysrgb&h=650&w=940";
   }
-  onSubmit() {
-    const {name, email, message} = this.form.value;
-    const date = Date();
-    const html = `
-      <div>From: ${name}</div>
-      <div>Email: <a href="mailto:${email}">${email}</a></div>
-      <div>Date: ${date}</div>
-      <div>Message: ${message}</div>
-    `;
-    let formRequest = { name, email, message, date, html };
-    this.db.list('/messages').push(formRequest);
-    this.afAuth.authState;
-    this.form.reset();
+
+  register() {
+    this.loading = true;
+    this.buttionText = "Submiting...";
+    let user = {
+      name: this.nameFormControl.value,
+      email: this.emailFormControl.value
+    }
+    this.http.sendEmail("http://localhost:3000/sendmail", user).subscribe(
+      data => {
+        let res:any = data; 
+        console.log(
+          `👏 > 👏 > 👏 > 👏 ${user.name} is successfully register and mail has been sent and the message id is ${res.messageId}`
+        );
+      },
+      err => {
+        console.log(err);
+        this.loading = false;
+        this.buttionText = "Submit";
+      },() => {
+        this.loading = false;
+        this.buttionText = "Submit";
+      }
+    );
   }
+  
+  
 }
+
+
+
+
+
