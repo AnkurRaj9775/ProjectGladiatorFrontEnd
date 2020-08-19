@@ -309,19 +309,20 @@ label {
 }
 
 .date-box {
-    width: 168px!important;
+    width: 220px!important;
 }
 
-.icon-calendar_icon-new {
-    font-size: 23px;
-    display: inline-block;
-    padding-top: 6.5%;
-    padding-right: 8%;
-    padding-left: 6%;
-    color: gray;
-    position: absolute;
-    left: 0;
-    z-index: 3;
+#calendar{
+  width: 200px;
+}
+
+#start{
+  position: relative;
+  top:12px;
+  left:30px;
+  width:150px;
+  border:blue;
+  
 }
 
 [class*=" icon-"], [class^=icon-] {
@@ -344,11 +345,11 @@ label {
 #onward_cal {
     width: 100%;
     position: relative;
-    padding-left: 38px;
+    padding-left: 28px;
 }
 
 .date-box label.db {
-    left: 23%;
+    left: 3%;
     top: 35%;
 }
 label.db {
@@ -388,6 +389,7 @@ label.db {
     font-style: normal;
     font-stretch: normal;
     text-transform: none;
+    
 }
 
 .button {
