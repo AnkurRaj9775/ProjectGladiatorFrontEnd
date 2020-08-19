@@ -26,6 +26,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { CancelComponent } from './cancel/cancel.component';
 import { RescheduleComponent } from './reschedule/reschedule.component';
 import { ShowMyTicketComponent } from './show-my-ticket/show-my-ticket.component';
+import { MyprofileComponent } from './myprofile/myprofile.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { ShowMyTicketComponent } from './show-my-ticket/show-my-ticket.component
     ContactUsComponent,
     CancelComponent,
     RescheduleComponent,
-    ShowMyTicketComponent
+    ShowMyTicketComponent,
+    MyprofileComponent
   ],
   imports: [
     BrowserModule,
