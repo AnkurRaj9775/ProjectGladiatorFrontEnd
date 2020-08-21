@@ -72,16 +72,9 @@
       </div>
       <div class="fl search-box date-box flaticon-005-calendar">
         <span class="fl flaticon-005-calendar icon"> </span>
-        <div>
-          <input
-            type="text"
-            id="onward_cal"
-            class="db"
-            readonly="readonly"
-            tabindex="3"
-            data-caleng=""
-          />
-          <label for="onward_cal" class="db text-trans-uc">Date</label>
+        <div class="calendar">
+           <label for="onward_cal" class="db text-trans-uc">Date</label>
+           <input type="date" id="start" name="trip-start" value="---">
           <div class="date-error">
             "Onward date should be before return date"
           </div>
