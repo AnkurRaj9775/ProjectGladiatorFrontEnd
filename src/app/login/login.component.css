@@ -125,3 +125,11 @@ input.ng-invalid.ng-touched +.error{
 	font-weight: bold;
 	
 }
+.status_true{
+	color: green;
+	font: x-large;
+}
+.status_false{
+	color: red;
+	font: x-large;
+}
