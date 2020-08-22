@@ -4,7 +4,6 @@ body {font-family: "Lato", sans-serif;}
   height: 100%;
   width: 220px;
   position: fixed;
-  z-index: 1;
   top: 10;
   background-color: rgb(224, 224, 224);
   overflow-x: hidden;
@@ -25,22 +24,22 @@ body {font-family: "Lato", sans-serif;}
 
 .main {
   margin-left: 300px; /* Same as the width of the sidenav */
-  padding: 0px 10px;
+  padding: 20px 30px;
   
-}
-
-
-@media screen and (max-height: 450px) {
-  .sidebar {padding-top: 15px;}
-  .sidebar a {font-size: 18px;}
 }
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
+  max-width: 1000px;
   margin: auto;
   text-align: center;
   font-family: arial;
+}
+
+.head{
+  color: red;
+  text-align: left;
+  padding-left: 10px;
 }
 
 .title {

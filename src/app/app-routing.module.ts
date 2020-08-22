@@ -11,6 +11,9 @@ import { RegisterComponent } from "./register/register.component";
 import { CancelComponent } from "./cancel/cancel.component";
 import { RescheduleComponent } from "./reschedule/reschedule.component";
 import { MyprofileComponent } from './myprofile/myprofile.component';
+import { MybookingsComponent } from './mybookings/mybookings.component';
+import { ChangepasswordComponent } from './changepassword/changepassword.component';
+import { WalletComponent } from './wallet/wallet.component';
 
 const routes: Routes = [
   {
@@ -45,6 +48,15 @@ const routes: Routes = [
   },
   {
     path:'myprofile',component:MyprofileComponent
+  },
+  {
+    path:'mybookings',component:MybookingsComponent
+  },
+  {
+    path:'changepassword',component:ChangepasswordComponent
+  },
+  {
+    path:'wallet',component:WalletComponent
   }
 ];
 

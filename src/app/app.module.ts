@@ -25,6 +25,9 @@ import { RescheduleComponent } from './reschedule/reschedule.component';
 import { ShowMyTicketComponent } from './show-my-ticket/show-my-ticket.component';
 import { MyprofileComponent } from './myprofile/myprofile.component';
 import { SharedComponent } from './shared/shared.component';
+import { MybookingsComponent } from './mybookings/mybookings.component';
+import { ChangepasswordComponent } from './changepassword/changepassword.component';
+import { WalletComponent } from './wallet/wallet.component';
 
 
 @NgModule({
@@ -42,7 +45,10 @@ import { SharedComponent } from './shared/shared.component';
     RescheduleComponent,
     ShowMyTicketComponent,
     MyprofileComponent,
-    SharedComponent
+    SharedComponent,
+    MybookingsComponent,
+    ChangepasswordComponent,
+    WalletComponent
   ],
   imports: [
     BrowserModule,
