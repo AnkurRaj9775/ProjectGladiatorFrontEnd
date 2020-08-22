@@ -1,0 +1,76 @@
+.row-sec {
+    border: 1px solid #ddd;
+    margin-top: 20px;
+    padding: 10px 0 0;
+}
+.sort-sec {
+    padding-left: 10px;
+    line-height: 13px;
+}
+.filter-sec, .sort-sec {
+    margin-top: 10px;
+}
+*, :after, :before {
+    box-sizing: border-box;
+}
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+ol, ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    
+        display: block;
+        list-style-type: disc;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        padding-inline-start: 40px;
+    
+}
+div {
+    display: block;
+}
+.bus-item-details {
+    padding-left: 10px;
+}
+.w-30 {
+    width: 30%;
+}
+.p-right-10 {
+    padding-right: 10px;
+}
+.fl {
+    float: left;
+}
+.lh-24 {
+    line-height: 24px;
+}
+.d-color {
+    color: #3e3e52;
+}
+.f-bold {
+    font-weight: 700;
+}
+.m-top-16 {
+    margin-top: 16px;
+}
+.l-color {
+    color: #7e7e8c;
+}
+.f-12 {
+    font-size: 12px;
+}

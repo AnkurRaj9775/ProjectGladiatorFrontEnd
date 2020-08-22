@@ -24,6 +24,7 @@ import { CancelComponent } from './cancel/cancel.component';
 import { RescheduleComponent } from './reschedule/reschedule.component';
 import { ShowMyTicketComponent } from './show-my-ticket/show-my-ticket.component';
 import { SharedComponent } from './shared/shared.component';
+import { SearchComponentComponent } from './searchBus/searchBus.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { SharedComponent } from './shared/shared.component';
     CancelComponent,
     RescheduleComponent,
     ShowMyTicketComponent,
-    SharedComponent
+    SharedComponent,
+    SearchComponentComponent
   ],
   imports: [
     BrowserModule,

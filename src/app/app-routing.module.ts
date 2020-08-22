@@ -10,6 +10,7 @@ import { ForgotPassComponent  } from "./forgot-pass/forgot-pass.component";
 import { RegisterComponent } from "./register/register.component";
 import { CancelComponent } from "./cancel/cancel.component";
 import { RescheduleComponent } from "./reschedule/reschedule.component";
+import { SearchComponentComponent } from "./searchBus/searchBus.component";
 
 const routes: Routes = [
   {
@@ -41,6 +42,9 @@ const routes: Routes = [
   },
   {
     path:'cancellation',component:CancelComponent
+  },
+  {
+    path:'searchBus', component: SearchComponentComponent
   }
 ];
 
