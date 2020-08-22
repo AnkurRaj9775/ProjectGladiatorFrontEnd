@@ -63,7 +63,8 @@ form.form1 {
 	padding-bottom: 10px;
 	padding-top: 10px;
 	font-family: 'Ubuntu', sans-serif;
-	margin-left: 35%;
+	margin-left: 30%;
+	margin-bottom: 5%;
 	font-size: 18px;
 	box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
 }
@@ -98,4 +99,29 @@ button:disabled {
 	background-repeat: no-repeat;
 	background-size: cover; 
 	background-position: center; 
+}
+
+.status{
+	text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+	color: #fd0606ad;
+	padding-top: 15px;
+	font-size: 15px;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: bold;
+}
+
+.error{
+
+	display: none;
+}
+
+input.ng-invalid.ng-touched{
+	border-color: red;
+}
+
+input.ng-invalid.ng-touched +.error{
+	display: block;
+	color: red;
+	font-weight: bold;
+	
 }

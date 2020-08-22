@@ -3,13 +3,15 @@
     <div class="main">
    
         <p class="sign" align="center">Sign in</p>
-        <form class="form1" #loginForm='ngForm' (ngSubmit)='send(loginForm)'>
-          <input class="un "  align="center" placeholder="Username" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required name="uname" id="uname" ngModel> 
-          <input class="un"  align="center" placeholder="Password" required ngModel minlength="8" >
+        <form class="form1" #loginForm='ngForm' (ngSubmit)='loginUser(loginForm)'>
+          <input class="un "  align="center" type="email" placeholder="Username" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required name="uname" id="uname" [(ngModel)]=login.email> 
+          <span class="error" align="center">Invalid Email Id</span>
+          <input class="un"  align="center" type="password" placeholder="Password" required ngModel minlength="8" name="psw" id="psw" [(ngModel)]=login.password >
+          <span class="error" align="center">Please enter your password </span>
           <button type="submit" class="submit" align="center" [disabled]="!loginForm.valid ">Sign In</button>
           <p  align="center"><a class="forgot" [routerLink]="['/forgetLink']">Forgot Password? </a></p>
           <p  align="center"><a class="forgot" [routerLink]="['/register']">Not a member? Sign up now </a></p>
         </form>     
-                  
+        <div align="center" *ngIf='!clientstatus' class="status" > The email or password did not match our records. Please try again.</div>      
     </div>
 </div>
