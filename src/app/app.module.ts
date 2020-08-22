@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule,HttpClient } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './register/register.component';
@@ -23,8 +23,13 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { CancelComponent } from './cancel/cancel.component';
 import { RescheduleComponent } from './reschedule/reschedule.component';
 import { ShowMyTicketComponent } from './show-my-ticket/show-my-ticket.component';
+import { MyprofileComponent } from './myprofile/myprofile.component';
 import { SharedComponent } from './shared/shared.component';
 import { SearchComponentComponent } from './searchBus/searchBus.component';
+import { MybookingsComponent } from './mybookings/mybookings.component';
+import { ChangepasswordComponent } from './changepassword/changepassword.component';
+import { WalletComponent } from './wallet/wallet.component';
+
 
 
 @NgModule({
@@ -42,7 +47,12 @@ import { SearchComponentComponent } from './searchBus/searchBus.component';
     RescheduleComponent,
     ShowMyTicketComponent,
     SharedComponent,
-    SearchComponentComponent
+    SearchComponentComponent,
+    MyprofileComponent,
+    SharedComponent,
+    MybookingsComponent,
+    ChangepasswordComponent,
+    WalletComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +65,8 @@ import { SearchComponentComponent } from './searchBus/searchBus.component';
     MatSidenavModule,
     MatListModule,
     MatButtonModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
