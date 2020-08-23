@@ -126,3 +126,28 @@ button {
     margin-top: 15px;
     text-align: center;
 }
+
+.error{
+
+	display: none;
+}
+
+input.ng-invalid.ng-touched{
+	border-color: red;
+}
+
+input.ng-invalid.ng-touched +.error{
+	display: block;
+	color: red;
+	font-weight: bold;
+	
+}
+.formError{
+  display: none;
+}
+input.ng-invalid.ng-submitted +.FormError{
+	display: block;
+	color: red;
+	font-weight: bold;
+	
+}

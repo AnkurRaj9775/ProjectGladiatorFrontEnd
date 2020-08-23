@@ -1,26 +1,36 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from "@angular/forms";
 import { Router } from '@angular/router';
+import { Customer  } from "../serviceclass/Customer";
+import { RegisterService } from "../service/register.service";
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-  
+  errorMsg: string;
   password: string;
-  registerUser(form: NgForm) {
-    var mobile = (<HTMLInputElement>document.getElementById("userMobile"));
-    var data = mobile.value;
-    console.log(data);
-    //console.log(mobile);
 
-    var male = (<HTMLInputElement>document.getElementById("Male"));
-    var female = (<HTMLInputElement>document.getElementById("Female"));
-    if (male.checked)
-      console.log(male.value);
-    else
-      console.log(female.value);
+  customer: Customer=new Customer();
+  registerStatus:boolean;
+constructor(private registerService:RegisterService,private router:Router){}
+
+
+
+
+  registerUser() {
+   this.registerService.register(this.customer).subscribe(data=>{
+
+    if(!data.resultStatus)
+      {
+        this.registerStatus=data.resultStatus;
+      }
+      else{
+        this.registerStatus=data.resultStatus;
+      }
+
+   })
   }
   
 
@@ -55,10 +65,12 @@ export class RegisterComponent implements OnInit {
     var pass = p.value;
     if (this.password === pass)
       return true;
+
+   this.errorMsg="Please Enter the same password";
     return false;
   }
 
-  constructor() { }
+  
 
   ngOnInit(): void {
   }

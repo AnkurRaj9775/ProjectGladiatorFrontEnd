@@ -1,44 +1,79 @@
 <div class="row">
- 
+
   <div class="main">
     <div class="card">
-      
+
       <h2 class="new-signin-header">Sign up to avail exciting discounts and special offers!!!</h2>
+      <img src="assets/Register.jpg" alt="Could not find image">
+      <form (ngSubmit)="registerUser()">
 
-      <form #registerForm='ngForm' (ngSubmit)='registerUser(registerForm)'>
-        <div class="container">
-          <img src="assets/Register.jpg" alt="Could not find image">
-          <input type="text" placeholder="Enter Your Name" name="userFirstName" (keypress)='isAName($event)' ngModel
-            required>
-          <input type="email" name="userEmail" ngModel pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{1,3})+$"
-            placeholder="Email" required>
-            <div id="emError" style="color: red; display: none;">Invalid Email address</div>
-          
-          
-            <input type="password" name="password" placeholder="Password" ngModel minlength="8"
-            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*]).{8,15}$" [(ngModel)]='password' required>
-            <div id="pswError" style="color: red; display: none;">Enter 8-15 Characters
-              <br>with atleast 1 capital Letter(A-Z)<br>One small letter(a-z)
-              <br>and one special Character(!@#$%&)</div>
-          <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" ngModel
-            required>
+        <input type="text" placeholder="Enter Your Name" name="userFirstName" (keypress)='isAName($event)'
+      [(ngModel)]="customer.name" required>
 
-            <input type="text" placeholder="Mobile" name="userMobile" id="userMobile"
-            (keypress)='isNumber($event,"userMobile",10)' (keyup)='manageMobile("userMobile")' value="" minlength="11"
-            ngModel required>
-            <div id="mbError" style="color: red; display: none;">Invalid Mobile Number</div>
-            
-            <input type="text" placeholder="Enter City" id="city" name="city" ngModel required>
+      <input type="email" name="userEmail" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{1,3})+$"
+      placeholder="Email" required [(ngModel)]="customer.email">
 
-          <span>Gender</span>
-          <input type="radio" id="Male" name="gender" value="Male" class="genderType">Male
-          <input type="radio" id="Female" name="gender" value="Female" class="genderType" >Female
-          <input type="radio" id="Other" name="gender" value="Other" class="genderType">Other
+      <input type="password" name="password" placeholder="Password" ngModel minlength="8"
+      pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*]).{8,15}$" [(ngModel)]='customer.password'
+      required>
 
-          <button type="submit" [disabled]='!registerForm.valid || !confirmPassword()'>Sign Up</button>
-          <div id="formError" style="color: red; display: none;"></div>
-        </div>
+      <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password"
+      required>
+
+
+      <input type="text" placeholder="Mobile" name="userMobile" id="userMobile"
+      (keypress)='isNumber($event,"userMobile",10)' (keyup)='manageMobile("userMobile")' value="" minlength="11"
+       required [(ngModel)]="customer.contact">
+
+
+    <span>Gender</span>
+    <input type="radio" value="male" name="gender" required ng-model="gender" [(ngModel)]="customer.gender"> Male
+    <input type="radio" value="female" name="gender" required ng-model="gender" [(ngModel)]="customer.gender">Female
+    <input type="radio" value="Other" name="gender" required ng-model="gender" [(ngModel)]="customer.gender">Other
+
+
+    <button type="submit">Sign Up</button>
+
+
       </form>
+      
+            
+        
+     
+      <!-- <div align="center" *ngIf='!registerStatus' class="status_false" > This email is already registered with us!</div>
+      <div align="center" *ngIf='registerStatus' class="status_true" > Resgistered Successfully. Please Check your mail !</div> -->
     </div>
   </div>
 </div>
+
+<!-- <form #registerForm='ngForm' (ngSubmit)='registerUser()'>
+  <div class="container">
+    <img src="assets/Register.jpg" alt="Could not find image">
+    <input type="text" placeholder="Enter Your Name" name="userFirstName" (keypress)='isAName($event)'
+      [(ngModel)]="customer.name" required>
+    <input type="email" name="userEmail" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{1,3})+$"
+      placeholder="Email" required [(ngModel)]="customer.email">
+    <div class="error">Invalid Email address</div>
+
+
+    <input type="password" name="password" placeholder="Password" ngModel minlength="8"
+      pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*]).{8,15}$" [(ngModel)]='customer.password'
+      required>
+    <div class="error">Enter 8-15 Characters
+      <br>with atleast 1 capital Letter(A-Z)<br>One small letter(a-z)
+      <br>and one special Character(!@#$%&)</div>
+    <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password"
+      required>
+    <!-- <div *ngIf="!confirmPassword()" style="color: red"> {{errorMsg}}</div> -->
+    <!-- <input type="text" placeholder="Mobile" name="userMobile" id="userMobile"
+      (keypress)='isNumber($event,"userMobile",10)' (keyup)='manageMobile("userMobile")' value="" minlength="11"
+      ngModel required [(ngModel)]="customer.contact">
+    <div class="error">Invalid Mobile Number</div>
+    <span>Gender</span>
+    <input type="radio" value="male" name="gender" required ng-model="gender" [(ngModel)]="customer.gender"> Male
+    <input type="radio" value="female" name="gender" required ng-model="gender" [(ngModel)]="customer.gender">
+    Female
+    <input type="radio" value="Other" name="gender" required ng-model="gender" [(ngModel)]="customer.gender">Other
+
+
+    <button type="submit" [disabled]='!registerForm.valid || !confirmPassword()'>Sign Up</button> -->

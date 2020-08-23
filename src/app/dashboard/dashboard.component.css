@@ -5,10 +5,8 @@ body {
 .sidebar {
   height: 100%;
   width: 220px;
-  position: fixed;
-  top: 80px;
-  left: 0;
-  z-index: 1;
+  position:fixed;  
+  top: 10;
   background-color: rgb(224, 224, 224);
   padding-top: 16px;
 }
@@ -42,10 +40,11 @@ body {
 }
 
 @media screen and (max-height: 450px) {
-  .sidebar {
-    padding-top: 15px;
-  }
-  .sidebar a {
-    font-size: 18px;
-  }
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+.bus_sideBar{
+  margin-bottom: 40px;
+
 }

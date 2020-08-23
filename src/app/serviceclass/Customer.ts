@@ -8,4 +8,5 @@ export class Customer{
     age:number;
     gender:string;
     
+    
 }

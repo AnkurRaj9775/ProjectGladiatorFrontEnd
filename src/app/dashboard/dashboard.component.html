@@ -14,7 +14,14 @@
     >
   </div>
 
-  <div class="bus__dashboard-main">
+<div class="sidebar">
+    <a class="bus_sideBar" ef="#profile" [routerLink]="['/myprofile']"><i class="fa fa-fw fa-user"></i> My Profile</a>
+    <a class="bus_sideBar" href="#bookings" [routerLink]="['/mybookings']"><i class="fa fa-fw fa-envelope"></i> My Bookings</a>
+    <a class="bus_sideBar" href="#changepassword" [routerLink]="['/changepassword']"><i class="fa fa-fw fa-wrench"></i> Change Password</a>
+    <a class="bus_sideBar" href="#wallet" [routerLink]="['/wallet']"><i class="fa fa-credit-card"></i> Wallet</a>
+</div>
+
+<div class="main">
     <h2>Sidebar with Icons</h2>
     <p>This side navigation is of full height (100%) and always shown.</p>
     <p>
