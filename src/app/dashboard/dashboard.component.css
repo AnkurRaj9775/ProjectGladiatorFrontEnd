@@ -1,13 +1,15 @@
-body {font-family: "Lato", sans-serif;}
+body {
+  font-family: "Lato", sans-serif;
+}
 
 .sidebar {
   height: 100%;
   width: 220px;
   position: fixed;
+  top: 80px;
+  left: 0;
   z-index: 1;
-  top: 10;
   background-color: rgb(224, 224, 224);
-  overflow-x: hidden;
   padding-top: 16px;
 }
 
@@ -23,14 +25,27 @@ body {font-family: "Lato", sans-serif;}
   color: #f1f1f1;
 }
 
-.main {
-  margin-left: 300px; /* Same as the width of the sidenav */
+.bus__dashboard-main {
+  /* Same as the width of the sidenav */
   padding: 0px 10px;
-  
+  width: 100%;
+  box-sizing: border-box;
+  min-height: calc(100% - 80px);
 }
 
+.bus__dashboard {
+  width: calc(100% - 220px);
+  height: calc(100vh - 140px);
+  position: relative;
+  left: 220px;
+
+}
 
 @media screen and (max-height: 450px) {
-  .sidebar {padding-top: 15px;}
-  .sidebar a {font-size: 18px;}
+  .sidebar {
+    padding-top: 15px;
+  }
+  .sidebar a {
+    font-size: 18px;
+  }
 }

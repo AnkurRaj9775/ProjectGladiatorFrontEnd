@@ -1,24 +1,23 @@
-<div class="header">
-  <div class="bus-booking__brand-logo">
-    <a class="bus-booking__home" [routerLink]="['/homeLink']">
-      <img class="ecologo" src="assets/bus.png" alt="Brand Logo" />
-    </a>
+<div class="bus-booking__body">
+  <div class="header">
+    <div class="bus-booking__brand-logo">
+      <a class="bus-booking__home" [routerLink]="['/homeLink']">
+        <img class="ecologo" src="assets/bus.png" alt="Brand Logo" />
+      </a>
+    </div>
+    <div class="bus-booking__brand-name">
+      <h1 class="bus-booking__header">EcoBus.com</h1>
+    </div>
   </div>
-<div class="bus-booking__brand-name">
-  <h1>EcoBus.com</h1>
-</div>
-
-</div>
-<div class="row">
-  <div class="main">
-    <div>
+  <div class="app__row">
+    <div class="main">
       <router-outlet></router-outlet>
     </div>
   </div>
-</div>
-
-<div class="footer">
-  <p>© 2020 EcoBus All rights reserved</p>
+  
+  <div class="footer">
+    <p class="footer__text">© 2020 EcoBus All rights reserved</p>
+  </div>
 </div>
 <!-- </body>
 </html> -->
