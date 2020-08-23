@@ -61,7 +61,7 @@
                 placeholder="FROM"
                 [(ngModel)]="fromCity"
               />
-              <p>{{ fromCity }}</p>
+             
             </div>
           </div>
           <div class="fl search-box clearfix">
@@ -76,7 +76,7 @@
                 placeholder="TO"
                 [(ngModel)]="toCity"
               />
-              <p>{{ toCity }}</p>
+              
             </div>
           </div>
           <div class="fl search-box date-box flaticon-005-calendar">
@@ -94,7 +94,7 @@
           </div>
           <button
             id="search_btn"
-            class="fl button"
+            class="fl button" (click)='setValue()'
             [routerLink]="['/searchBus']"
           >
             Search Buses
