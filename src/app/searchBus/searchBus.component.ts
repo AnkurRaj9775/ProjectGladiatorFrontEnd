@@ -10,6 +10,7 @@ import { BusDetailsService } from '../service/BusDetails.service';
 })
 export class SearchComponentComponent implements OnInit {
 
+  data : any;
   details : BusDetails = new BusDetails();
 
   constructor(private busDetails: BusDetailsService) { }
