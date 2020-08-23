@@ -1,4 +1,4 @@
 export class WalletAmount{
-    
-    customerId:number;
+
+    custometId:number;
 }
