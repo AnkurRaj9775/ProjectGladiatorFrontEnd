@@ -1,4 +1,3 @@
 export class WalletAmount{
-    custId:any;
-    constructor(){}
+    customerId:number;
 }

@@ -39,6 +39,7 @@ body {font-family: "Lato", sans-serif;}
 .head{
   color: red;
   text-align: left;
+  padding-top: 10px;
   padding-left: 10px;
 }
 
@@ -68,4 +69,9 @@ a {
 
 button:hover, a:hover {
   opacity: 0.7;
+}
+
+.walletAmount{
+  color: black;
+  padding-left: 15px;
 }

@@ -25,35 +25,6 @@
       (keypress)='isNumber($event,"userMobile",10)' (keyup)='manageMobile("userMobile")' value="" minlength="11"
        required [(ngModel)]="customer.contact">
 
-<<<<<<< HEAD
-      <form #registerForm='ngForm' (ngSubmit)='registerUser(registerForm)'>
-        <div class="container">
-          <img src="assets/Register.jpg" alt="Could not find image">
-        </div>
-        <div class="container">
-          <input type="text" placeholder="Enter Your Name" name="userFirstName" (keypress)='isAName($event)' ngModel
-            required>
-          <input type="email" name="userEmail" ngModel pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{1,3})+$"
-            placeholder="Email" required>
-            <div id="emError" style="color: red; display: none;">Invalid Email address</div>
-          
-          
-            <input type="password" name="password" placeholder="Password" ngModel minlength="8"
-            pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*]).{8,15}$" [(ngModel)]='password' required>
-            <div id="pswError" style="color: red; display: none;">Enter 8-15 Characters
-              <br>with atleast 1 capital Letter(A-Z)<br>One small letter(a-z)
-              <br>and one special Character(!@#$%&)</div>
-          <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" ngModel
-            required>
-
-            <input type="text" placeholder="Mobile" name="userMobile" id="userMobile"
-            (keypress)='isNumber($event,"userMobile",10)' (keyup)='manageMobile("userMobile")' value="" minlength="11"
-            ngModel required>
-            <div id="mbError" style="color: red; display: none;">Invalid Mobile Number</div>
-            
-            <input type="text" placeholder="Enter City" id="city" name="city" ngModel required>
-=======
->>>>>>> 95541b8c0dd75befa7526a0c45a19f16b2331f16
 
     <span>Gender</span>
     <input type="radio" value="male" name="gender" required ng-model="gender" [(ngModel)]="customer.gender"> Male
