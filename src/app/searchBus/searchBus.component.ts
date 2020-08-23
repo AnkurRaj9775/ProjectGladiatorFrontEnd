@@ -10,21 +10,27 @@ import { BusDetailsService } from '../service/BusDetails.service';
 })
 export class SearchComponentComponent implements OnInit {
 
-  details : BusDetails = new BusDetails();
-
+  details: BusDetails = new BusDetails();
+  data: any;
   constructor(private busDetails: BusDetailsService) { }
-     
+
   ngOnInit(): void {
-    this.details.fromCity=sessionStorage.getItem('fromCity');
-    this.details.toCity=sessionStorage.getItem('toCity');
-    this.details.date=sessionStorage.getItem('date');
+    const dateOfJourney = new Date(sessionStorage.getItem('date'));
+    const day1 = dateOfJourney.getDay();
+    var Wday: string[] = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    var day = Wday[day1];
+    console.log(day);
+    this.details.fromCity = sessionStorage.getItem('fromCity');
+    this.details.toCity = sessionStorage.getItem('toCity');
+    this.details.day=day;
+    this.details.date = sessionStorage.getItem('date');
+    
 
-
-    this.busDetails.busDetails(this.details).subscribe(data=>{
-      
+    this.busDetails.busDetails(this.details).subscribe(data => {
+      this.data = data;
     })
   }
-  
+
 
 
 }
