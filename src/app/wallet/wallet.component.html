@@ -10,8 +10,12 @@
     <h1>Wallet</h1>
     <div class="card">
         <h1 class="head"><i class="fa fa-credit-card"></i> Your Wallet Balance
-            <span class="walletAmount"><i class="fa fa-inr"></i> {{walletBalance}}</span>
+            <span class="walletAmount"><i class="fa fa-inr"></i> {{walletBalance}}</span><br>
+            <label for="addMoneyToWallet">Add Money to Wallet :</label>
+            <input type="number" min="1" id="addMoney" name="addMoney" [(ngModel)]='amount'/>
         </h1>
-        <button>Add</button>
+
+        <button (click)="addBalance()">Add</button>
+        <h3>{{message}}</h3>
     </div>
 </div>
