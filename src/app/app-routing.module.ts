@@ -10,6 +10,7 @@ import { ForgotPassComponent  } from "./forgot-pass/forgot-pass.component";
 import { RegisterComponent } from "./register/register.component";
 import { CancelComponent } from "./cancel/cancel.component";
 import { RescheduleComponent } from "./reschedule/reschedule.component";
+import { SearchComponentComponent } from "./searchBus/searchBus.component";
 import { MyprofileComponent } from './myprofile/myprofile.component';
 import { MybookingsComponent } from './mybookings/mybookings.component';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
@@ -47,7 +48,8 @@ const routes: Routes = [
     path:'cancellation',component:CancelComponent
   },
   {
-    path:'myprofile',component:MyprofileComponent
+    path:'searchBus', component: SearchComponentComponent
+    
   },
   {
     path:'mybookings',component:MybookingsComponent
@@ -57,6 +59,9 @@ const routes: Routes = [
   },
   {
     path:'wallet',component:WalletComponent
+  },
+  {
+    path:'myprofile',component:MyprofileComponent
   }
 ];
 

@@ -25,6 +25,7 @@ import { RescheduleComponent } from './reschedule/reschedule.component';
 import { ShowMyTicketComponent } from './show-my-ticket/show-my-ticket.component';
 import { MyprofileComponent } from './myprofile/myprofile.component';
 import { SharedComponent } from './shared/shared.component';
+import { SearchComponentComponent } from './searchBus/searchBus.component';
 import { MybookingsComponent } from './mybookings/mybookings.component';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
 import { WalletComponent } from './wallet/wallet.component';
@@ -45,6 +46,8 @@ import { WalletComponent } from './wallet/wallet.component';
     CancelComponent,
     RescheduleComponent,
     ShowMyTicketComponent,
+    SharedComponent,
+    SearchComponentComponent,
     MyprofileComponent,
     SharedComponent,
     MybookingsComponent,

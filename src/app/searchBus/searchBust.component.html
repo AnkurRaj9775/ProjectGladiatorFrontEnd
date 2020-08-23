@@ -1,0 +1,106 @@
+<!-- <div class="searchBus-content">
+<div class="searchBus-header">
+  <div class="sort-sec clearfix">
+    <div class="w-30 fl">
+      <span>
+        <span class="w-60  ">
+         {{46}} Buses
+        </span>
+        found
+      </span>
+    </div>
+    <div class="w-19 fl">
+      <a>Departure</a>
+    </div>
+    <div class="w-10 fl">
+      <a>Duration</a>
+    </div>
+    <div class="w-10 fl">
+      <a>Arrival</a>
+    </div>
+    <div class="w-10 fl">
+      <a>Fare</a>
+    </div>
+    <div class="w-10 fl">
+      <a>Seats Available</a>
+    </div>
+  </div>
+</div>
+<div class="searchBus-card">
+  <ul class="bus-items" style="list-style-type: none;">
+    <div>
+      <li id="11994669" class="row-sec clearfix">
+        <div class="clearfix row-one">
+          <div class="p-right-10 w-30 fl">
+            <div class="travels lh-24 f-bold d-color">
+             {{RC_travels}}
+            </div>
+            <div class="bus-type   m-top-16 l-color">
+              {{A/C_Seater_/_Sleeper_(2+1)}}
+            </div>
+          </div>
+          <div class="p-right-10 w-11 fl">
+            <div class="dp-time f-19 d-color f-bold">
+              {{2359}}
+            </div>
+            <div
+              class="dp-loc l-color w-wrap   m-top-42"
+              title="Dhaula Kuan"
+            >
+              {{Dhaula_Kuan}}
+            </div>
+          </div>
+          <div class=" p-right-10 w-11 fl">
+            <div class="dur l-color lh-24">05h 22m</div>
+          </div>
+          <div class="p-right-10 w-11 fl">
+            <div class="bp-time f-19 d-color disp-Inline">05:21</div>
+            <div class="next-day-dp-lbl m-top-16">23-Aug</div>
+            <div class="bp-loc l-color w-wrap   m-top-8" >
+             {{Sindhi_Camp}}
+            </div>
+          </div>
+
+          <div class="p-right-10 w-15 fl">
+            <div class="seat-fare">
+              <div class="starts">Starts from</div>
+              <div class="fare d-block">
+                INR <span class="f-19 f-bold">
+                  {{380}}</span>
+              </div>
+            </div>
+          </div>
+        <div class="w-15 fl">          
+            {{37}}
+            <span class="l-color">
+              Seats available
+            </span>
+          
+          
+        </div>
+        <div class="clearfix m-top-16">
+          <div class="button view-seats fr">
+            View Seats
+          </div>
+        </div>
+      </div>
+      </li>
+    </div>
+  </ul>
+</div>
+</div> -->
+
+
+
+<tr *ngFor ="let cp of data">
+    <td> {{cp.busId}} </td>   
+    <td> {{cp.busName}}</td>
+    <td> {{cp.busType}}</td>
+    <td> {{cp.departureTime}}</td>
+    <td> {{cp.arrivalTime}}</td>
+    <td> {{cp.duration}}</td>
+    <td> {{cp.fare}}</td>
+    <td> {{cp.totalSeatsAvailable}}</td>
+</tr>
+
+ 
