@@ -9,6 +9,8 @@ import { Observable } from 'rxjs';
 export class BusDetailsService {
 
   constructor(private http:HttpClient) { }
-
+  busDetails(busDetails :BusDetails):Observable<any>{
+    return this.http.post("http://localhost:8080/searchABus",busDetails);
+  }
  
 }

@@ -51,47 +51,51 @@
           <div class="fl search-box clearfix">
             <span class="fl flaticon-urban icon"> </span>
 
-                <div>
-                  <input
-                    type="text"
-                    id="src"
-                    class="db"
-                    tabindex="1"
-                    autocomplete="off"
-                    placeholder="FROM"
-                    [(ngModel)]="details.fromCity"
-                  />
-                  <p>{{fromCity}}</p>
-                </div>
-                </div>
-                <div class="fl search-box clearfix">
-                  <span class="fl flaticon-urban icon"> </span>
-                  <div>
-                    <input
-                      type="text"
-                      id="dest"
-                      class="db"
-                      tabindex="2"
-                      autocomplete="off"
-                      placeholder="TO"   
-                      [(ngModel)]="details.toCity" 
-                             
-                    />
-                    <p>{{toCity}}</p>
-                  </div>
-                  </div>
-                <div class="fl search-box date-box flaticon-005-calendar">
-                  <span class="fl flaticon-005-calendar icon"> </span>
-                  <div class="calendar">
-                    <label for="onward_cal" class="db text-trans-uc">Date</label>
-                    <input type="date" id="start" name="trip-start" value="---"                    />
-                  </div>
-                </div>
+            <div>
+              <input
+                type="text"
+                id="src"
+                class="db"
+                tabindex="1"
+                autocomplete="off"
+                placeholder="FROM"
+                [(ngModel)]="details.fromCity"
+              />
+              <p>{{ fromCity }}</p>
+            </div>
+          </div>
+          <div class="fl search-box clearfix">
+            <span class="fl flaticon-urban icon"> </span>
+            <div>
+              <input
+                type="text"
+                id="dest"
+                class="db"
+                tabindex="2"
+                autocomplete="off"
+                placeholder="TO"
+                [(ngModel)]="details.toCity"
+              />
+              <p>{{ toCity }}</p>
+            </div>
+          </div>
+          <div class="fl search-box date-box flaticon-005-calendar">
+            <span class="fl flaticon-005-calendar icon"> </span>
+            <div class="calendar">
+              <label for="onward_cal" class="db text-trans-uc">Date</label>
+              <input
+                type="date"
+                id="start"
+                name="trip-start"
+                value="---"
+                [(ngModel)]="details.date"
+              />
+            </div>
+          </div>
           <button
             id="search_btn"
             class="fl button"
             [routerLink]="['/searchBus']"
-            (click)="searchBus()"
           >
             Search Buses
           </button>

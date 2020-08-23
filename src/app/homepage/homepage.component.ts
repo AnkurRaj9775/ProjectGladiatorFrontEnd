@@ -8,30 +8,17 @@ import { BusDetails } from "../serviceclass/BusDetails";
   styleUrls: ['./homepage.component.css'],
 })
 export class HomepageComponent implements OnInit {
-  details :BusDetails=new BusDetails();
- 
-
-   searchBus(){
-   
-    this.loginService.login(this.login).subscribe(data =>{
   
-      if(!data.resultStatus)
-      {
-        this.clientstatus=data.resultStatus;
-      }
-      else{
-        this.clientstatus=data.resultStatus;
-        let customerId=data.customerId;
-         let customerName=data.name;
+  fromCity: string;
+  toCity: string;
+  date : string;
 
-    sessionStorage.setItem('customerId',customerId);
-    sessionStorage.setItem('customerName',customerName);  
-      this.router.navigate(['dashboard']);
-      }
-    })
+  
+  constructor() {}  
+
+  ngOnInit(): void {
+    sessionStorage.setItem('fromCity',this.fromCity);
+    sessionStorage.setItem('toCity',this.toCity);
+    sessionStorage.setItem('date',this.date);
   }
-
-  constructor(private busService :BusDetailsService) {}
-
-  ngOnInit(): void {}
 }
