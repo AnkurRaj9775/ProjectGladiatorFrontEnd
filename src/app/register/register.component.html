@@ -5,7 +5,7 @@
 
       <h2 class="new-signin-header">Sign up to avail exciting discounts and special offers!!!</h2>
       <img src="assets/Register.jpg" alt="Could not find image">
-      <form (ngSubmit)="registerUser">
+      <form (ngSubmit)="registerUser()">
 
         <input type="text" placeholder="Enter Your Name" name="userFirstName" (keypress)='isAName($event)'
       [(ngModel)]="customer.name" required>

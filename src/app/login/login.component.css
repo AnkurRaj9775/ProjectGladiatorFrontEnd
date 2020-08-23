@@ -3,7 +3,8 @@
 	font-family: 'Ubuntu', sans-serif;
 } */
 
-.main {
+.login_main {
+	
 	background-color: #FFFFFF;
 	width: 350px;
 	height: 500px;
@@ -41,7 +42,9 @@ font-family: 'Ubuntu', sans-serif;
 }
 
 form.form1 {
+	
 	padding-top: 40px;
+	
 }
 
 
@@ -94,7 +97,9 @@ button:disabled {
 	opacity: 0.5;
 }
 
-.card{
+.login_card{
+
+	
 	background-image: url("/assets/bus-parked.jpg");
 	background-repeat: no-repeat;
 	background-size: cover; 
