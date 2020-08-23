@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { WalletAmount } from '../serviceclass/walletamount';
-
+import { WalletAmount } from "../serviceclass/walletAmount";
 @Component({
   selector: 'app-wallet',
   templateUrl: './wallet.component.html',
@@ -8,13 +7,14 @@ import { WalletAmount } from '../serviceclass/walletamount';
 })
 export class WalletComponent {
 
-  wallet : WalletAmount=new WalletAmount;
-  constructor(){}
+  walletamount :WalletAmount=new WalletAmount();
+  
+  constructor() { }
 
-  //walletCustId.custId=sessionStorage.getItem('customerId');
-
- walletCustId=sessionStorage.getItem('customerId');
- console.log();
- 
+  ngOnInit(): void {
+  this.walletamount.custometId=Number(sessionStorage.getItem('customerId'));
+  
+  console.log(this.walletamount.custometId);
+  }
 
 }

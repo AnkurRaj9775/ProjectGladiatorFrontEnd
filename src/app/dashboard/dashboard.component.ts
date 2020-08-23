@@ -7,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
+  usern:any=sessionStorage.getItem('customerId');
+  
+  
+  
   constructor() { }
 
   toggle(){
@@ -14,6 +18,7 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log(this.usern);
   }
 
 }
