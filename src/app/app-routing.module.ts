@@ -15,6 +15,7 @@ import { MyprofileComponent } from './myprofile/myprofile.component';
 import { MybookingsComponent } from './mybookings/mybookings.component';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
 import { WalletComponent } from './wallet/wallet.component';
+import{ ShowMyTicketComponent} from './show-my-ticket/show-my-ticket.component'
 
 
 const routes: Routes = [
@@ -66,6 +67,9 @@ const routes: Routes = [
   },
   {
     path:'myprofile',component:MyprofileComponent
+  },
+  {
+    path:'showMyTicket',component:ShowMyTicketComponent
   }
 ];
 
