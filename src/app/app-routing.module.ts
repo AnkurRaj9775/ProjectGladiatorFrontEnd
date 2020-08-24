@@ -37,7 +37,7 @@ const routes: Routes = [
     path:'contact',component:ContactUsComponent
   },
   {
-    path:'login',component:LoginComponent
+    path:'loginCustomer',component:LoginComponent
   },
   {
     path:'forgetLink',component:ForgotPassComponent

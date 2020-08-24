@@ -1,29 +1,28 @@
-<div class="bg_bus" style="background-image: url('/assets/bgBus.jpg');">
-  <div class="about-card">
-    <h2 class="Red XCN">
-      Cancel Your Ticket
-    </h2>
-
-    <div
-      class="input component"
-      style="padding-left: 300px; padding-top: 80px;"
-    >
-      <input
-        class="input-box input-text"
-        name="tin"
-        type="text"
-        placeholder="Enter ticket No." [(ngModel)]="ct.ticketNo"
-      />
-      <input
-        class="input-box input-text"
-        name="email"
-        type="text"
-        placeholder="Enter Email"
-        [(ngModel)]="ct.email"
-      />
-    </div>
-
-    <div > <button class="button-comp-lbl bg-color-d84e55" type="submit" (click)='cancelTicket()'>Submit</button></div>
-      {{cancelTicketStatus}}
-  </div>
+<div class="container" style="background-image: url('/assets/bgBus.jpg');">
+  <div class="headerwidget">
+  <h2 class="header">
+      Cancel Your Ticket					  
+  </h2>
+  <div class="headerTitle">
+	  <div class="headcaption">
+	      Enter ticket details to cancel your ticket
+  	</div> 
+	<div class="tinheader">
+	    TICKET NUMBER
+	</div>
+	<div class="fl search-box1">
+      <div class="fl search-box">   
+        <input type="text" id="searchTicket" class="db label" placeholder="Enter ticket No." [(ngModel)]="ct.ticketNo"/>
+      </div>
+			<div class="emailheader">
+		    	E-MAIL
+	   	</div>
+			<div class="fl search-box">   
+          <input  class="db1 label" id="searchEmail" type="text" placeholder="Enter Email" [(ngModel)]="ct.email"/>
+	    </div>
+	</div>
+</div>
+<div class="ticketSubmit">
+                    <input type="submit" value="SEARCH" class="search_btn" id="ticketSearch" />
+ </div>
 </div>
