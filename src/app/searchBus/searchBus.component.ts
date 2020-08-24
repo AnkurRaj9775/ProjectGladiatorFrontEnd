@@ -9,7 +9,7 @@ import { BusDetailsService } from '../service/BusDetails.service';
   styleUrls: ['./searchBus.component.css']
 })
 export class SearchComponentComponent implements OnInit {
-
+  totalBus:number;
   details: BusDetails = new BusDetails();
   data: any;
   constructor(private busDetails: BusDetailsService) { }
@@ -28,6 +28,7 @@ export class SearchComponentComponent implements OnInit {
     console.log(this.details);
     this.busDetails.busDetails(this.details).subscribe(data => {
       this.data = data;
+      this.totalBus=data.length;
     })
   }
 

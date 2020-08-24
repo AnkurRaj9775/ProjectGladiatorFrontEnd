@@ -4,7 +4,7 @@
     <div class="w-30 fl">
       <span>
         <span class="w-60  ">
-         46 Buses
+          {{totalBus}} Buses 
         </span>
         found
       </span>
@@ -85,18 +85,4 @@
 </div> 
 
 
-<table  border="1" style="margin:0 auto">
-<tr *ngFor ="let cp of data" >
-    <td> {{cp.busId}} </td>   
-    <td> {{cp.busName}}</td>
-    <td> {{cp.busType}}</td>
-    <td> {{cp.departureTime}}</td>
-    <td> {{cp.arrivalTime}}</td>
-    <td> {{cp.duration}}</td>
-    <td> {{cp.fare}}</td>
-    <td> {{cp.totalSeatsAvailable}}</td>
-    <td>{{cp.totalSeats}}</td>
 
-</tr>
-</table>
-  -->
