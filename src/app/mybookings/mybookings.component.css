@@ -20,12 +20,12 @@ body {font-family: "Lato", sans-serif;}
 }
 
 .sidebar a:hover {
-  color: #f1f1f1;
+  color: #000000;
 }
 
 .main {
   margin-left: 300px; /* Same as the width of the sidenav */
-  padding: 0px 10px;
+  padding: 20px 30px;
   
 }
 
