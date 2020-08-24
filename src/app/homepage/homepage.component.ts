@@ -13,8 +13,9 @@ export class HomepageComponent implements OnInit {
   toCity: string;
   date : string;
 
-  
-  constructor() {}  
+
+  constructor() {
+  }  
 
   setValue(){
     sessionStorage.setItem('fromCity',this.fromCity);
@@ -23,6 +24,8 @@ export class HomepageComponent implements OnInit {
 
   }
   ngOnInit(): void {
+    let today = new Date().toISOString().split('T')[0];
+  document.getElementsByName("trip-start")[0].setAttribute('min', today);
     
   }
 }
