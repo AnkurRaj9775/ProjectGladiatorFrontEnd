@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -11,7 +12,11 @@ export class DashboardComponent implements OnInit {
   
   
   
-  constructor() { }
+  constructor(private router:Router) {
+    if(!sessionStorage.getItem('customerId')){
+      this.router.navigate(['loginCustomer']);
+    }
+   }
 
   toggle(){
     
