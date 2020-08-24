@@ -84,7 +84,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 300px;
+  width: 350px;
   padding-left: 20px;
   color: white;
   text-align: left;
@@ -139,10 +139,10 @@
 
 /* Add a red background color to navbar links on hover */
 .bus-booking__mb-dropdown:hover .bus-booking__mb {
-  background-color: rgb(175, 24, 24);
+  background-color:#d84f57;
 }
 .bus-booking__user-dropdown:hover .bus-booking__user {
-  background-color: rgb(175, 24, 24);
+  background-color: #d84f57;
 }
 
 /* Dropdown content (hidden by default) */
