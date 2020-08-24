@@ -8,7 +8,19 @@ import { Router } from '@angular/router';
 })
 export class MyprofileComponent implements OnInit {
 
-  //userName:string;
+  //status:boolean;
+
+  makeEditable(){
+
+    var contenteditable = document.getElementById('editable').contentEditable;
+ 
+    if(contenteditable == 'inherit' || contenteditable == 'false'){
+     document.getElementById('editable').contentEditable = 'true';
+    }else{
+     document.getElementById('txt1').contentEditable = 'false';
+    }
+    
+  }
 
   constructor(private router:Router) {
     if(!sessionStorage.getItem('customerId')){
