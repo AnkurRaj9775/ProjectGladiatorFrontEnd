@@ -104,15 +104,6 @@ button {
 
 
 
-  /* Footer */
-  .footer {
-    padding: 20px;
-    text-align: center;
-    background: #ddd;
-    margin-top: 20px;
-    width: 80%;
-    margin: auto;
-  }
   .new-signin-header {
     font-size: 19px;
     font-weight: 700;
