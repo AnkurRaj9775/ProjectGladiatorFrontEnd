@@ -1,46 +1,33 @@
-<div class="container" style="background-image: url('/assets/bgBus.jpg');">
-  <div class="headerwidget">
-    <h2 class="header">
+<div class="bg_bus" style="background-image: url('/assets/bgBus.jpg');">
+  <div class="about-card">
+    <h2 class="Red XCN">
       Cancel Your Ticket
     </h2>
 
-    <div class="headerTitle">
-      <div class="headcaption">
-        Enter ticket details to cancel your ticket
-      </div>
-      <div class="tinheader">
-        TICKET NUMBER
-      </div>
-      <div class="fl search-box1">
-        <span class="boxImage"> </span>
-        <input
-          type="text"
-          id="searchTicket"
-          class="db label"
-          placeholder="Enter ticket No."
-          [(ngModel)]="ct.ticketNo"
-        />
-
-        <div class="emailheader">
-          E-MAIL
-        </div>
-        <div class="fl search-box">
-          <div>
-            <input
-              class="db1 label"
-              id="searchEmail"
-              type="text"
-              placeholder="Enter Email"
-              [(ngModel)]="ct.email"
-            />
-            <div class="error-message-fixed"></div>
-          </div>
-        </div>
-        <div>      
-      </div>
+    <div
+      class="input component"
+      style="padding-left: 300px; padding-top: 80px;"
+    >
+      <input
+        class="input-box input-text"
+        name="tin"
+        type="text"
+        placeholder="Enter ticket No." [(ngModel)]="ct.ticketNo"
+      />
+      <input
+        class="input-box input-text"
+        name="email"
+        type="text"
+        placeholder="Enter Email"
+        [(ngModel)]="ct.email"
+      />
+    </div>
 
     <div > <button class="button-comp-lbl bg-color-d84e55" type="submit" (click)='cancelTicket()'>Submit</button></div>
-    
-      <div class="warning-error-container" *ngIf='cancelTicketStatus!=null' ><div class="warning-error" ><div><i class="icon-warning_failed icon font-size-32"></i></div><div class="message">  {{cancelTicketStatus}} </div><div class="cross-icon"><i class="icon-cross icon"></i></div></div></div>
+
+    <div class="warning-error-container" *ngIf='cancelTicketStatus!=null' ><div class="warning-error" ><div><i class="icon-warning_failed icon font-size-32"></i></div><div class="message">  {{cancelTicketStatus}} </div><div class="cross-icon"><i class="icon-cross icon"></i></div></div></div>
+
+
+
   </div>
 </div>

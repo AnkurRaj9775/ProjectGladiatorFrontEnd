@@ -5,9 +5,9 @@
     <div><img class="im" src="assets/forgot.jpg"  > </div>
   <p class="sign" align="center">FORGOT PASSWORD?</p>
   <form class="form1">
-    <input class="un " type="text" align="center" placeholder="Enter Username">
-    <button class="submit" align="center">Reset My Password</button>
-    <button class="cancel" align="center">Cancel</button>
+    <input class="un " type="text" align="center" placeholder="Enter CustomerID" [(ngModel)]='forgot.customerId'>
+    <button class="submit" align="center" (click)='forgotPass()'>Reset My Password</button>
+    <button class="cancel" align="center" >Cancel</button>
   </form>    
 </div>
 </div>
