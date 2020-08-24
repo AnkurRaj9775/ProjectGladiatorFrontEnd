@@ -11,7 +11,7 @@ import { BusDetailsService } from '../service/BusDetails.service';
 export class SearchComponentComponent implements OnInit {
 
   details : BusDetails = new BusDetails();
-
+  data: any;
   constructor(private busDetails: BusDetailsService) { }
      
   ngOnInit(): void {
@@ -21,7 +21,7 @@ export class SearchComponentComponent implements OnInit {
 
 
     this.busDetails.busDetails(this.details).subscribe(data=>{
-      
+
     })
   }
   
