@@ -5,58 +5,15 @@ body {
 .sidebar {
   height: 100%;
   width: 220px;
-  position:fixed;  
-  top: 10;
-  background-color: rgb(224, 224, 224);
-  padding-top: 16px;
-}
-
-.sidebar a {
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 20px;
-  color: rgb(94, 83, 83);
-  display: block;
-}
-
-.sidebar a:hover {
-  color: #f1f1f1;
-}
-
-.bus__dashboard-main {
-  /* Same as the width of the sidenav */
-  padding: 0px 10px;
-  width: 100%;
-  box-sizing: border-box;
-  min-height: calc(100% - 80px);
-}
-
-.bus__dashboard {
-  width: calc(100% - 220px);
-  height: calc(100vh - 140px);
-  position: relative;
-  left: 220px;
-
-}
-
-@media screen and (max-height: 450px) {
-  .sidebar {padding-top: 15px;}
-  .sidebar a {font-size: 18px;}
-}
-
-.bus_sideBar{
-  margin-bottom: 40px;
-
-}body {font-family: "Lato", sans-serif;}
-
-.sidebar {
-  height: 100%;
-  width: 220px;
   position: fixed;
   top: 10;
   background-color: rgb(224, 224, 224);
-  overflow-x: hidden;
   padding-top: 16px;
+}
+
+.main {
+  margin-left: 300px; /* Same as the width of the sidenav */
+  padding: 20px 30px; 
 }
 
 .sidebar a {
@@ -71,8 +28,10 @@ body {
   color: #000000;
 }
 
-.main {
-  margin-left: 300px; /* Same as the width of the sidenav */
-  padding: 20px 30px;
-  
+.bus__dashboard {
+  width: calc(100% - 220px);
+  height: calc(100vh - 140px);
+  position: relative;
+  left: 220px;
+
 }

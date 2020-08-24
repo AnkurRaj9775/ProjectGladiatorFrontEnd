@@ -6,7 +6,6 @@ body {font-family: "Lato", sans-serif;}
   position: fixed;
   top: 10;
   background-color: rgb(224, 224, 224);
-  overflow-x: hidden;
   padding-top: 16px;
 }
 
@@ -53,11 +52,11 @@ button {
   outline: 0;
   display: inline-block;
   padding: 8px;
-  color: white;
-  background-color: #000;
+  color: rgb(0, 0, 0);
+  background-color: rgb(43, 214, 0);
   text-align: center;
   cursor: pointer;
-  width: 100%;
+  width: 30%;
   font-size: 18px;
 }
 
