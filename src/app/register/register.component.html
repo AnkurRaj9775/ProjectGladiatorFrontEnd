@@ -8,38 +8,37 @@
       <form (ngSubmit)="registerUser()">
 
         <input type="text" placeholder="Enter Your Name" name="userFirstName" (keypress)='isAName($event)'
-      [(ngModel)]="customer.name" required>
+          [(ngModel)]="customer.name" required>
 
-      <input type="email" name="userEmail" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{1,3})+$"
-      placeholder="Email" required [(ngModel)]="customer.email">
+        <input type="email" name="userEmail" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{1,3})+$" placeholder="Email"
+          required [(ngModel)]="customer.email">
 
-      <input type="password" name="password" placeholder="Password" ngModel minlength="8"
-      pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*]).{8,15}$" [(ngModel)]='customer.password'
-      required>
+        <input type="password" name="password" placeholder="Password" ngModel minlength="8"
+          pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*]).{8,15}$" [(ngModel)]='customer.password'
+          required>
 
-      <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password"
-      required>
-
-
-      <input type="text" placeholder="Mobile" name="userMobile" id="userMobile"
-      (keypress)='isNumber($event,"userMobile",10)' (keyup)='manageMobile("userMobile")' value="" minlength="11"
-       required [(ngModel)]="customer.contact">
+        <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" required>
 
 
-    <span>Gender</span>
-    <input type="radio" value="male" name="gender" required ng-model="gender" [(ngModel)]="customer.gender"> Male
-    <input type="radio" value="female" name="gender" required ng-model="gender" [(ngModel)]="customer.gender">Female
-    <input type="radio" value="Other" name="gender" required ng-model="gender" [(ngModel)]="customer.gender">Other
+        <input type="text" placeholder="Mobile" name="userMobile" id="userMobile"
+          (keypress)='isNumber($event,"userMobile",10)' (keyup)='manageMobile("userMobile")' value="" minlength="11"
+          required [(ngModel)]="customer.contact">
 
 
-    <button type="submit">Sign Up</button>
+        <span>Gender</span>
+        <input type="radio" value="male" name="gender" required ng-model="gender" [(ngModel)]="customer.gender"> Male
+        <input type="radio" value="female" name="gender" required ng-model="gender" [(ngModel)]="customer.gender">Female
+        <input type="radio" value="Other" name="gender" required ng-model="gender" [(ngModel)]="customer.gender">Other
+
+
+        <button type="submit">Sign Up</button>
 
 
       </form>
-      
-            
-        
-     
+
+
+
+
       <!-- <div align="center" *ngIf='!registerStatus' class="status_false" > This email is already registered with us!</div>
       <div align="center" *ngIf='registerStatus' class="status_true" > Resgistered Successfully. Please Check your mail !</div> -->
     </div>
@@ -65,7 +64,7 @@
     <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password"
       required>
     <!-- <div *ngIf="!confirmPassword()" style="color: red"> {{errorMsg}}</div> -->
-    <!-- <input type="text" placeholder="Mobile" name="userMobile" id="userMobile"
+<!-- <input type="text" placeholder="Mobile" name="userMobile" id="userMobile"
       (keypress)='isNumber($event,"userMobile",10)' (keyup)='manageMobile("userMobile")' value="" minlength="11"
       ngModel required [(ngModel)]="customer.contact">
     <div class="error">Invalid Mobile Number</div>

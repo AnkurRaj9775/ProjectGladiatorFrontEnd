@@ -7,7 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyprofileComponent implements OnInit {
 
-  //userName:string;
+  //status:boolean;
+
+  makeEditable(){
+
+    var contenteditable = document.getElementById('editable').contentEditable;
+ 
+    if(contenteditable == 'inherit' || contenteditable == 'false'){
+     document.getElementById('editable').contentEditable = 'true';
+    }else{
+     document.getElementById('txt1').contentEditable = 'false';
+    }
+    
+  }
 
   constructor() { }
 
