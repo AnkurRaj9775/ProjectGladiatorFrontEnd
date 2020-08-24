@@ -256,6 +256,8 @@ button, input, optgroup, select, textarea {
     border: 1px solid #ddd;
     margin-bottom: 20px;
     margin-top: 50px;
+    margin-left:50px;
+    padding-left:80px;
 }
 
 .img2_Hero {

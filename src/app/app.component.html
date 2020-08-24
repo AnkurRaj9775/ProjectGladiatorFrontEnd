@@ -18,9 +18,9 @@
         <a class="bus-booking__contact" [routerLink]="['/contact']"
           >Contact Us</a
         >
-        <a class="bus-booking__dashboard" [routerLink]="['/dashboard']"
-          >Dashboard</a
-        >
+        <a class="bus-booking__dashboard" [routerLink]="['/homeLink']"
+          >Home</a
+        > 
       </li>
     </ul>
     <ul>
@@ -42,9 +42,43 @@
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="bus-booking__mb-options">
-            <a class="bus-booking__mb-list" [routerLink]="['/']">Show My Ticket</a>
+            <a class="bus-booking__mb-list" [routerLink]="['/showMyTicket']">Show My Ticket</a>
             <a class="bus-booking__mb-list" [routerLink]="['/cancellation']">Cancel</a>
             <a class="bus-booking__mb-list" [routerLink]="['/reschedule']">Reschedule</a>
+          </div>
+        </div>
+
+        <div class="bus-booking__user-dropdown">
+          <div class="bus-booking__user">
+            <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                  
+            <i class="fa fa-caret-down"></i>
+          </div>
+
+          <div class="bus-booking__user-options">
+            <ul class="config-list">
+              <li class="bus-booking__user-list" [routerLink]="['/myprofile']">
+                My Profile
+              </li>
+              <li class="bus-booking__user-list" [routerLink]="['/mybookings']">
+                My Bookings
+              </li>
+              <li
+                class="bus-booking__user-list"
+                [routerLink]="['/changepassword']"
+              >
+                Change Password
+              </li>
+              <li class="bus-booking__user-list" [routerLink]="['/wallet']">
+                Wallet
+              </li>
+              <li
+              class="bus-booking__user-list" 
+                [routerLink]="['/homeLink']"
+              >
+                Sign Out
+              </li>
+            </ul>
           </div>
         </div>
       </li>
@@ -60,5 +94,3 @@
     <p class="footer__text">© 2020 EcoBus All rights reserved</p>
   </div>
 </div>
-<!-- </body>
-</html> -->
