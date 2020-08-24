@@ -23,20 +23,12 @@ body {
   color: #f1f1f1;
 }
 
-.bus__dashboard-main {
-  /* Same as the width of the sidenav */
-  padding: 0px 10px;
-  width: 100%;
-  box-sizing: border-box;
-  min-height: calc(100% - 80px);
-}
+
 
 .bus__dashboard {
   width: calc(100% - 220px);
   height: calc(100vh - 140px);
   position: relative;
-  left: 220px;
-
 }
 
 @media screen and (max-height: 450px) {

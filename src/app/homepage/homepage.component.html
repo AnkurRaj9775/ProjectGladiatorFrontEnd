@@ -1,149 +1,144 @@
-<div class="bus-booking__container">
-  <div class="bus-booking__search-wrapper">
-    <div class="bus-booking__navigation">
-      <ul>
-        <li class="bus-booking__nav-contact">
-          <a class="bus-booking__about" [routerLink]="['/about']">About</a>
-          <a class="bus-booking__terms" [routerLink]="['/terms']"
-            >Terms Of Use</a
-          >
-          <a class="bus-booking__contact" [routerLink]="['/contact-us']"
-            >Contact Us</a
-          >
-          <a class="bus-booking__dashboard" [routerLink]="['/dashboard']"
-            >Dashboard</a
-          >
-        </li>
-      </ul>
-      <ul>
-        <li class="bus-booking__nav-signin">
-          <span
-            >Already a member?
-            <a class="bus-booking__login" [routerLink]="['/login']"> Sign in</a>
-          </span>
-          <a class="bus-booking__register" [routerLink]="['/register']"
-            >Sign Up</a
-          >
-          <div class="bus-booking__mb-dropdown">
-            <!---dropdown-->
-            <button class="bus-booking__mb">
-              <!--manageHeaderLbl-->
-              Manage Booking
-              <i class="fa fa-caret-down"></i>
-            </button>
+<div class="bus-booking__homepage">
+  <ul>
+    <li class="bus-booking__nav-contact">
+      <a class="bus-booking__about" [routerLink]="['/about']">About</a>
+      <a class="bus-booking__terms" [routerLink]="['/terms']">Terms Of Use</a>
+      <a class="bus-booking__contact" [routerLink]="['/contact']">Contact Us</a>
+      <a class="bus-booking__dashboard" [routerLink]="['/dashboard']"
+      >Dashboard</a
+    >
+    </li>
+  </ul>
+   <ul>
+    <li class="bus-booking__nav-signin">
+      <span
+        >Already a member?
+        <a class="bus-booking__login" [routerLink]="['/login']"> Sign in</a>
+      </span>
+      <a class="bus-booking__register" [routerLink]="['/register']">Sign Up</a>
 
-            <div class="bus-booking__mb-options">
-              <!--dropdownoptions-->
-              <a class="bus-booking__mb-list" [routerLink]="['/cancellation']"
-                >Cancel</a
-              >
-              <a class="bus-booking__mb-list" [routerLink]="['/reschedule']"
-                >Reschedule</a
-              >
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
-    <div id="search_div" class="bus-booking__bg">
-      <section id="search">
-        <div class="clearfix search-wrap">
-          <div class="fl search-box clearfix">
-            <span class="fl flaticon-urban icon"> </span>
+      <div class="bus-booking__mb-dropdown">
+        <!---dropdown-->
+        <button class="bus-booking__mb">
+          <!--manageHeaderLbl-->
+          Manage Booking
+          <i class="fa fa-caret-down"></i>
+        </button>
 
-            <div>
-              <input
-                type="text"
-                id="src"
-                class="db"
-                tabindex="1"
-                autocomplete="off"
-                placeholder="FROM"
+        <div class="bus-booking__mb-options">
+          <!--dropdownoptions-->
+          <a class="bus-booking__mb-list" [routerLink]="['/cancellation']"
+          >Cancel</a
+        >
+        <a class="bus-booking__mb-list" [routerLink]="['/reschedule']"
+          >Reschedule</a
+        >
+        </div>
+      </div>
+    </li>
+  </ul>
+</div>
+<div
+  id="search_div"
+  class="bus-booking__bg"
+  style="background-image: url('/assets/bgimage.jpg');"
+>
+  <section id="search">
+    <div class="clearfix search-wrap">
+      <div class="fl search-box clearfix">
+        <span class="fl flaticon-urban icon"> </span>
+        <div>
+          <input
+            type="text"
+            id="src"
+            class="db"
+            data-message="Please enter a source city"
+            tabindex="1"
+            autocomplete="off"
+            placeholder="FROM"
                 [(ngModel)]="fromCity"
-              />
-             
-            </div>
+          />      
           </div>
-          <div class="fl search-box clearfix">
-            <span class="fl flaticon-urban icon"> </span>
-            <div>
-              <input
-                type="text"
-                id="dest"
-                class="db"
-                tabindex="2"
-                autocomplete="off"
-                placeholder="TO"
+      </div>
+      <!-- <span class="flaticon-double-arrow clearfix"  id="togglebtn" > </span> -->
+      <div class="fl search-box clearfix">
+        <span class="fl flaticon-urban icon"> </span>
+        <div>
+          <input
+            type="text"
+            id="dest"
+            class="db"
+            data-message="Please enter a destination city"
+            tabindex="2"
+            autocomplete="off"
+            placeholder="TO"
                 [(ngModel)]="toCity"
-              />
-              
-            </div>
-          </div>
-          <div class="fl search-box date-box flaticon-005-calendar">
-            <span class="fl flaticon-005-calendar icon"> </span>
-            <div class="calendar">
-              <label for="onward_cal" class="db text-trans-uc">Date</label>
-              <input
-                type="date"
-                id="start"
-                name="trip-start"
-                value="---"
-                [(ngModel)]="date"
-              />
-            </div>
-          </div>
-          <button
-            id="search_btn"
-            class="fl button" (click)='setValue()'
-            [routerLink]="['/searchBus']"
-          >
-            Search Buses
-          </button>
+          />
+       </div>
+      </div>
+      <div class="fl search-box date-box flaticon-005-calendar">
+        <span class="fl flaticon-005-calendar icon"> </span>
+        <div class="calendar">
+          <label for="onward_cal" class="db text-trans-uc">Date</label>
+          <input
+            type="date"
+            id="start"
+            name="trip-start"
+            value="---"          
+            [(ngModel)]="date"
+          />
         </div>
-      </section>
+      </div>
+      <button
+        id="search_btn"
+        class="fl button" (click)='setValue()'
+        [routerLink]="['/searchBus']"
+      >
+        Search Buses
+      </button>
     </div>
-  </div>
-  <div class="main-body">
-    <div class="HeroMain">
-      <div class="header">
-        <div class="img2_Hero"></div>
-        <span class="fl">
-          <div class="Title_hero">Introducing Safety&#x2B;</div>
-          <p class="subtext_hero">
-            Opt to Travel Safe with EcoBus
-          </p>
-        </span>
-        <span class="fr"> </span>
-      </div>
-      <div class="subHeader_hero">
-        <span class="img3_hero"></span>
-        <span class="Herotext1"> Look for buses with </span>
-        <span class="img4_Hero"></span>
-        <span class="text"> tag while booking your journey, </span>
-      </div>
+  </section>
+</div>
 
-      <div class="info_hero">
-        <div class="titl_hero">Sanitized Bus</div>
-        <div class="value_hero"></div>
-        <div class="text_hero">
-          All Safety&#x2B; buses are sanitized and disinfected before and after
-          every trip.
+<div class="main-body">
+  <div class="HeroMain">
+    <div class="header">
+      <div class="img2_Hero"></div>
+      <span class="fl">
+        <div class="Title_hero">Introducing Safety&#x2B;</div>
+        <div class="subtext_hero">
+          Opt to Travel Safe with EcoBus
         </div>
+      </span>
+      <span class="fr"> </span>
+    </div>
+    <div class="subHeader_hero">
+      <span class="img3_hero"></span>
+      <span class="Herotext1"> Look for buses with </span>
+      <span class="img4_Hero"></span>
+      <span class="text"> tag while booking your journey, </span>
+    </div>
+    <div class="info_hero">
+      <div class="titl_hero">Sanitized Bus</div>
+      <div class="value_hero"></div>
+      <div class="text_hero">
+        All Safety&#x2B; buses are sanitized and disinfected before and after
+        every trip.
       </div>
-      <div class="info_hero2">
-        <div class="titl_hero">Mandatory masks</div>
-        <div class="value_hero"></div>
-        <div class="text_hero">
-          Proper masks are mandatory for all passengers and bus staff.
-        </div>
+    </div>
+    <div class="info_hero2">
+      <div class="titl_hero">Mandatory masks</div>
+      <div class="value_hero"></div>
+      <div class="text_hero">
+        Proper masks are mandatory for all passengers and bus staff.
       </div>
-      <div class="info_hero2">
-        <div class="titl_hero">Thermal Screening</div>
-        <div class="value_hero"></div>
-        <div class="text_hero">
-          All passengers will undergo thermal screening. Temperature checks for
-          bus drivers and service staff are done before every trip.
-        </div>
+    </div>
+    <div class="info_hero2">
+      <div class="titl_hero">Thermal Screening</div>
+      <div class="value_hero"></div>
+      <div class="text_hero">
+        All passengers will undergo thermal screening. Temperature checks for
+        bus drivers and service staff are done before every trip.
       </div>
     </div>
   </div>
