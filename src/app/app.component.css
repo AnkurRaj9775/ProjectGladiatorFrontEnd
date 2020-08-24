@@ -66,6 +66,89 @@
   padding-left: 30px;
 }
 
+
+.bus-booking__homepage {         /*navigation bar at top*/
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #d46d74;
+  font-size: 16px;
+  width: 100%;
+  margin: 0;
+  padding: 15px;
+  flex-direction: row;
+}
+
+.bus-booking__nav-contact {/* css for left nav card*/
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 400px;
+  padding-left: 20px;
+  color: white;
+  text-align: left;
+}
+
+.bus-booking__nav-signin {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 500px;
+  color: white;
+  padding-right: 30px;
+}
+
+.bus-booking__mb-options {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 140px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+.bus-booking__mb-list {
+  padding: 10px;
+  color: black;
+  text-align: left;
+  display: block;
+}
+.bus-booking__mb-dropdown {
+  /* float: right; */
+  position: relative;
+  min-width: 150px;
+}
+
+.bus-booking__mb {
+  background-color: inherit;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  margin: 0;
+  width: 100%;
+}
+
+/* Add a red background color to navbar links on hover */
+.bus-booking__mb-dropdown:hover .bus-booking__mb {
+  background-color: rgb(175, 24, 24);
+}
+
+/* Dropdown content (hidden by default) */
+
+/* Add a grey background color to dropdown links on hover */
+.bus-booking__mb-options a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.bus-booking__mb-dropdown:hover .bus-booking__mb-options {
+  display: block;
+}
+
 .footer {
   padding: 20px 0;
   bottom: 0;
