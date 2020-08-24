@@ -17,12 +17,7 @@ export class ChangepasswordComponent implements OnInit {
   changePasswordFunction(){
     this.password.customerId=Number(sessionStorage.getItem('customerId'));
     this.changePassword.changePassword(this.password).subscribe(data=>{
-      if(data.status){
-        this.message="Password updated sucessfully !";
-      }
-      else{
-        this.message="Could not update password.";
-      }
+     this.message=data.status;
     })
   }
 

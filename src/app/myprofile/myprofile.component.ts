@@ -15,7 +15,7 @@ export class MyprofileComponent implements OnInit {
     var contenteditable = document.getElementById('editable').contentEditable;
  
     if(contenteditable == 'inherit' || contenteditable == 'false'){
-     document.getElementById('editable').contentEditable = 'true';
+       document.getElementById('editable').contentEditable = 'true';
     }else{
      document.getElementById('txt1').contentEditable = 'false';
     }

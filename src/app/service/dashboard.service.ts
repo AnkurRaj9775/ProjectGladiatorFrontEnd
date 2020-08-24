@@ -22,6 +22,6 @@ export class DashboardService {
   }
 
   changePassword(changePassword:ChangePassword):Observable<any>{
-    return this.http.post("",changePassword);
+    return this.http.post("http://localhost:8080/changePassword",changePassword);
   }
 }
