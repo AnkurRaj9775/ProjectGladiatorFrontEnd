@@ -78,52 +78,8 @@ input.db1 {
 .ticketSubmit {
     display: inline-block;
     margin-top: 26px;
-    margin-left: 24em;
+    margin-left: 20em;
 }
-
-/* 
-  
-  
-*, :after, :before {
-    box-sizing: border-box;
-}
-.headerwidget {
-    text-align: center;
-   margin-top: 0px;
-}
-
-
-
-#ticketInput {
-    display: flex;
-    flex-direction: row;
-    margin-left: 15em;
-    margin-top:0px;
-    width: 100px;
-}
-body {
-    color: #4a4a4a;
-    height: 100%;
-    overflow-y: scroll;
-    word-break: break-word;
-    font-family: Montserrat;
-    font-size: 14px;
-    font-weight: 400;
-}
-
-
-.boxImage, .fl {
-    float: left;
-}
-.boxImage {
-    margin-top: 12px;
-    margin-left: 8px;
-    margin-right: 8px;
-}
-.boxImage, .fl {
-    float: left;
-}
-
 
 
 input {
@@ -134,31 +90,7 @@ button, input, optgroup, select, textarea {
     font: inherit;
     margin: 0;
 }
-*, :after, :before {
-    box-sizing: border-box;
-}
-user agent stylesheet
-input[type="text" i] {
-    padding: 1px 2px;
-}
-.error-message-fixed {
-    color: #d74f57;
-}
-.error-message-fixed, .errorMessageFixed {
-    display: block;
-    font-size: 11px;
-    color: red;
-    margin-top: 2px;
-    text-align: right;
-    word-break: keep-all;
-}
-.error-message-fixed {
-    height: 17px;
-}
-.emailInput {
-    display: inline-block;
-    float: left;
-    margin-left: -65px;
-}
 
- */
+
+
+

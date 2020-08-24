@@ -122,6 +122,10 @@
   min-width: 150px;
 }
 
+.bus-booking__signin-dropdown{
+  position: relative;
+  min-width: 150px;
+}
 .bus-booking__mb {
   background-color: inherit;
   font-size: 16px;
@@ -131,6 +135,8 @@
   margin: 0;
   width: 100%;
 }
+
+
 
 /* Add a red background color to navbar links on hover */
 .bus-booking__mb-dropdown:hover .bus-booking__mb {
