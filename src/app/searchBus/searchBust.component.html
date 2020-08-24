@@ -1,10 +1,10 @@
-<!-- <div class="searchBus-content">
+ <div class="searchBus-content">
 <div class="searchBus-header">
   <div class="sort-sec clearfix">
     <div class="w-30 fl">
       <span>
         <span class="w-60  ">
-         {{46}} Buses
+         46 Buses
         </span>
         found
       </span>
@@ -26,38 +26,32 @@
     </div>
   </div>
 </div>
-<div class="searchBus-card">
+<div class="searchBus-card" *ngFor ="let cp of data" >
   <ul class="bus-items" style="list-style-type: none;">
     <div>
       <li id="11994669" class="row-sec clearfix">
         <div class="clearfix row-one">
           <div class="p-right-10 w-30 fl">
             <div class="travels lh-24 f-bold d-color">
-             {{RC_travels}}
+              {{cp.busName}}
             </div>
             <div class="bus-type   m-top-16 l-color">
-              {{A/C_Seater_/_Sleeper_(2+1)}}
+              {{cp.busType}}
             </div>
           </div>
           <div class="p-right-10 w-11 fl">
             <div class="dp-time f-19 d-color f-bold">
-              {{2359}}
-            </div>
-            <div
-              class="dp-loc l-color w-wrap   m-top-42"
-              title="Dhaula Kuan"
-            >
-              {{Dhaula_Kuan}}
-            </div>
+              {{cp.departureTime}}
+            </div>            
           </div>
           <div class=" p-right-10 w-11 fl">
-            <div class="dur l-color lh-24">05h 22m</div>
+            <div class="dur l-color lh-24">
+              {{cp.duration}}
+            </div>
           </div>
           <div class="p-right-10 w-11 fl">
-            <div class="bp-time f-19 d-color disp-Inline">05:21</div>
-            <div class="next-day-dp-lbl m-top-16">23-Aug</div>
-            <div class="bp-loc l-color w-wrap   m-top-8" >
-             {{Sindhi_Camp}}
+            <div class="bp-time f-19 d-color disp-Inline">
+              {{cp.arrivalTime}}
             </div>
           </div>
 
@@ -66,32 +60,32 @@
               <div class="starts">Starts from</div>
               <div class="fare d-block">
                 INR <span class="f-19 f-bold">
-                  {{380}}</span>
+                  {{cp.fare}}</span>
               </div>
             </div>
           </div>
-        <div class="w-15 fl">          
-            {{37}}
+        <div class="w-15 fl">  
+          {{cp.totalSeats}} ,        
+          {{cp.totalSeatsAvailable}}
             <span class="l-color">
               Seats available
             </span>
-          
-          
+                    
         </div>
         <div class="clearfix m-top-16">
-          <div class="button view-seats fr">
+          <button class="button view-seats fr" >
             View Seats
-          </div>
+          </button>
         </div>
       </div>
       </li>
     </div>
   </ul>
 </div>
-</div> -->
+</div> 
 
 
-<table  border="1" >
+<!-- <table  border="1" >
 <tr *ngFor ="let cp of data" >
     <td> {{cp.busId}} </td>   
     <td> {{cp.busName}}</td>
@@ -105,4 +99,4 @@
 
 </tr>
 </table>
- 
+  -->
