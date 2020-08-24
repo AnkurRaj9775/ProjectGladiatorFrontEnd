@@ -6,12 +6,17 @@
   left: 450px;
   background-color: #fff;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: auto;
+  margin-right: auto; */
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+   border-radius:45px;
+  margin: auto;
+  margin-right: 75px; 
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 .XCN {
@@ -25,30 +30,10 @@ h2 {
   text-align: center;
   padding-top: 25px;
 }
-*,
-:after,
-:before {
-  box-sizing: border-box;
-}
-h3 {
-  display: block;
-  font-size: 1.17em;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  font-weight: bold;
-  background-color: #fff;
-}
 
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
-
-.container {
-  padding: 2px 16px;
-}
-
 .western,
 ol li {
   text-align: justify;
@@ -62,9 +47,7 @@ ol li {
   background: #fff;
   line-height: 1.5;
 }
-p {
-  margin: 1% 0;
-}
+
 *,
 :after,
 :before {
@@ -72,6 +55,7 @@ p {
 }
 
 p {
+  margin: 1% 0;
   display: block;
   margin-block-start: 1em;
   margin-block-end: 1em;
