@@ -20,6 +20,7 @@ export class HomepageComponent implements OnInit {
     sessionStorage.setItem('fromCity',this.fromCity);
     sessionStorage.setItem('toCity',this.toCity);
     sessionStorage.setItem('date',this.date);
+
   }
   ngOnInit(): void {
     
