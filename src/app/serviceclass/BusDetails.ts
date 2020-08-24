@@ -1,6 +1,6 @@
 export class BusDetails{
     fromCity: string;
     toCity: string;
-    date :string;
+    dateOfJourney :string;
     day: string;
 }

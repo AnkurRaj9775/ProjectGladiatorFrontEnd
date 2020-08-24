@@ -23,9 +23,9 @@ export class SearchComponentComponent implements OnInit {
     this.details.fromCity = sessionStorage.getItem('fromCity');
     this.details.toCity = sessionStorage.getItem('toCity');
     this.details.day=day;
-    this.details.date = sessionStorage.getItem('date');
-    
-
+    this.details.dateOfJourney = sessionStorage.getItem('date');
+    console.log(this.details.dateOfJourney);
+    console.log(this.details);
     this.busDetails.busDetails(this.details).subscribe(data => {
       this.data = data;
     })
