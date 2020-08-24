@@ -26,8 +26,8 @@ export class WalletComponent implements OnInit {
 
     this.walletAmount.customerId = Number(sessionStorage.getItem('customerId'));
     this.walletService.showWalletBalance(this.walletAmount).subscribe(data => {
-      this.walletBalance = data.walletAmount;
-
+      this.walletBalance = data.amount;
+    
     }
     )
   }
