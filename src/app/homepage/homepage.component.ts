@@ -12,13 +12,16 @@ export class HomepageComponent implements OnInit {
   fromCity: string;
   toCity: string;
   date : string;
-
+  
   
   constructor() {}  
 
-  ngOnInit(): void {
+  setValue(){
     sessionStorage.setItem('fromCity',this.fromCity);
     sessionStorage.setItem('toCity',this.toCity);
     sessionStorage.setItem('date',this.date);
+  }
+  ngOnInit(): void {
+    
   }
 }
