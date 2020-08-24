@@ -1,13 +1,25 @@
+<div class="card">
 
-<div class="card" >
+  <div class="main">
 
-<div class="main">
-    <div><img class="im" src="assets/forgot.jpg"  > </div>
-  <p class="sign" align="center">FORGOT PASSWORD?</p>
-  <form class="form1">
-    <input class="un " type="text" align="center" placeholder="Enter CustomerID" [(ngModel)]='forgot.customerId'>
-    <button class="submit" align="center" (click)='forgotPass()'>Reset My Password</button>
-    <button class="cancel" align="center" >Cancel</button>
-  </form>    
-</div>
+    <div><img class="im" src="assets/forgot.jpg"> </div>
+    <p class="sign" align="center">FORGOT PASSWORD?</p>
+    <form class="form1"  (ngSubmit)='forgotPass()'>
+      <input class="un " type="text" align="center" placeholder="Enter CustomerID" [(ngModel)]='forgot.customerId' name="customerid" autocomplete="off">
+      <button class="submit" align="center" >Reset My Password</button>
+      <a [routerLink]="['/homeLink']"> <button class="cancel" align="center" >Cancel</button></a> 
+    </form>
+    <div *ngIf='!errorstatus' class="status" align="center"> Invalid CustomerID</div>
+  </div>
+  <div class="main1" *ngIf='clientstatus'>
+
+    <form class="form1" (ngSubmit)='resetPass()'>
+      <input class="un " type="password" align="center" placeholder="Enter Password" [(ngModel)]='resetpass.password' name="psw"minlength="8"
+      pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*]).{8,15}$" required>
+      <input class="un " type="password" align="center" placeholder="Confirm Password" >
+      <button class="submit1" align="center" >submit</button>
+      <button class="cancel1" align="center" (click)='cancel()'>Cancel</button>
+    </form>
+    <div *ngIf='status' class="status" align="center"> Password changed successfully!!</div>
+  </div>
 </div>
