@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-myprofile',
@@ -7,9 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyprofileComponent implements OnInit {
 
-  //userName:string;
+  //status:boolean;
 
-  constructor() { }
+  makeEditable(){
+
+    var contenteditable = document.getElementById('editable').contentEditable;
+ 
+    if(contenteditable == 'inherit' || contenteditable == 'false'){
+     document.getElementById('editable').contentEditable = 'true';
+    }else{
+     document.getElementById('txt1').contentEditable = 'false';
+    }
+    
+  }
+
+  constructor(private router:Router) {
+    if(!sessionStorage.getItem('customerId')){
+      this.router.navigate(['loginCustomer']);
+    }
+   }
 
   ngOnInit(): void {
   }
