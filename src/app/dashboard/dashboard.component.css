@@ -31,7 +31,6 @@ body {
 .bus__dashboard {
   width: calc(100% - 220px);
   height: calc(100vh - 140px);
-  position: relative;
-  left: 220px;
+  position: fixed;
 
 }
