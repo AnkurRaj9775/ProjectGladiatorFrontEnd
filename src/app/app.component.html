@@ -1,3 +1,4 @@
+
 <div class="bus-booking__body">
   <div class="header">
     <div class="bus-booking__brand-logo">
@@ -8,6 +9,49 @@
     <div class="bus-booking__brand-name">
       <h1 class="bus-booking__header">EcoBus.com</h1>
     </div>
+    
+
+  </div>
+
+  <div class="bus-booking__homepage">
+    <ul>
+      <li class="bus-booking__nav-contact">
+        <a class="bus-booking__about" [routerLink]="['/about']">About</a>
+        <a class="bus-booking__terms" [routerLink]="['/terms']">Terms Of Use</a>
+        <a class="bus-booking__contact" [routerLink]="['/contact']">Contact Us</a>
+        <a class="bus-booking__dashboard" [routerLink]="['/dashboard']"
+        >Dashboard</a
+      >
+      </li>
+    </ul>
+     <ul>
+      <li class="bus-booking__nav-signin">
+        <span
+          >Already a member?
+          <a class="bus-booking__login" [routerLink]="['/login']"> Sign in</a>
+        </span>
+        <a class="bus-booking__register" [routerLink]="['/register']">Sign Up</a>
+  
+        <div class="bus-booking__mb-dropdown">
+          <!---dropdown-->
+          <button class="bus-booking__mb">
+            <!--manageHeaderLbl-->
+            Manage Booking
+            <i class="fa fa-caret-down"></i>
+          </button>
+  
+          <div class="bus-booking__mb-options">
+            <!--dropdownoptions-->
+            <a class="bus-booking__mb-list" [routerLink]="['/cancellation']"
+            >Cancel</a
+          >
+          <a class="bus-booking__mb-list" [routerLink]="['/reschedule']"
+            >Reschedule</a
+          >
+          </div>
+        </div>
+      </li>
+    </ul>
   </div>
   <div class="app__row">
     <div class="main">

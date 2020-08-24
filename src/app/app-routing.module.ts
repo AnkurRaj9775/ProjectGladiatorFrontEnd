@@ -16,7 +16,11 @@ import { MybookingsComponent } from './mybookings/mybookings.component';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
 import { WalletComponent } from './wallet/wallet.component';
 
+
 const routes: Routes = [
+  {
+     path:'',component:HomepageComponent
+  },
   {
     path:'homeLink',component:HomepageComponent
   },
@@ -30,7 +34,7 @@ const routes: Routes = [
     path:'dashboard',component:DashboardComponent
   },
   {
-    path:'contact-us',component:ContactUsComponent
+    path:'contact',component:ContactUsComponent
   },
   {
     path:'login',component:LoginComponent
