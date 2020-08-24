@@ -12,7 +12,7 @@ export class HomepageComponent implements OnInit {
   fromCity: string;
   toCity: string;
   date : string;
-  
+
   
   constructor() {}  
 
