@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DashboardService } from '../service/dashboard.service';
 import { ChangePassword } from '../serviceclass/changePassword';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-changepassword',
@@ -12,7 +13,11 @@ export class ChangepasswordComponent implements OnInit {
   password:ChangePassword=new ChangePassword();
   message:string;
 
-  constructor(private changePassword:DashboardService) { }
+  constructor(private changePassword:DashboardService,private router:Router) { 
+    if(sessionStorage.getItem('customerId')==null){
+      this.router.navigate(['loginCustomer']);
+    }
+  }
 
   changePasswordFunction(){
     this.password.customerId=Number(sessionStorage.getItem('customerId'));

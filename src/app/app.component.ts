@@ -7,4 +7,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ProjectGladiator';
+loggedIn:boolean=true;
+constructor(){
+  console.log(sessionStorage.getItem('customerId'))
+  if(sessionStorage.getItem('customerId')!=null)
+  {
+    this.loggedIn=false;
+    console.log(this.loggedIn);
+  }
+}
+clearSession(){
+  sessionStorage.clear();
+}
+
+
+
+
+
 }

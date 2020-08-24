@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { WalletAmount } from '../serviceclass/walletAmount';
 import { addAmountToWallet } from '../serviceclass/addAmountToWallet';
 import { DashboardService } from '../service/dashboard.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -17,7 +18,11 @@ export class WalletComponent implements OnInit {
   amount:number;
   message:string;
 
-  constructor(private walletService: DashboardService) { }
+  constructor(private walletService: DashboardService,private router:Router) {
+    if(!sessionStorage.getItem('customerId')){
+      this.router.navigate(['loginCustomer']);
+    }
+  }
 
   //this.walletAmount.customerId=Number(sessionStorage.getItem('customerId'));   
   //console.log(this.walletAmount.customerId);
