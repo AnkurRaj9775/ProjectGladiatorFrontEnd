@@ -56,7 +56,7 @@ form.form1 {
   cursor: pointer;
 	border-radius: 5em;
 	color: #fff;
-	background: linear-gradient(to right, #9C27B0, #5a3461);
+	background: linear-gradient(to right, #e00808, #c92f2f);
 	border: 0;
 	padding-left: 40px;
 	padding-right: 40px;
@@ -96,7 +96,7 @@ button:disabled {
 
 .login_card{
 
-	height: 100%;
+	height: 500px;
 	background-image: url("/assets/bus-parked.jpg");
 	background-repeat: no-repeat;
 	background-size: cover; 
