@@ -3,10 +3,7 @@
   <div class="main">
     <div class="card">
       <img src="assets/Register.jpg" alt="Could not find image">
-      <div class="column">
-      <h2 class="new-signin-header">Sign up to avail exciting discounts and special offers!!!</h2>
-     
-      <form (ngSubmit)="registerUser()">
+      <form   #registerForm='ngForm' (ngSubmit)='registerUser(registerForm)' >
 
         <input type="text" placeholder="Enter Your Name" name="userFirstName" (keypress)='isAName($event)'
           [(ngModel)]="customer.name" required>

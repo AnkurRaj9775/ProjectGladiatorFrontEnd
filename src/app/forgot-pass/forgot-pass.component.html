@@ -5,7 +5,7 @@
     <div><img class="im" src="assets/forgot.jpg"> </div>
     <p class="sign" align="center">FORGOT PASSWORD?</p>
     <form class="form1"  (ngSubmit)='forgotPass()'>
-      <input class="un " type="text" align="center" placeholder="Enter CustomerID" [(ngModel)]='forgot.customerId' name="customerid" autocomplete="off">
+      <input class="un " type="text" align="center" placeholder="Enter CustomerID" [(ngModel)]='forgot.customerId' name="customerid" id="customerid" (keypress)='isNumber($event,"customerid",8)' autocomplete="off">
       <button class="submit" align="center" >Reset My Password</button>
       <a [routerLink]="['/homeLink']"> <button class="cancel" align="center" >Cancel</button></a> 
     </form>
@@ -13,13 +13,14 @@
   </div>
   <div class="main1" *ngIf='clientstatus'>
 
-    <form class="form1" (ngSubmit)='resetPass()'>
-      <input class="un " type="password" align="center" placeholder="Enter Password" [(ngModel)]='resetpass.password' name="psw"minlength="8"
-      pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*]).{8,15}$" required>
-      <input class="un " type="password" align="center" placeholder="Confirm Password" >
-      <button class="submit1" align="center" >submit</button>
+    <form class="form1" #forgotPassForm (ngSubmit)='resetPass(forgotPass)'>
+      <input class="un " type="password" align="center" placeholder="Enter New Password" [(ngModel)]='resetpass.password' name="psw" id="psw" minlength="8"
+      pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*]).{8,15}$" required  >
+      <input class="un " type="password" align="center" placeholder="Confirm Password" name="confirmpsw" id="confirmpsw" [(ngModel)]='confirmPass' required>
+      <div *ngIf='!confirmPassword();' align="center" style="color: red;">Please Enter Same Password</div>
+      <button class="submit1" align="center" [disabled]='!confirmPassword()'>submit</button>
       <button class="cancel1" align="center" (click)='cancel()'>Cancel</button>
     </form>
-    <div *ngIf='status' class="status" align="center"> Password changed successfully!!</div>
+    <div *ngIf='status' class="status" align="center" > Password changed successfully!!</div>
   </div>
 </div>

@@ -181,3 +181,21 @@ a {
 	font-family: 'Ubuntu', sans-serif;
 	font-weight: bold;
 }
+
+.error{
+    display: none;
+  }
+  input.ng-invalid.ng-touched{
+    border-color: red;
+  }
+  
+  input.ng-invalid.ng-touched +.error{
+   display: inline; 
+   color: red;
+  }
+
+  button:disabled {
+    /* styles when the element is disabled */
+	background-color: rgb(204, 23, 23);
+	opacity: 0.5;
+}
