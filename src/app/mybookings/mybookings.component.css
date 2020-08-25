@@ -30,7 +30,7 @@ body {font-family: "Lato", sans-serif;}
   height: 600px;
   position: relative;
   background-size: 100% 100%;
-  
+  z-index: -100;
 }
 
 
