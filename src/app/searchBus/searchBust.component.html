@@ -1,10 +1,10 @@
- <div class="searchBus-content">
-  <div class= "searchDetails">
-    <div class="w-1 fl">      
-      <a>FROM :      {{this.details.fromCity}}</a>  
+<div class="searchBus-content">
+  <div class="searchDetails">
+    <div class="w-1 fl">
+      <a>FROM : {{this.details.fromCity}}</a>
     </div>
     <div class="w-1 fl">
-      <a>TO :    {{this.details.toCity}}</a>
+      <a>TO : {{this.details.toCity}}</a>
     </div>
     <div class="w-1 fl">
       <a>DATE OF JOURNEY : {{this.details.dateOfJourney}}</a>
@@ -15,72 +15,69 @@
   <div class="searchBus-header">
     <div class="sort-sec clearfix">
       <div class="w-30 fl">
-          <span class="w-60  ">
-            {{totalBus}} Buses found
-          </span>
+        <span class="w-60  ">
+          {{totalBus}} Buses found
+        </span>
       </div>
-     
+
     </div>
   </div>
-  <div class="searchBus-card" *ngFor ="let cp of data" >
+  <div class="searchBus-card" *ngFor="let cp of data">
     <ul class="bus-items" style="list-style-type: none;">
       <div>
-        <li>           
+        <li>
           <div class="clearfix">
             <div class=" p-right-20 w-11 fl">
               <div class="dp-time f-19 d-color f-bold">
-                {{cp.departureTime}}                 
-              </div>            
+                {{cp.departureTime}}
+              </div>
             </div>
 
-            <div class="dp-time f-19 d-color f-bold">            
-              <i class="destination fa fa-map-marker"></i>              
-              {{this.details.fromCity}}             
-            </div> 
-           <span class="path">| </span>
+            <div class="dp-time f-19 d-color f-bold">
+              <i class="destination fa fa-map-marker"></i>
+              {{this.details.fromCity}}
+            </div>
+            <span class="path">| </span>
             <div class=" f-20 d-color disp-Inline">
-                <i class="transport fa fa-bus"></i>
-                {{cp.busName}},
-                {{cp.busType}} Seater   
+              <i class="transport fa fa-bus"></i>
+              {{cp.busName}},
+              {{cp.busType}} Seater
               <span class="durationPos">
                 Duration :
                 {{cp.duration}}
-              </span> 
-                <span class="farePos">
-                INR :  {{cp.fare}}
-              </span> 
+              </span>
+              <span class="farePos">
+                INR : {{cp.fare}}
+              </span>
               <span class="seatsPos">
                 Seats Available: {{cp.totalSeatsAvailable}}
               </span>
-     
-                           
-            </div>     
-            
-          <div class="path">| </div>
+
+
+            </div>
+
+            <div class="path">| </div>
             <div class="  p-right-20 w-11 fl">
-              <div class="dur lh-24">                
+              <div class="dur lh-24">
                 {{cp.arrivalTime}}
-                <i class="destination fa fa-map-marker"></i> 
-                 {{this.details.toCity}}
+                <i class="destination fa fa-map-marker"></i>
+                {{this.details.toCity}}
               </div>
             </div>
-        
 
 
-                 
-                      
 
-          <div class="clearfix m-top-16">
-            <button class="button view-seats fr" >
-              View Seats
-            </button>
+
+
+
+            <div class="clearfix m-top-16">
+              <button class="button view-seats fr">
+                View Seats
+              </button>
+            </div>
           </div>
-        </div>
         </li>
       </div>
     </ul>
   </div>
-</div> 
-
-
-
+</div>
