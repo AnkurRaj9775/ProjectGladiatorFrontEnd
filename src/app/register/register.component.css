@@ -9,6 +9,12 @@
     background: #f1f1f1;
   }
 
+  .row{
+    background-attachment: fixed;
+    background-size: cover;
+    height:100vh;
+  }
+
 .header{
     padding: 10px;
     text-align: center;
@@ -46,21 +52,49 @@
     margin: auto;
   }
 
- /* Add a card effect for articles */
- .card:before {
-    background-color: white;
-    padding: 20px;    
-    overflow: hidden;
-    height: 50px;
-    content: "";
-    display:flex;
-    clear: both;
-    margin-bottom: 20px;
-    
-  }
+ .registerCard{
+  width: 50%;
+  position: relative;
+  left: -150px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  padding-left: 150px;
+  padding-right: 50px;
+  padding-top:55px;
+  padding-bottom: 175px;
+  
+  display: block;
+
+ }
+
+ h2{
+  font-family: Apercu, sans-serif;
+     color:#d84f57;
+    font-size: 2em;
+    margin-block-start: 20px;    
+    margin-inline-start: -100px;  
+    font-weight: bold;
+ }
+
+ h3{
+  font-family: Apercu, sans-serif;
+  color:#d84f57;
+  font-weight: bold;
+  font-size: 20px;
+ }
+
   .column{
     float:right;
     width:50%;
+  }
+
+  .genderStyle{
+    padding-top: 20px;
+    padding-left:10px;
+  }
+
+  .genVal{
+    padding-right: 20px;
   }
 
   .cc{
@@ -95,7 +129,7 @@ button {
     background-color: rgb(139, 39, 0);
     color: white;
     padding: 14px 20px;
-    margin: 8px 0;
+    margin: 18px 0;
     border: none;
     cursor: pointer;
     width: 70%;

@@ -1,8 +1,9 @@
-<div class="row">
-
-  <div class="main">
-    <div class="card">
-      <img src="assets/Register.jpg" alt="Could not find image">
+<div class="row" style="background-image: url('/assets/bus_uk_london_wallpaper.jpg');"> 
+   <div class="main" ><!---row-->
+    
+    <div class="registerCard" > 
+      <h2>Get the full EcoBus experience</h2>
+      <h3>Sign Up for exciting offers!!!</h3>
       <form   #registerForm='ngForm' (ngSubmit)='registerUser(registerForm)' >
 
         <input type="text" placeholder="Enter Your Name" name="userFirstName" (keypress)='isAName($event)'
@@ -23,10 +24,10 @@
           required [(ngModel)]="customer.contact">
 
 
-        <div>Gender</div>
-        <input type="radio" value="male" name="gender" required ng-model="gender" [(ngModel)]="customer.gender"> Male
-        <input type="radio" value="female" name="gender" required ng-model="gender" [(ngModel)]="customer.gender">Female
-        <input type="radio" value="Other" name="gender" required ng-model="gender" [(ngModel)]="customer.gender">Other
+        <div class="genderStyle">Gender</div>
+        <input type="radio"  value="male" name="gender" required ng-model="gender" [(ngModel)]="customer.gender"> Male
+        <input type="radio"  value="female" name="gender" required ng-model="gender" [(ngModel)]="customer.gender">Female
+        <input type="radio"   value="Other" name="gender" required ng-model="gender" [(ngModel)]="customer.gender">Other
 
 
         <button type="submit">Sign Up</button>
@@ -36,41 +37,7 @@
 
     </div>
 
-
-      <!-- <div align="center" *ngIf='!registerStatus' class="status_false" > This email is already registered with us!</div>
-      <div align="center" *ngIf='registerStatus' class="status_true" > Resgistered Successfully. Please Check your mail !</div> -->
     </div>
   
 </div>
 
-<!-- <form #registerForm='ngForm' (ngSubmit)='registerUser()'>
-  <div class="container">
-    <img src="assets/Register.jpg" alt="Could not find image">
-    <input type="text" placeholder="Enter Your Name" name="userFirstName" (keypress)='isAName($event)'
-      [(ngModel)]="customer.name" required>
-    <input type="email" name="userEmail" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{1,3})+$"
-      placeholder="Email" required [(ngModel)]="customer.email">
-    <div class="error">Invalid Email address</div>
-
-
-    <input type="password" name="password" placeholder="Password" ngModel minlength="8"
-      pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*]).{8,15}$" [(ngModel)]='customer.password'
-      required>
-    <div class="error">Enter 8-15 Characters
-      <br>with atleast 1 capital Letter(A-Z)<br>One small letter(a-z)
-      <br>and one special Character(!@#$%&)</div>
-    <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password"
-      required>
-    <!-- <div *ngIf="!confirmPassword()" style="color: red"> {{errorMsg}}</div> -->
-<!-- <input type="text" placeholder="Mobile" name="userMobile" id="userMobile"
-      (keypress)='isNumber($event,"userMobile",10)' (keyup)='manageMobile("userMobile")' value="" minlength="11"
-      ngModel required [(ngModel)]="customer.contact">
-    <div class="error">Invalid Mobile Number</div>
-    <span>Gender</span>
-    <input type="radio" value="male" name="gender" required ng-model="gender" [(ngModel)]="customer.gender"> Male
-    <input type="radio" value="female" name="gender" required ng-model="gender" [(ngModel)]="customer.gender">
-    Female
-    <input type="radio" value="Other" name="gender" required ng-model="gender" [(ngModel)]="customer.gender">Other
-
-
-    <button type="submit" [disabled]='!registerForm.valid || !confirmPassword()'>Sign Up</button> -->
