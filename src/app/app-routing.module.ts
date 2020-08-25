@@ -71,6 +71,7 @@ const routes: Routes = [
   {
     path:'showMyTicket',component:ShowMyTicketComponent
   }
+  
 ];
 
 @NgModule({
