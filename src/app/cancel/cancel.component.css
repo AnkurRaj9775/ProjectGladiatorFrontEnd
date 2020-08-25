@@ -14,7 +14,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
+input{border:1px solid #000 !important;}
 .input-component .input-text {
   font-size: 14px;
   font-weight: 700;
@@ -29,7 +29,7 @@
   margin-right: auto;
 }
 
-.input-component {
+.input-component .input-box{
   width: 328px;
   border-top: 10px;
   border-right: 10px;
