@@ -30,6 +30,7 @@ import { MybookingsComponent } from './mybookings/mybookings.component';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
 import { WalletComponent } from './wallet/wallet.component';
 import { AdminComponent } from './admin/admin.component';
+import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
 
 
 
@@ -54,7 +55,8 @@ import { AdminComponent } from './admin/admin.component';
     MybookingsComponent,
     ChangepasswordComponent,
     WalletComponent,
-    AdminComponent
+    AdminComponent,
+    AdmindashboardComponent
   ],
   imports: [
     BrowserModule,
