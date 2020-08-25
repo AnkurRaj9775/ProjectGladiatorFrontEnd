@@ -11,9 +11,9 @@ import { RegisterService } from "../service/register.service";
 export class RegisterComponent implements OnInit {
   errorMsg: string;
   password: string;
-
+  confirmPass="";
   customer: Customer=new Customer();
-  registerStatus:boolean;
+  registerStatus:boolean=false;
 constructor(private registerService:RegisterService,private router:Router){}
 
 
@@ -31,6 +31,7 @@ constructor(private registerService:RegisterService,private router:Router){}
       }
 
    })
+   form.reset();
   }
   
 
@@ -60,17 +61,16 @@ constructor(private registerService:RegisterService,private router:Router){}
     else
       mobile.value = data.substring(0, 5) + " " + data.substring(5, data.length);
   }
+
+
   confirmPassword(): boolean {
-    var p = (<HTMLInputElement>document.getElementById("confirmPassword"));
-    var pass = p.value;
-    if (this.password === pass)
-      return true;
-
-   this.errorMsg="Please Enter the same password";
+    if (this.customer.password == this.confirmPass){
+     
+      return true;      
+    }
     return false;
-  }
-
   
+  }
 
   ngOnInit(): void {
   }
