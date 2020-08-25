@@ -9,8 +9,6 @@
     <div class="w-1 fl">
       <a>DATE OF JOURNEY : {{this.details.dateOfJourney}}</a>
     </div>
-
-
   </div>
   <div class="searchBus-header">
     <div class="sort-sec clearfix">
@@ -18,8 +16,7 @@
           <span class="w-60  ">
             {{totalBus}} Buses found
           </span>
-      </div>
-     
+      </div>     
     </div>
   </div>
   <div class="searchBus-card" *ngFor ="let cp of data" >
@@ -32,7 +29,6 @@
                 {{cp.departureTime}}                 
               </div>            
             </div>
-
             <div class="dp-time f-19 d-color f-bold">            
               <i class="destination fa fa-map-marker"></i>              
               {{this.details.fromCity}}             
@@ -64,13 +60,7 @@
                  {{this.details.toCity}}
               </div>
             </div>
-        
-
-
-                 
-                      
-
-          <div class="clearfix m-top-16">
+              <div class="clearfix m-top-16">
             <button class="button view-seats fr" >
               View Seats
             </button>
