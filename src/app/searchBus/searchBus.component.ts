@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BusDetails } from '../serviceclass/BusDetails';
 import { BusDetailsService } from '../service/BusDetails.service';
 import { HomepageComponent  } from '../homepage/homepage.component';
-
+import { Router } from "@angular/router";
 @Component({
   selector: 'app-search-component',
   templateUrl: './searchBust.component.html',
@@ -12,7 +12,7 @@ export class SearchComponentComponent implements OnInit {
   totalBus:number;
   details: BusDetails = new BusDetails();
   data: any;
-  constructor(private busDetails: BusDetailsService) { }
+  constructor(private busDetails: BusDetailsService,private router:Router) { }
 
   ngOnInit(): void {
     const dateOfJourney = new Date(sessionStorage.getItem('date'));
@@ -33,6 +33,11 @@ export class SearchComponentComponent implements OnInit {
     })
   }
 
+  viewSeats(busId:any)
+  {
+    sessionStorage.setItem('busId',busId);
+    this.router.navigate(['seatMap']);
+  }
 
 
 }
