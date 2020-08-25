@@ -25,7 +25,7 @@
     </ul>
     <ul>
       <li class="bus-booking__nav-signin">
-        <div *ngIf='loggedIn' class="bus-booking__mb-dropdown">
+        <div class="bus-booking__mb-dropdown">
           <button class="bus-booking__mb">
             Already a member? Sign in
             <i class="fa fa-caret-down"></i>
@@ -35,20 +35,20 @@
             <a class="bus-booking__mb-list" [routerLink]="['/loginAdmin']">Sign in as admin</a>
           </div>
         </div>
-        <a *ngIf='loggedIn' class="bus-booking__register" [routerLink]="['/register']">Sign Up</a>
+        <a class="bus-booking__register" [routerLink]="['/register']">Sign Up</a>
         <div class="bus-booking__mb-dropdown">
             <button class="bus-booking__mb">
               Manage Booking
             <i class="fa fa-caret-down"></i>
           </button>
-          <div class="bus-booking__mb-options1">
+          <div class="bus-booking__mb-options">
             <a class="bus-booking__mb-list" [routerLink]="['/showMyTicket']">Show My Ticket</a>
-            <a class="bus-booking__mb-list" [routerLink]="['/cancellation']">Cancel Ticket</a>
+            <a class="bus-booking__mb-list" [routerLink]="['/cancellation']">Cancel</a>
             <a class="bus-booking__mb-list" [routerLink]="['/reschedule']">Reschedule</a>
           </div>
         </div>
 
-        <div *ngIf='!loggedIn' class="bus-booking__user-dropdown">
+        <div class="bus-booking__user-dropdown">
           <div class="bus-booking__user">
             <i class="fa fa-user-circle-o" aria-hidden="true"></i>
                   
@@ -72,7 +72,7 @@
               <li class="bus-booking__user-list" [routerLink]="['/wallet']">
                 Wallet
               </li>
-              <li (click)='clearSession()'
+              <li
               class="bus-booking__user-list" 
                 [routerLink]="['/homeLink']"
               >

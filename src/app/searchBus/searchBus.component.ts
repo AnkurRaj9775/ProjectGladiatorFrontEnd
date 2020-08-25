@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BusDetails } from '../serviceclass/BusDetails';
 import { BusDetailsService } from '../service/BusDetails.service';
-
+import { HomepageComponent  } from '../homepage/homepage.component';
 
 @Component({
   selector: 'app-search-component',

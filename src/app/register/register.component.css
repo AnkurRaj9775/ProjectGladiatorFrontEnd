@@ -47,11 +47,20 @@
   }
 
  /* Add a card effect for articles */
- .card {
+ .card:before {
     background-color: white;
-    padding: 20px;
-    margin-top: 20px;
+    padding: 20px;    
     overflow: hidden;
+    height: 50px;
+    content: "";
+    display:flex;
+    clear: both;
+    margin-bottom: 20px;
+    
+  }
+  .column{
+    float:right;
+    width:50%;
   }
 
   .cc{
@@ -66,7 +75,7 @@
 
 /* Full-width inputs */
 input[type=text], input[type=password], input[type=email], input[type=tel] {
-    width: 100%;
+    width: 70%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -89,7 +98,7 @@ button {
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 100%;
+    width: 70%;
   }
    /* Add a hover effect for buttons */
    button:hover {
