@@ -1,22 +1,22 @@
-<div class="row">
-
+<div class="row" >
+  <h3 style="color:rgb(167, 34, 34);text-align: center;"> Sign in to avail exciting discounts and cashbacks!!</h3>
   <div class="main">
     <div class="card">
-      <img src="assets/Register.jpg" alt="Could not find image">
+     
       <form   #registerForm='ngForm' (ngSubmit)='registerUser(registerForm)' >
-
+            
         <input type="text" placeholder="Enter Your Name" name="userFirstName" (keypress)='isAName($event)'
           [(ngModel)]="customer.name" required autocomplete="off">
-          <span class="error" align="center">Please Enter Your Name</span>
+          <span class="error" >Please Enter Your Name</span>
         <input type="email" name="userEmail" pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{1,3})+$" placeholder="Email"
           required [(ngModel)]="customer.email" autocomplete="off">
-          <span class="error" align="center">Invalid Email Id</span>
+          <span class="error" >Invalid Email Id</span>
         <input type="password" name="password" placeholder="Password" ngModel minlength="8"
           pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*]).{8,15}$" [(ngModel)]='customer.password'
           required>
 
         <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" [(ngModel)]="confirmPass" required>
-        <div *ngIf='!confirmPassword();' align="center" style="color: red;">Please Enter Same Password</div>
+        <div *ngIf='!confirmPassword();'  style="color: red;">Please Enter Same Password</div>
 
         <input type="text" placeholder="Mobile" name="userMobile" id="userMobile"
           (keypress)='isNumber($event,"userMobile",10)' (keyup)='manageMobile("userMobile")' value="" minlength="11"
