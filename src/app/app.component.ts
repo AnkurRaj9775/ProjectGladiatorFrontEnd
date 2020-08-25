@@ -17,6 +17,7 @@ constructor(){
   
 clearSession(){
   sessionStorage.clear();
+  location.reload;
 }
 
 ngOnInit(): void {
