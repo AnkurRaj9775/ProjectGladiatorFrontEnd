@@ -61,11 +61,10 @@
                 {{this.details.toCity}}
               </div>
             </div>
-            <div class="clearfix m-top-16">
-              <button class="button view-seats fr">
-                View Seats
-              </button>
-            </div>
+              <div class="clearfix m-top-16">
+            <button class="button view-seats fr" (click)="viewSeats(cp.busId)" >
+              View Seats 
+            </button>
           </div>
         </li>
       </div>

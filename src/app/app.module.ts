@@ -31,6 +31,7 @@ import { ChangepasswordComponent } from './changepassword/changepassword.compone
 import { WalletComponent } from './wallet/wallet.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
+import { SeatmapComponent } from './seatmap/seatmap.component';
 
 
 
@@ -56,7 +57,8 @@ import { AdmindashboardComponent } from './admindashboard/admindashboard.compone
     ChangepasswordComponent,
     WalletComponent,
     AdminComponent,
-    AdmindashboardComponent
+    AdmindashboardComponent,
+    SeatmapComponent
   ],
   imports: [
     BrowserModule,

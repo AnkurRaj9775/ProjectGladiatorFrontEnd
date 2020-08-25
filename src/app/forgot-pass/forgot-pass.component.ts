@@ -78,6 +78,7 @@ export class ForgotPassComponent implements OnInit {
   {
     sessionStorage.removeItem('customerId');
     this.clientstatus=false;
+
   }
 
 

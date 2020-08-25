@@ -15,8 +15,9 @@ import { MyprofileComponent } from './myprofile/myprofile.component';
 import { MybookingsComponent } from './mybookings/mybookings.component';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
 import { WalletComponent } from './wallet/wallet.component';
-import { ShowMyTicketComponent} from './show-my-ticket/show-my-ticket.component'
 import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
+import{ ShowMyTicketComponent} from './show-my-ticket/show-my-ticket.component';
+import { SeatmapComponent } from "./seatmap/seatmap.component";
 
 const routes: Routes = [
   {
@@ -73,8 +74,10 @@ const routes: Routes = [
   },
   {
     path:'loginAdmin',component:AdmindashboardComponent
+  },
+  {
+    path:'seatMap',component:SeatmapComponent
   }
-  
 ];
 
 @NgModule({
