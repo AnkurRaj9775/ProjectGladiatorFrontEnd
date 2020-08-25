@@ -2,9 +2,7 @@
 
   <div class="main">
     <div class="card">
-
-      <h2 class="new-signin-header">Sign up to avail exciting discounts and special offers!!!</h2>
-      
+      <img src="assets/Register.jpg" alt="Could not find image">
       <form   #registerForm='ngForm' (ngSubmit)='registerUser(registerForm)' >
 
         <input type="text" placeholder="Enter Your Name" name="userFirstName" (keypress)='isAName($event)'
@@ -25,7 +23,7 @@
           required [(ngModel)]="customer.contact" autocomplete="off">
           <span class="error" align="center" >Invalid Phone Number</span>
 
-        <span>Gender</span>
+        <div>Gender</div>
         <input type="radio" value="male" name="gender" required ng-model="gender" [(ngModel)]="customer.gender"> Male
         <input type="radio" value="female" name="gender" required ng-model="gender" [(ngModel)]="customer.gender">Female
         <input type="radio" value="Other" name="gender" required ng-model="gender" [(ngModel)]="customer.gender">Other
@@ -42,7 +40,7 @@
       <!-- <div align="center" *ngIf='!registerStatus' class="status_false" > This email is already registered with us!</div>
       <div align="center" *ngIf='registerStatus' class="status_true" > Resgistered Successfully. Please Check your mail !</div> -->
     </div>
-  </div>
+  
 </div>
 
 <!-- <form #registerForm='ngForm' (ngSubmit)='registerUser()'>

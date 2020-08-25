@@ -106,9 +106,7 @@
   background-color: #f9f9f9;
   min-width: 140px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  width: inherit;
-  position:fixed;
-
+  width: 100%;
 }
 
 .bus-booking__mb-list {
@@ -215,4 +213,3 @@ ol, ul {
   text-align: left;
   display: block;
 }
-

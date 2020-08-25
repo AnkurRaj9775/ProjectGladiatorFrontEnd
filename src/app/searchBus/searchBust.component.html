@@ -1,87 +1,85 @@
  <div class="searchBus-content">
-<div class="searchBus-header">
-  <div class="sort-sec clearfix">
-    <div class="w-30 fl">
-      <span>
-        <span class="w-60  ">
-          {{totalBus}} Buses 
-        </span>
-        found
-      </span>
+  <div class= "searchDetails">
+    <div class="w-1 fl">      
+      <a>FROM :      {{this.details.fromCity}}</a>  
     </div>
-    <div class="w-19 fl">
-      <a>Departure</a>
+    <div class="w-1 fl">
+      <a>TO :    {{this.details.toCity}}</a>
     </div>
-    <div class="w-10 fl">
-      <a>Duration</a>
+    <div class="w-1 fl">
+      <a>DATE OF JOURNEY : {{this.details.dateOfJourney}}</a>
     </div>
-    <div class="w-10 fl">
-      <a>Arrival</a>
-    </div>
-    <div class="w-10 fl">
-      <a>Fare</a>
-    </div>
-    <div class="w-10 fl">
-      <a>Seats Available</a>
+
+
+  </div>
+  <div class="searchBus-header">
+    <div class="sort-sec clearfix">
+      <div class="w-30 fl">
+          <span class="w-60  ">
+            {{totalBus}} Buses found
+          </span>
+      </div>
+     
     </div>
   </div>
-</div>
-<div class="searchBus-card" *ngFor ="let cp of data" >
-  <ul class="bus-items" style="list-style-type: none;">
-    <div>
-      <li id="11994669" class="row-sec clearfix">
-        <div class="clearfix row-one">
-          <div class="p-right-10 w-30 fl">
-            <div class="travels lh-24 f-bold d-color">
-              {{cp.busName}}
+  <div class="searchBus-card" *ngFor ="let cp of data" >
+    <ul class="bus-items" style="list-style-type: none;">
+      <div>
+        <li>           
+          <div class="clearfix">
+            <div class=" p-right-20 w-11 fl">
+              <div class="dp-time f-19 d-color f-bold">
+                {{cp.departureTime}}                 
+              </div>            
             </div>
-            <div class="bus-type   m-top-16 l-color">
-              {{cp.busType}}
-            </div>
-          </div>
-          <div class="p-right-10 w-11 fl">
-            <div class="dp-time f-19 d-color f-bold">
-              {{cp.departureTime}}
-            </div>            
-          </div>
-          <div class=" p-right-10 w-11 fl">
-            <div class="dur l-color lh-24">
-              {{cp.duration}}
-            </div>
-          </div>
-          <div class="p-right-10 w-11 fl">
-            <div class="bp-time f-19 d-color disp-Inline">
-              {{cp.arrivalTime}}
-            </div>
-          </div>
 
-          <div class="p-right-10 w-15 fl">
-            <div class="seat-fare">
-              <div class="starts">Starts from</div>
-              <div class="fare d-block">
-                INR <span class="f-19 f-bold">
-                  {{cp.fare}}</span>
+            <div class="dp-time f-19 d-color f-bold">            
+              <i class="destination fa fa-map-marker"></i>              
+              {{this.details.fromCity}}             
+            </div> 
+           <span class="path">| </span>
+            <div class=" f-20 d-color disp-Inline">
+                <i class="transport fa fa-bus"></i>
+                {{cp.busName}},
+                {{cp.busType}} Seater   
+              <span class="durationPos">
+                Duration :
+                {{cp.duration}}
+              </span> 
+                <span class="farePos">
+                INR :  {{cp.fare}}
+              </span> 
+              <span class="seatsPos">
+                Seats Available: {{cp.totalSeatsAvailable}}
+              </span>
+     
+                           
+            </div>     
+            
+          <div class="path">| </div>
+            <div class="  p-right-20 w-11 fl">
+              <div class="dur lh-24">                
+                {{cp.arrivalTime}}
+                <i class="destination fa fa-map-marker"></i> 
+                 {{this.details.toCity}}
               </div>
             </div>
+        
+
+
+                 
+                      
+
+          <div class="clearfix m-top-16">
+            <button class="button view-seats fr" >
+              View Seats
+            </button>
           </div>
-        <div class="w-15 fl">  
-          {{cp.totalSeats}} ,        
-          {{cp.totalSeatsAvailable}}
-            <span class="l-color">
-              Seats available
-            </span>
-                    
         </div>
-        <div class="clearfix m-top-16">
-          <button class="button view-seats fr" >
-            View Seats
-          </button>
-        </div>
+        </li>
       </div>
-      </li>
-    </div>
-  </ul>
-</div>
+    </ul>
+  </div>
 </div> 
 
 

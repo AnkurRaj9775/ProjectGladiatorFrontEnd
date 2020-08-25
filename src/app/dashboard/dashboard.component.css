@@ -13,7 +13,10 @@ body {
 
 .main {
   margin-left: 300px; /* Same as the width of the sidenav */
-  padding: 20px 30px; 
+  padding: 0px 10px;
+  height: 600px;
+  position: relative;
+  background-size: 100% 100%;
 }
 
 .sidebar a {
