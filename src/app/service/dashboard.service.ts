@@ -14,14 +14,14 @@ export class DashboardService {
   constructor(private http:HttpClient) { }
 
   showWalletBalance(walletAmount:WalletAmount):Observable<any>{
-    return this.http.post("http://localhost:8080/walletBalance",walletAmount);
+    return this.http.post("http://localhost:8181/walletBalance",walletAmount);
   }
   
   addBalance(addAmountToWallet:addAmountToWallet):Observable<any>{
-    return this.http.post("http://localhost:8080/addBalance",addAmountToWallet);
+    return this.http.post("http://localhost:8181/addBalance",addAmountToWallet);
   }
 
   changePassword(changePassword:ChangePassword):Observable<any>{
-    return this.http.post("http://localhost:8080/changePassword",changePassword);
+    return this.http.post("http://localhost:8181/changePassword",changePassword);
   }
 }
