@@ -11,6 +11,6 @@ export class RegisterService {
   constructor(private http:HttpClient) { }
 
   register(customer:Customer):Observable<any>{
-    return this.http.post("http://localhost:8080/register",customer);
+    return this.http.post("http://localhost:8181/register",customer);
   }
 }
