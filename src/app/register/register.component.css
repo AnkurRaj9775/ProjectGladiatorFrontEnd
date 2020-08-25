@@ -42,8 +42,9 @@
   }
 
   .main {   
-    width: 80%;
+    width: 30%;
     margin: auto;
+    
   }
 
  /* Add a card effect for articles */
@@ -150,4 +151,10 @@ input.ng-invalid.ng-submitted +.FormError{
 	color: red;
 	font-weight: bold;
 	
+}
+
+button:disabled {
+  /* styles when the element is disabled */
+background-color: rgb(204, 23, 23);
+opacity: 0.5;
 }
