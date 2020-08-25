@@ -29,6 +29,11 @@ export class MyprofileComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    if (!sessionStorage.justOnce){
+      sessionStorage.setItem('justOnce',"true");  
+    window.location.reload();
+    }
+
   }
 
 }
