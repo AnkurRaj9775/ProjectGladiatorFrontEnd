@@ -16,7 +16,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule} from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatFormFieldModule} from '@angular/material/form-field';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { ContactUsComponent } from './contact-us/contact-us.component';
