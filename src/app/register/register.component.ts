@@ -19,7 +19,7 @@ constructor(private registerService:RegisterService,private router:Router){}
 
 
 
-  registerUser() {
+  registerUser(form:NgForm) {
    this.registerService.register(this.customer).subscribe(data=>{
 
     if(!data.resultStatus)
