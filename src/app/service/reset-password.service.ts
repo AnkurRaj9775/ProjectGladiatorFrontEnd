@@ -11,10 +11,10 @@ export class ResetPasswordService {
   constructor(private http:HttpClient) { }
 
   forgotPass(forgot :ForgotPassword):Observable<any>{
-    return this.http.post("http://localhost:8080/forgotPassword",forgot);
+    return this.http.post("http://localhost:8181/forgotPassword",forgot);
   }
 
   resetPass(passwordreset :PasswordReset):Observable<any>{
-    return this.http.post("http://localhost:8080/resetPassword",passwordreset);
+    return this.http.post("http://localhost:8181/resetPassword",passwordreset);
   }
 }
