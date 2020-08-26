@@ -1,14 +1,25 @@
+<body>
 
-<div class="sidebar">
-    <a href="#profile" [routerLink]="['/myprofile']"><i class="fa fa-fw fa-user"></i> My Profile</a>
-    <a href="#bookings" [routerLink]="['/mybookings']"><i class="fa fa-fw fa-envelope"></i> My Bookings</a>
-    <a href="#changepassword" [routerLink]="['/changepassword']"><i class="fa fa-fw fa-wrench"></i> Change Password</a>
-    <a href="#wallet" [routerLink]="['/wallet']"><i class="fa fa-credit-card"></i> Wallet</a>
-</div>
-
-<div class="main">
-    <h2>My Bookings</h2>
-    <div class="card">
-       
+    <div class="sidebar">
+        <a href="#profile" [routerLink]="['/myprofile']"><i class="fa fa-fw fa-user"></i> My Profile</a>
+        <a href="#bookings" [routerLink]="['/mybookings']"><i class="fa fa-fw fa-envelope"></i> My Bookings</a>
+        <a href="#changepassword" [routerLink]="['/changepassword']"><i class="fa fa-fw fa-wrench"></i> Change
+            Password</a>
+        <a href="#wallet" [routerLink]="['/wallet']"><i class="fa fa-credit-card"></i> Wallet</a>
     </div>
-</div>
+
+    <div class="main">
+        <h2>My Bookings</h2>
+        <div class="card">
+            <span>Ticket Number : </span><br>
+            <span>Date of Journey : </span>
+            <span>Date of Booking : </span><br>
+            <span>From City : </span>
+            <span>To City : </span><br>
+            <span>Ticket Amount : </span><br>
+            <button class="reschedule">Reschedule</button>
+            <button class="cancelBooking">Cancel Booking</button>
+        </div>
+    </div>
+
+</body>

@@ -107,6 +107,7 @@
   min-width: 140px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   width: 100%;
+  z-index: 100;
 }
 
 .bus-booking__mb-list {
@@ -162,6 +163,7 @@
 }
 .bus-booking__user-dropdown:hover .bus-booking__user-options {
   display: block;
+  z-index: 100;
 }
 .footer {
   padding: 20px 0;

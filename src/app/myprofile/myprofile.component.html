@@ -1,37 +1,41 @@
-<div class="sidebar">
-    <a href="#profile" [routerLink]="['/myprofile']"><i class="fa fa-fw fa-user"></i> My Profile</a>
-    <a href="#bookings" [routerLink]="['/mybookings']"><i class="fa fa-fw fa-envelope"></i> My Bookings</a>
-    <a href="#changepassword" [routerLink]="['/changepassword']"><i class="fa fa-fw fa-wrench"></i> Change Password</a>
-    <a href="#wallet" [routerLink]="['/wallet']"><i class="fa fa-credit-card"></i> Wallet</a>
-</div>
+<body>
 
-<div class="main">
-    <h2>My Profile</h2>
-    <div class="card">
-        <!-- <button (click)="makeEditable()">EDIT</button> -->
-        <h3 class="yourName">YOUR NAME
-            <span class="dateOfBirth">DATE OF BIRTH</span>
-        </h3>
-        <h4 class="userName" id="editable">John Doe
-            <span class="birthDate">15/02/1998</span>
-        </h4>
-        <h3 class="gender">GENDER
-        </h3>
-        <div class="genderInput">
-            <input type="radio" id="male" name="gender" value="male">
-            <label for="male">Male</label>
-            <input type="radio" id="female" name="gender" value="female">
-            <label for="female">Female</label>
-        </div>
-        <hr style="width:85%;height:2px;color: grey;background-color: grey;">
-        <h3>CONTACT DETAILS</h3>
-        <h3 class="email">EMAIL ID
-            <span class="phoneNumber">PHONE NUMBER</span>
-        </h3>
-        <h4 class="emailInput" id="editable">johndoe@lntinfotech.com
-            <span class="phoneInput">9876543210
-            </span>
-        </h4>
-
+    <div class="sidebar">
+        <a href="#profile" [routerLink]="['/myprofile']"><i class="fa fa-fw fa-user"></i> My Profile</a>
+        <a href="#bookings" [routerLink]="['/mybookings']"><i class="fa fa-fw fa-envelope"></i> My Bookings</a>
+        <a href="#changepassword" [routerLink]="['/changepassword']"><i class="fa fa-fw fa-wrench"></i> Change
+            Password</a>
+        <a href="#wallet" [routerLink]="['/wallet']"><i class="fa fa-credit-card"></i> Wallet</a>
     </div>
-</div>
+
+    <div class="main">
+        <h2>My Profile</h2>
+        <div class="card">
+            <!-- <button (click)="makeEditable()">EDIT</button> -->
+            <h3 class="yourName">YOUR NAME
+                <span class="dateOfBirth">DATE OF BIRTH</span>
+            </h3>
+            <h4 class="userName" id="editable">John Doe
+                <span class="birthDate">15/02/1998</span>
+            </h4>
+            <h3 class="gender">GENDER
+            </h3>
+            <div class="genderInput">
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+            </div>
+            <hr style="width:85%;height:2px;color: grey;background-color: grey;">
+            <h3>CONTACT DETAILS</h3>
+            <h3 class="email">EMAIL ID
+                <span class="phoneNumber">PHONE NUMBER</span>
+            </h3>
+            <h4 class="emailInput" id="editable">johndoe@lntinfotech.com
+                <span class="phoneInput">9876543210
+                </span>
+            </h4>
+
+        </div>
+    </div>
+</body>
