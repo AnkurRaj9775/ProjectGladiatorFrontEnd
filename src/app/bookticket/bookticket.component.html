@@ -22,15 +22,21 @@
                 <input type="radio" value="male" name="gender"  class="genderStyle" required [(ngModel)]='passengerdetails.gender'> Male
                 <input type="radio" value="female" name="gender"  class="genderStyle" required [(ngModel)]='passengerdetails.gender'>Female
                 <input type="radio" value="Other" name="gender"  class="genderStyle" required [(ngModel)]='passengerdetails.gender'>Other <br/>
-                </li>
+                <button (click)='addPassenger()' class="submit_pass" id="addPass">Add Passenger</button>
+            </li>
                 </ul>
-                <button (click)='addPassenger()'>Add Passenger</button>
+                <div class="img_gif">
+                   
+                     <img src="./assets/busgif.gif" />
+                     </div> 
             </div>
         
-            <button type="submit" class="submit" (click)='bookTicket()'> Book Now</button>
+            <button type="submit" class="submit" (click)='bookTicket()' *ngIf='totalMembers==counter'> Proceed to Pay</button>
 
+            
         </div>
         
+     
     </div>
     
 </div>

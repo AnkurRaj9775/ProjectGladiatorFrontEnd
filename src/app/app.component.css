@@ -24,6 +24,7 @@
   list-style-type: none;
   margin: 0;
   padding: 0;
+
 }
 
 .bus-booking__brand-name {
@@ -193,6 +194,7 @@ ol, ul {
   margin: 0;
   padding: 0;
   border: 0;
+  z-index: 100;
 }
 
 .bus-booking__user-dropdown {

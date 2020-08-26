@@ -24,7 +24,7 @@ import { LastmonthrecordsandprofitComponent } from './lastmonthrecordsandprofit/
 import { MostpreferredtypeofbusesComponent } from './mostpreferredtypeofbuses/mostpreferredtypeofbuses.component';
 import { RegisteredcustomerbutnoreservationComponent } from './registeredcustomerbutnoreservation/registeredcustomerbutnoreservation.component';
 import { ReservationdetailsComponent } from './reservationdetails/reservationdetails.component';
-
+import { PaymentComponent } from "./payment/payment.component";
 const routes: Routes = [
   {
      path:'',component:HomepageComponent
@@ -102,6 +102,10 @@ const routes: Routes = [
   ,
   {
     path:'bookTicket',component:BookticketComponent
+  }
+  ,
+  {
+    path:'payment',component:PaymentComponent
   }
 ];
 
