@@ -33,6 +33,9 @@ const routes: Routes = [
     path:'homeLink',component:HomepageComponent
   },
   {
+    path:'adminDashboard',component:
+  },
+  {
     path:'about',component:AboutComponent
   },
   {

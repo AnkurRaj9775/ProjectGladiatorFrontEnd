@@ -35,8 +35,29 @@ body {
  display: flex;
 
 }
+
+button{
+ 
+  cursor: pointer;
+    border-radius: 5em;
+    color: #fff;
+    background: linear-gradient(to right,#d84f57, #c92f2f);
+    border: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 30px;
+    padding-top: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    margin-top: 1%;
+    margin-left: 40%;
+    margin-bottom: 5%;
+    font-size: 25px;
+    height: 40px;
+    width: 300px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
 .personal-information {
- background-color: #3C8DC5;
+ background-color: #d46d74;
  color: #fff;
  padding: 1px 0;
  text-align: center;
@@ -144,9 +165,9 @@ input[type="submit"]:hover{
 
 .head_card{
     text-align: center;
-    font-size: larger;
+    font-size: 30px;
     font-weight: 200;
-    padding: 10px;
+    padding: 30px;
 }
 
 .selected_seats{
@@ -155,8 +176,11 @@ input[type="submit"]:hover{
     font-weight: 100;
     padding: 10px;
     margin-left:100px;
+    padding-bottom: 20px;
 }
 .select_card{
     margin-left: 20px;
     margin-bottom: 30px;
+    padding-bottom: 30px;
+    padding-left: 50px;
 }
