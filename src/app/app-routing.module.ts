@@ -33,7 +33,7 @@ const routes: Routes = [
     path:'homeLink',component:HomepageComponent
   },
   {
-    path:'adminDashboard',component:
+    path:'adminDashboard',component: AdmindashboardComponent
   },
   {
     path:'about',component:AboutComponent
