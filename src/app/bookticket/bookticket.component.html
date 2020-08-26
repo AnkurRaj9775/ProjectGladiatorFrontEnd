@@ -6,21 +6,31 @@
     </div>
 
     <div class="searchBus-card">
-        <ul class="bus-items" style="list-style-type: none;">
-            <div>
-                <input class="un" type="email" id="email" name="email" placeholder="Enter Email">
-                <input class="un" type="text" id="number" name="number" placeholder="Enter Contact Number"><br/>
-                
-                <div class="searchBus-card-nested" >
-                <input class="un" type="text" id="pname" name="pname" placeholder="Enter Passenger Name"><br/>
 
-                <input class="un" type="number" id="age" name="age" placeholder="Enter Age"><br/>
+        <div>
+            <input class="un" type="email" id="email" name="email" placeholder="Enter Email" [(ngModel)]='customerdetails.email'>
+            <input class="un" type="text" id="number" name="number" placeholder="Enter Contact Number" [(ngModel)]='customerdetails.contact'>
 
-                <div class="genderStyle">Gender</div>
-                <input type="radio" value="male" name="gender" required> Male
-                <input type="radio" value="female" name="gender" required>Female
-                <input type="radio" value="Other" name="gender" required>Other
+            <div class="searchBus-card-nested"  >
+                <ul class="bus-items" style="list-style-type: none;">
+                    <li>
+                    <h3 class="passenger_seat">Passenger For Seat Number :{{seat}} </h3>
+                <input class="un1" type="text" id="pname" name="pname" placeholder="Enter Passenger Name" [(ngModel)]='passengerdetails.name'><br />
+                <input class="un1" type="number" id="age" name="age" placeholder="Enter Age" [(ngModel)]='passengerdetails.age' ><br />
+
+                <div class="genderStyle">Gender</div><br />
+                <input type="radio" value="male" name="gender"  class="genderStyle" required [(ngModel)]='passengerdetails.gender'> Male
+                <input type="radio" value="female" name="gender"  class="genderStyle" required [(ngModel)]='passengerdetails.gender'>Female
+                <input type="radio" value="Other" name="gender"  class="genderStyle" required [(ngModel)]='passengerdetails.gender'>Other <br/>
+                </li>
+                </ul>
+                <button (click)='addPassenger()'>Add Passenger</button>
             </div>
-           
+        
+            <button type="submit" class="submit" (click)='bookTicket()'> Book Now</button>
+
+        </div>
+        
+    </div>
     
 </div>

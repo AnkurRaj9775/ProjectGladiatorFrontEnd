@@ -44,10 +44,35 @@
     text-align: center;
     margin-bottom: 27px;
     font-family: 'Ubuntu', sans-serif;
+    margin-top: 30px;
     }
 
+    .un1 {
+        width: 80%;
+        color: rgb(0, 2, 3);
+        font-weight: 900;
+        font-size: 16px;
+        letter-spacing: 1px;
+        background: rgba(177, 49, 49, 0.04);
+        padding: 10px 20px;
+        border: none;
+        border-radius: 20px;
+        outline: none;
+        box-sizing: border-box;
+        border: 2px solid rgba(0, 0, 0, 0.02);
+        margin-bottom: 50px;
+        margin-left: 46px;
+        text-align: center;
+        margin-bottom: 27px;
+        font-family: 'Ubuntu', sans-serif;
+        }
 
-
+.genderStyle{
+    margin-left: 46px;
+    color: rgb(0, 2, 3);
+    font-weight: 900;
+    font-size: 16px;
+}
 .searchBus-card {
   box-sizing: border-box;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -58,17 +83,17 @@
   margin-left: 100px;
   margin-bottom: 30px;
   display: -webkit-inline-flex;
- 
+    padding-bottom:50px ;
   height: fit-content;
 }
 
 .searchBus-card-nested{
     box-sizing: border-box;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  width: 85%;
+  width: 80%;
 
   display: block;
-  margin-top: 50px;
+  margin-top: 30px;
   margin-left: 100px;
   margin-bottom: 30px;
   display: -webkit-inline-flex;
@@ -98,7 +123,29 @@ div {
   display: block;
 }
 
+.submit {
+    cursor: pointer;
+      border-radius: 5em;
+      color: #fff;
+      background: linear-gradient(to right,#d84f57, #c92f2f);
+      border: 0;
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-bottom: 10px;
+      padding-top: 10px;
+      font-family: 'Ubuntu', sans-serif;
+      margin-left: 40%;
+      margin-bottom: 5%;
+      font-size: 25px;
+      height: 80px;
+      width: 250px;
+      box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+  }
 
+  .passenger_seat{
+    margin-top:-10px ;
+    padding-top: 0px ;
+  }
 .w-9 {
     padding-left: 65px;
 }
