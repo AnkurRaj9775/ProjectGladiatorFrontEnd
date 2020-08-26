@@ -1,8 +1,77 @@
+<div class='seatmap'>
+   
+    <table border='1' class="seat_card">
+        <div class="front"> FRONT</div>
+        <tr>
+            <td> <button id="1" (click)='selectseat(1)'><img id="1" src="../assets/bseat.png" alt="unbooked">
+                </button></td>
+            <td><button id="5" (click)='selectseat(5)'><img id="5" src="../assets/bseat.png" alt="unbooked">
+                </button></td>
+            <td><button id="9" (click)='selectseat(9)'><img id="9" src="../assets/bseat.png" alt="unbooked">
+                </button></td>
+            <td> <button id="13" (click)='selectseat(13)'><img id="13" src="../assets/bseat.png" alt="unbooked">
+                </button></td>
+            <td> <button id="17" (click)='selectseat(17)'><img id="17" src="../assets/bseat.png" alt="unbooked">
+                </button></td>
+        </tr>
+        <tr>
+            <td> <button id="2" (click)='selectseat(2)'><img id="2" src="../assets/bseat.png" alt="unbooked">
+                </button></td>
+            <td><button id="6" (click)='selectseat(6)'><img id="6" src="../assets/bseat.png" alt="unbooked">
+                </button></td>
+            <td><button id="10" (click)='selectseat(10)'><img id="10" src="../assets/bseat.png" alt="unbooked">
+                </button></td>
+            <td> <button id="14" (click)='selectseat(14)'><img id="14" src="../assets/bseat.png" alt="unbooked">
+                </button></td>
+            <td> <button id="18" (click)='selectseat(18)'> <img id="18" src="../assets/bseat.png" alt="unbooked">
+                </button></td>
+        </tr>
+        
+        <tr > 
+            
+            <td colspan="5" > <hr style="width:100%;height:100%;color: grey;background-color: grey;"></td>
+        </tr>
+        <tr>
+            <td (click)='selectseat(3)'> <button id="3"><img id="3" src="../assets/bseat.png" alt="unbooked">
+                </button></td>
+            <td><button id="7" (click)='selectseat(7)'><img id="7" src="../assets/bseat.png" alt="unbooked">
+                </button></td>
+            <td><button id="11" (click)='selectseat(11)'><img id="11" src="../assets/bseat.png" alt="unbooked">
+                </button></td>
+            <td> <button id="15" (click)='selectseat(15)'><img id="15" src="../assets/bseat.png" alt="unbooked">
+                </button></td>
+            <td> <button id="19" (click)='selectseat(19)'><img id="19" src="../assets/bseat.png" alt="unbooked">
+                </button></td>
+        </tr>
+        <tr>
+            <td (click)='selectseat(4)'> <button id="4"><img id="4" src="../assets/bseat.png" alt="unbooked">
+                </button></td>
+            <td><button id="8" (click)='selectseat(8)'><img id="8" src="../assets/bseat.png" alt="unbooked">
+                </button></td>
+            <td><button id="12" (click)='selectseat(12)'><img id="12" src="../assets/bseat.png" alt="unbooked">
+                </button></td>
+            <td> <button id="16" (click)='selectseat(16)'><img id="16" src="../assets/bseat.png" alt="unbooked">
+                </button></td>
+            <td> <button id="20" (click)='selectseat(20)'><img id="20" src="../assets/bseat.png" alt="unbooked">
+                </button></td>
+        </tr>
+  
+    </table>
+    
+  
+        <div class="login_main">
+       <div  >
+           <div *ngIf='fare==0' class="not_selected"><h3>Please select seat(s) to continue</h3> </div>
+        <table *ngIf='fare!=0' class="select_card">
+            <tr class='selected_seats'><td>Seat(s)</td> <td  >{{selectedSeatNumber}} </td> </tr>
+            <tr class='selected_seats'><td>Fare</td> <td>{{fare}} </td> </tr>
+            <tr class='selected_seats'> <td>ToTal</td> <td>{{totalFare}} </td> </tr>
+            <button type="submit" class="submit"> Continue</button>
+        </table>
+        
+       </div>
+            
+        </div>
+    
 
-<table border='1' >
-<tr><td > <button id="1" (click)='selectseat(1)'><img id="1" src="../assets/bookseat.png" alt="unbooked"> </button></td> <td ><button id="5" (click)='selectseat(5)'><img id="5" src="../assets/bookseat.png" alt="unbooked"> </button></td><td ><button id="9" (click)='selectseat(9)'><img id="9" src="../assets/bookseat.png" alt="unbooked"> </button></td> <td > <button id="13" (click)='selectseat(13)'><img id="13" src="../assets/bookseat.png" alt="unbooked"> </button></td> <td > <button id="17" (click)='selectseat(17)'><img id="17" src="../assets/bookseat.png" alt="unbooked"> </button></td> </tr>
-<tr><td > <button id="2" (click)='selectseat(2)' ><img id="2" src="../assets/bookseat.png" alt="unbooked"> </button></td> <td ><button id="6" (click)='selectseat(6)'><img id="6" src="../assets/bookseat.png" alt="unbooked"> </button></td><td ><button id="10" (click)='selectseat(10)'><img id="10" src="../assets/bookseat.png" alt="unbooked"> </button></td> <td > <button id="14" (click)='selectseat(14)'><img id="14" src="../assets/bookseat.png" alt="unbooked"> </button></td> <td > <button id="18" (click)='selectseat(18)'> <img id="18" src="../assets/bookseat.png" alt="unbooked"> </button></td> </tr>
-<tr> <td colspan="5"> </td> </tr>
-<tr><td  (click)='selectseat(3)'> <button id="3"><img  id="3" src="../assets/bookseat.png" alt="unbooked"> </button></td> <td ><button id="7" (click)='selectseat(7)'><img id="7" src="../assets/bookseat.png" alt="unbooked"> </button></td><td ><button id="11" (click)='selectseat(11)'><img id="11" src="../assets/bookseat.png" alt="unbooked"> </button></td> <td > <button id="15" (click)='selectseat(15)'><img id="15" src="../assets/bookseat.png" alt="unbooked"> </button></td> <td > <button id="19" (click)='selectseat(19)'><img id="19" src="../assets/bookseat.png" alt="unbooked"> </button></td> </tr>
-<tr><td  (click)='selectseat(4)'> <button id="4"><img id="4" src="../assets/bookseat.png" alt="unbooked"> </button></td> <td ><button id="8" (click)='selectseat(8)'><img  id="8" src="../assets/bookseat.png" alt="unbooked"> </button></td><td ><button  id="12" (click)='selectseat(12)'><img id="12"src="../assets/bookseat.png" alt="unbooked"> </button></td> <td > <button id="16" (click)='selectseat(16)'><img id="16" src="../assets/bookseat.png" alt="unbooked"> </button></td> <td > <button id="20" (click)='selectseat(20)'><img id="20" src="../assets/bookseat.png" alt="unbooked"> </button></td> </tr>
-</table>
+    </div>

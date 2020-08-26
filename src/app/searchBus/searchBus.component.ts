@@ -33,9 +33,10 @@ export class SearchComponentComponent implements OnInit {
     })
   }
 
-  viewSeats(busId:any)
+  viewSeats(busId:any,fare:any)
   {
     sessionStorage.setItem('busId',busId);
+    sessionStorage.setItem('fare',fare)
     this.router.navigate(['seatMap']);
   }
 

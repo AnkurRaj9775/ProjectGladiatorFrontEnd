@@ -8,12 +8,17 @@ import { SeatDetails } from '../serviceclass/SeatDetails';
 })
 export class SeatmapComponent implements OnInit {
   tempid: any;
+  fare:number=0;
+  totalFare:number=0;
   constructor(private busdetails : BusDetailsService) { }
   selected: boolean = false;
   selectSeats = new Array<number>();
+  selectedSeatNumber:string;
   seatdetails:SeatDetails=new SeatDetails();
   
+  
   selectseat(idin: any) {
+
     this.tempid = idin;
     var s;
     var id = document.getElementById(idin)
@@ -22,22 +27,45 @@ export class SeatmapComponent implements OnInit {
    
      if(result>=0)
     {
-     
-      var x = document.getElementById(idin);
-      x.setAttribute("src", "../assets/bookseat.png");
       this.selectSeats.splice(result,1);
+      document.getElementById(idin).style.backgroundColor = "rgb(211, 183, 183)";
+      // var x = document.getElementById(idin);
+      // x.setAttribute("src", "../assets/bookseat.png");
+      if(this.selectSeats.length==0)
+      {
+        this.fare=0;
+        this.totalFare=this.fare;
+      }
+      else{
+      this.fare=this.fare-Number(sessionStorage.getItem('fare'));
+      this.totalFare=this.fare;
+      }
     }
     else{
       console.log("else callled");
       
+      if(this.selectSeats.length==0)
+      {
+      this.fare=Number(sessionStorage.getItem('fare'));
+      this.totalFare=this.fare;
+      }
       this.selectSeats.push(idin);
-      var x = document.getElementById(idin);
-      x.setAttribute("src", "../assets/fseat.png");
+      this.myFunction(idin);
+      this.fare=Number(sessionStorage.getItem('fare'))*this.selectSeats.length;
+      this.totalFare=this.fare;
+      
     }
-    console.log(this.selectSeats)
+    
+    this.selectedSeatNumber=String(this.selectSeats.sort().toString().split(","));
+    
+
 }
    
 
+myFunction(idin) {
+  console.log(idin+" inside func");
+  document.getElementById(idin).style.backgroundColor = "yellow";
+}
     findIndex(id1)
     {
       
@@ -54,12 +82,15 @@ export class SeatmapComponent implements OnInit {
     changeSeatColor(seatNo) {
       console.log("called")
       var x = document.getElementById(seatNo);
+      console.log(x);
       x.setAttribute("src", "../assets/bseat.png");
       var element = <HTMLInputElement> document.getElementById(seatNo);
       
       element.disabled = true;
       
     }
+
+  
     key = new Array<number>();
    ngOnInit(): void {
     this.seatdetails.busId=Number(sessionStorage.getItem('busId'));

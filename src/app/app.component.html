@@ -15,12 +15,8 @@
       <li class="bus-booking__nav-contact">
         <a class="bus-booking__about" [routerLink]="['/about']">About</a>
         <a class="bus-booking__terms" [routerLink]="['/terms']">Terms Of Use</a>
-        <a class="bus-booking__contact" [routerLink]="['/contact']"
-          >Contact Us</a
-        >
-        <a class="bus-booking__dashboard" [routerLink]="['/homeLink']"
-          >Home</a
-        > 
+        <a class="bus-booking__contact" [routerLink]="['/contact']">Contact Us</a>
+        <a class="bus-booking__dashboard" [routerLink]="['/homeLink']">Home</a>
       </li>
     </ul>
     <ul>
@@ -37,8 +33,8 @@
         </div>
         <a *ngIf='loggedIn' class="bus-booking__register" [routerLink]="['/register']">Sign Up</a>
         <div class="bus-booking__mb-dropdown">
-            <button class="bus-booking__mb">
-              Manage Booking
+          <button class="bus-booking__mb">
+            Manage Booking
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="bus-booking__mb-options">
@@ -51,7 +47,7 @@
         <div *ngIf='!loggedIn' class="bus-booking__user-dropdown">
           <div class="bus-booking__user">
             <i class="fa fa-user-circle-o" aria-hidden="true"></i>
-                  
+
             <i class="fa fa-caret-down"></i>
           </div>
 
@@ -63,19 +59,13 @@
               <li class="bus-booking__user-list" [routerLink]="['/mybookings']">
                 My Bookings
               </li>
-              <li
-                class="bus-booking__user-list"
-                [routerLink]="['/changepassword']"
-              >
+              <li class="bus-booking__user-list" [routerLink]="['/changepassword']">
                 Change Password
               </li>
               <li class="bus-booking__user-list" [routerLink]="['/wallet']">
                 Wallet
               </li>
-              <li (click)='clearSession()'
-              class="bus-booking__user-list" 
-                [routerLink]="['/homeLink']"
-              >
+              <li (click)='clearSession()' class="bus-booking__user-list" [routerLink]="['/homeLink']">
                 Sign Out
               </li>
             </ul>

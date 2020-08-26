@@ -30,7 +30,14 @@ import { MybookingsComponent } from './mybookings/mybookings.component';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
 import { WalletComponent } from './wallet/wallet.component';
 import { AdminComponent } from './admin/admin.component';
+import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
 import { SeatmapComponent } from './seatmap/seatmap.component';
+import { BookticketComponent } from './bookticket/bookticket.component';
+import { FrequentlytravelledroutesComponent } from './frequentlytravelledroutes/frequentlytravelledroutes.component';
+import { LastmonthrecordsandprofitComponent } from './lastmonthrecordsandprofit/lastmonthrecordsandprofit.component';
+import { MostpreferredtypeofbusesComponent } from './mostpreferredtypeofbuses/mostpreferredtypeofbuses.component';
+import { RegisteredcustomerbutnoreservationComponent } from './registeredcustomerbutnoreservation/registeredcustomerbutnoreservation.component';
+import { ReservationdetailsComponent } from './reservationdetails/reservationdetails.component';
 
 
 
@@ -56,7 +63,15 @@ import { SeatmapComponent } from './seatmap/seatmap.component';
     ChangepasswordComponent,
     WalletComponent,
     AdminComponent,
-    SeatmapComponent
+    SeatmapComponent,
+    BookticketComponent,
+    AdmindashboardComponent,
+    SeatmapComponent,
+    FrequentlytravelledroutesComponent,
+    LastmonthrecordsandprofitComponent,
+    MostpreferredtypeofbusesComponent,
+    RegisteredcustomerbutnoreservationComponent,
+    ReservationdetailsComponent
   ],
   imports: [
     BrowserModule,
