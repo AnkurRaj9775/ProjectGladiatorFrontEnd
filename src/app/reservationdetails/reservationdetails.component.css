@@ -62,3 +62,25 @@ body{
       padding-right: 8px;
     }
     
+    .main {
+      margin-left: 350px; /* Same as the width of the sidenav */
+      padding: 0px 10px;
+      height: 600px;
+      position: relative;
+      background-size: 100% 100%;
+    }
+    
+    .card {
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      text-align: center;
+      font-family: arial;
+      font-size: xx-large;
+      border-radius: 10px;
+      background-color: rgb(255, 160, 160);
+      border: 2px solid rgb(0, 0, 0);
+      cursor: pointer;
+      padding: 10px;
+      width: 95%;
+    }
+
+    
