@@ -87,9 +87,9 @@ button:hover, a:hover {
   color: rgb(73, 41, 0);
 }
 
-.dateOfBirth{
+.age{
   text-align: right;
-  margin-left: 500px;
+  margin-left: 600px;
   color: rgb(73, 41, 0);
 }
 
@@ -98,9 +98,9 @@ button:hover, a:hover {
   margin-left: 20px;
 }
 
-.birthDate{
+.customerAge{
   text-align: right;
-  margin-left: 560px;
+  margin-left: 600px;
 }
 
 .gender{
@@ -115,6 +115,7 @@ button:hover, a:hover {
   text-align: left;
   font-size: medium;
   padding-bottom: 10px;
+  margin-left: 30px;
 }
 
 .email{
