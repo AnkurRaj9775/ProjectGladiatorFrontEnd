@@ -31,5 +31,10 @@ export class HomepageComponent implements OnInit {
     let today = new Date().toISOString().split('T')[0];
     console.log(today);
   document.getElementsByName("trip-start")[0].setAttribute('min', today);
+
+  if (!localStorage.justOnce){
+    localStorage.setItem('justOnce',"true");  
+    location.reload();
   }
+}
 }
