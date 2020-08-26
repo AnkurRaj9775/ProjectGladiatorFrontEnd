@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;/*it will be a box and content will be adjusted*/
     font-family: 'Muli', 'Baloo Da 2', 'Montserrat', sans-serif;
+    color:white;
   }
   
   body {
@@ -54,18 +55,27 @@
 
  .registerCard{
   width: 50%;
-  position: relative;
-  left: -150px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  background-color: #fff;
-  padding-left: 150px;
-  padding-right: 50px;
-  padding-top:55px;
-  padding-bottom: 175px;
-  
-  display: block;
+    position: relative;
+    left: -150px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding-left: 150px;
+    padding-right: 50px;
+    padding-top: 55px;
+    padding-bottom: 175px;
+    display: block;
 
  }
+
+
+
+
+ ::placeholder {
+  color: white;
+  opacity: 5; 
+  font-weight: 25px;
+
+}
+ 
 
  h2{
   font-family: Apercu, sans-serif;
@@ -93,6 +103,7 @@
   .genderStyle{
     padding-top: 20px;
     padding-left:10px;
+    color:white;
   }
 
   .genVal{
@@ -111,13 +122,17 @@
 
 /* Full-width inputs */
 input[type=text], input[type=password], input[type=email], input[type=tel] {
-    width: 70%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  color: white;
+  box-sizing: border-box;
+  background-color: transparent;
   }
+
+    
 
 /* Add padding to containers */
 .container {
