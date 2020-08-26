@@ -56,6 +56,7 @@
   .main {   
     width: 80%;
     margin: auto;
+    
   }
 
  .registerCard{
@@ -68,6 +69,7 @@
     padding-top: 55px;
     padding-bottom: 175px;
     display: block;
+    z-index: 100;
 
  }
 

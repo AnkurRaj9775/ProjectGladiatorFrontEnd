@@ -33,7 +33,7 @@ body{
   
   /* On mouse-over */
   .sidenav a:hover, .dropdown-btn:hover {
-    color: #f1f1f1;
+    color:black;
   }
   
   /* Main content */

@@ -41,6 +41,7 @@ import { ReservationdetailsComponent } from './reservationdetails/reservationdet
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -71,7 +72,8 @@ import { ReservationdetailsComponent } from './reservationdetails/reservationdet
     LastmonthrecordsandprofitComponent,
     MostpreferredtypeofbusesComponent,
     RegisteredcustomerbutnoreservationComponent,
-    ReservationdetailsComponent
+    ReservationdetailsComponent,
+    
   ],
   imports: [
     BrowserModule,
