@@ -156,6 +156,7 @@
 
 .bus-booking__user-options li:hover {
   background-color: #ddd;
+  cursor: pointer;
 }
 
 /* Show the dropdown menu on hover */

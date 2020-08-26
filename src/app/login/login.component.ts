@@ -31,7 +31,8 @@ export class LoginComponent implements OnInit {
          let customerName=data.name;
 
     sessionStorage.setItem('customerId',customerId);
-    sessionStorage.setItem('customerName',customerName);  
+    sessionStorage.setItem('customerName',customerName); 
+    sessionStorage.setItem('justOnce',"false"); 
       this.router.navigate(['homeLink']);
       }
     })
