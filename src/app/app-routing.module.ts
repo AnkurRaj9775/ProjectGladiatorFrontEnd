@@ -18,6 +18,11 @@ import { WalletComponent } from './wallet/wallet.component';
 import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
 import{ ShowMyTicketComponent} from './show-my-ticket/show-my-ticket.component';
 import { SeatmapComponent } from "./seatmap/seatmap.component";
+import { FrequentlytravelledroutesComponent } from './frequentlytravelledroutes/frequentlytravelledroutes.component';
+import { LastmonthrecordsandprofitComponent } from './lastmonthrecordsandprofit/lastmonthrecordsandprofit.component';
+import { MostpreferredtypeofbusesComponent } from './mostpreferredtypeofbuses/mostpreferredtypeofbuses.component';
+import { RegisteredcustomerbutnoreservationComponent } from './registeredcustomerbutnoreservation/registeredcustomerbutnoreservation.component';
+import { ReservationdetailsComponent } from './reservationdetails/reservationdetails.component';
 
 const routes: Routes = [
   {
@@ -77,6 +82,21 @@ const routes: Routes = [
   },
   {
     path:'seatMap',component:SeatmapComponent
+  },
+  {
+    path:'frequentlytravelledroutes',component:FrequentlytravelledroutesComponent
+  },
+  {
+    path:'lastmonthrecordsandprofit',component:LastmonthrecordsandprofitComponent
+  },
+  {
+    path:'mostpreferredtypeofbuses',component:MostpreferredtypeofbusesComponent
+  },
+  {
+    path:'registeredcustomerbutnoreservation',component:RegisteredcustomerbutnoreservationComponent
+  },
+  {
+    path:'reservationdetails',component:ReservationdetailsComponent
   }
 ];
 
