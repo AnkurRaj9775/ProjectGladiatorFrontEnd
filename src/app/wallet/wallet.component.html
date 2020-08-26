@@ -1,22 +1,26 @@
-<div class="sidebar">
-    <a href="#profile" [routerLink]="['/myprofile']"><i class="fa fa-fw fa-user"></i> My Profile</a>
-    <a href="#bookings" [routerLink]="['/mybookings']"><i class="fa fa-fw fa-envelope"></i> My Bookings</a>
-    <a href="#changepassword" [routerLink]="['/changepassword']"><i class="fa fa-fw fa-wrench"></i> Change Password</a>
-    <a href="#wallet" [routerLink]="['/wallet']"><i class="fa fa-credit-card"></i> Wallet</a>
-</div>
-
-
-<div class="main">
-    <h2>Wallet</h2>
-    <div class="card">
-        <h2 class="head"><i class="fa fa-credit-card"></i> Your Wallet Balance :
-            <span class="walletAmount"><i class="fa fa-inr"></i> {{walletBalance}}</span><br>
-        </h2>
-        <h3 class="subhead">
-            <label for="addMoneyToWallet">Add Money to Wallet : </label>
-            <input class="input" type="number" min="1" id="addMoney" name="addMoney" placeholder="Enter Amount" style="text-align: center;" [(ngModel)]='amount' />
-            <button (click)="addBalance()">ADD</button>
-        </h3>
-        <h3 class="message">{{message}}</h3>
+<body>
+    <div class="sidebar">
+        <a href="#profile" [routerLink]="['/myprofile']"><i class="fa fa-fw fa-user"></i> My Profile</a>
+        <a href="#bookings" [routerLink]="['/mybookings']"><i class="fa fa-fw fa-envelope"></i> My Bookings</a>
+        <a href="#changepassword" [routerLink]="['/changepassword']"><i class="fa fa-fw fa-wrench"></i> Change
+            Password</a>
+        <a href="#wallet" [routerLink]="['/wallet']"><i class="fa fa-credit-card"></i> Wallet</a>
     </div>
-</div>
+
+
+    <div class="main">
+        <h2>Wallet</h2>
+        <div class="card">
+            <h2 class="head"><i class="fa fa-credit-card"></i> Your Wallet Balance :
+                <span class="walletAmount"><i class="fa fa-inr"></i> {{walletBalance}}</span><br>
+            </h2>
+            <h3 class="subhead">
+                <label for="addMoneyToWallet">Add Money to Wallet : </label>
+                <input class="input" type="number" min="1" id="addMoney" name="addMoney" placeholder="Enter Amount"
+                    style="text-align: center;" [(ngModel)]='amount' />
+                <button (click)="addBalance()">ADD</button>
+            </h3>
+            <h3 class="message">{{message}}</h3>
+        </div>
+    </div>
+</body>
