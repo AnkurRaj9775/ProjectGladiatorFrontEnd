@@ -1,0 +1,42 @@
+<div>
+    <div class="login_main">
+        <div  >
+            <div  class="head_card"><h3>Passenger Details</h3> </div>
+         <table  class="select_card">
+            <tr class='selected_seats'><td>Passenger Name</td> <td  > </td> </tr>
+            <tr class='selected_seats'><td>Fare</td> <td> </td> </tr>
+             <tr class='selected_seats'><td>Seat(s)</td> <td  > </td> </tr>
+             <tr class='selected_seats'><td>Date Of Journey</td> <td> </td> </tr>
+             <tr class='selected_seats'> <td>From</td> <td> </td> </tr>
+             <tr class='selected_seats'> <td>Destination</td> <td> </td> </tr>
+             <div > </div>
+             
+         </table>
+         
+        </div>
+             
+         </div>
+  </div>
+    <div class="body-text" align="center">Write your name in the right fields. Also write your  card number. By clicking CCV field card will turn.</div>
+    
+    <form>
+      <div class="form-container">
+        <div class="personal-information">
+          <h1>Payment Information</h1>
+        </div> <!-- end of personal-information -->
+             
+            <input id="column-left" type="text" name="first-name" placeholder="First Name"/>
+            <input id="column-right" type="text" name="last-name" placeholder="Surname"/>
+            <input id="input-field" type="text" name="number" placeholder="Card Number"/>
+            <input id="column-left" type="text" name="expiry" placeholder="MM / YY"/>
+            <input id="column-right" type="text" name="cvc" placeholder="CCV"/>
+           
+            <div class="card-wrapper"></div>
+  
+            <!-- <input id="input-field" type="text" name="streetaddress" required="required" autocomplete="on" maxlength="45" placeholder="Streed Address"/>
+            <input id="column-left" type="text" name="city" required="required" autocomplete="on" maxlength="20" placeholder="City"/>
+            <input id="column-right" type="text" name="zipcode" required="required" autocomplete="on" pattern="[0-9]*" maxlength="5" placeholder="ZIP code"/>
+            <input id="input-field" type="email" name="email" required="required" autocomplete="on" maxlength="40" placeholder="Email"/> -->
+            <button (click)='payNow()'>Submit </button> 
+          
+      
