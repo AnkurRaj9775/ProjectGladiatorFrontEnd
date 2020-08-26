@@ -1,5 +1,4 @@
 <body>
-
     <div class="sidebar">
         <a href="#profile" [routerLink]="['/myprofile']"><i class="fa fa-fw fa-user"></i> My Profile</a>
         <a href="#bookings" [routerLink]="['/mybookings']"><i class="fa fa-fw fa-envelope"></i> My Bookings</a>
@@ -9,31 +8,25 @@
         <a href="#wallet" [routerLink]="['/wallet']"><i class="fa fa-credit-card"></i> Wallet</a>
     </div>
 
+
     <div class="main">
-        <h2>My Profile</h2>
+        <h2>Book your own EcoBus !!!</h2>
+        <span style="color: red;">NOTE : This facility is only available without driver.</span><br><br><br><br>
         <div class="card">
-            <!-- <button (click)="makeEditable()">EDIT</button> -->
-            <h3 class="yourName">YOUR NAME
-                <span class="age">AGE</span>
+            <h3 class="busName">BUS NAME
+                <span class="noPlate">BUS PLATE NUMBER</span>
             </h3>
-            <h4 class="userName" id="editable">{{viewProfile.name}}
-                <span class="customerAge">{{viewProfile.age}}</span>
+            <h4 class="nameOfBus" id="editable">Tiger Bus
+                <span class="plate">UK 07 4568</span>
             </h4>
-            <h3 class="gender">GENDER
-            </h3>
-            <div class="genderInput">
-                <span>{{viewProfile.gender}}</span>
-            </div>
             <hr style="width:85%;height:2px;color: grey;background-color: grey;">
-            <h3>CONTACT DETAILS</h3>
-            <h3 class="email">EMAIL ID
-                <span class="phoneNumber">PHONE NUMBER</span>
-            </h3>
-            <h4 class="emailInput" id="editable">{{viewProfile.email}}
-                <span class="phoneInput">{{viewProfile.contact}}
+            <h3 class="busType">BUS TYPE
+                <span class="noOfSeats">NUMBER OF SEATS</span>
+            </h3><br><br>
+            <h4 class="type" id="editable">AC
+                <span class="seats">20
                 </span>
             </h4>
-
         </div>
     </div>
 </body>

@@ -39,6 +39,7 @@ import { MostpreferredtypeofbusesComponent } from './mostpreferredtypeofbuses/mo
 import { RegisteredcustomerbutnoreservationComponent } from './registeredcustomerbutnoreservation/registeredcustomerbutnoreservation.component';
 import { ReservationdetailsComponent } from './reservationdetails/reservationdetails.component';
 import { PaymentComponent } from './payment/payment.component';
+import { BookbuswithoutdriverComponent } from './bookbuswithoutdriver/bookbuswithoutdriver.component';
 
 
 
@@ -74,7 +75,8 @@ import { PaymentComponent } from './payment/payment.component';
     MostpreferredtypeofbusesComponent,
     RegisteredcustomerbutnoreservationComponent,
     ReservationdetailsComponent,
-    PaymentComponent
+    PaymentComponent,
+    BookbuswithoutdriverComponent
   ],
   imports: [
     BrowserModule,

@@ -16,7 +16,7 @@ import { MybookingsComponent } from './mybookings/mybookings.component';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
 import { WalletComponent } from './wallet/wallet.component';
 import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
-import{ ShowMyTicketComponent} from './show-my-ticket/show-my-ticket.component';
+import { ShowMyTicketComponent} from './show-my-ticket/show-my-ticket.component';
 import { SeatmapComponent } from "./seatmap/seatmap.component";
 import { BookticketComponent } from './bookticket/bookticket.component';
 import { FrequentlytravelledroutesComponent } from './frequentlytravelledroutes/frequentlytravelledroutes.component';
@@ -24,7 +24,9 @@ import { LastmonthrecordsandprofitComponent } from './lastmonthrecordsandprofit/
 import { MostpreferredtypeofbusesComponent } from './mostpreferredtypeofbuses/mostpreferredtypeofbuses.component';
 import { RegisteredcustomerbutnoreservationComponent } from './registeredcustomerbutnoreservation/registeredcustomerbutnoreservation.component';
 import { ReservationdetailsComponent } from './reservationdetails/reservationdetails.component';
-import { PaymentComponent } from "./payment/payment.component";
+import { PaymentComponent } from './payment/payment.component';
+import { BookbuswithoutdriverComponent } from './bookbuswithoutdriver/bookbuswithoutdriver.component';
+
 const routes: Routes = [
   {
      path:'',component:HomepageComponent
@@ -109,6 +111,9 @@ const routes: Routes = [
   ,
   {
     path:'payment',component:PaymentComponent
+  },
+  {
+    path:'bookbuswithoutdriver',component:BookbuswithoutdriverComponent
   }
 ];
 
