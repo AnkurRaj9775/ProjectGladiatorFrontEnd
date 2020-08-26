@@ -1,11 +1,183 @@
 td{
-    padding: 40px;
+    padding: 20px;
+    border: 0px;
 }
 
 tr{
     margin: 20px;
+    border-radius: 25px;
+   
 }
 
-table{
+.seat_card{
     margin: 50px;
+    margin-left: 200px;
+    border-radius: 25px;
+    width: 300px;
+    padding-left: 60px;
 }
+
+button:disabled,
+button[disabled]{
+    padding-left: 5px;
+    padding-right: 5px;
+  background-color: #d84f57;
+  color: #666666;
+}
+
+img {  
+    -webkit-transform:rotate(90deg);  
+    -moz-transform: rotate(90deg);  
+    -ms-transform: rotate(90deg);  
+    -o-transform: rotate(90deg);  
+    transform: rotate(90deg);  
+    padding-left: 5px;
+    padding-right:5px ;
+    height: 30px;
+  }
+
+  /* button { outline: none;
+
+    padding: 0;
+    border: none;
+    background: none;
+} */
+button{
+    background-color: rgb(211, 183, 183);
+    padding: 0;
+    border: none;
+
+}
+
+.front{
+    position: absolute;
+    width: 3px;
+    height: 30px;
+    top: 53%;
+    -webkit-transform:rotate(-90deg);  
+    -moz-transform: rotate(-90deg);  
+    -ms-transform: rotate(-90deg);  
+    -o-transform: rotate(-90deg);  
+    transform: rotate(-90deg);  
+    display: flex;
+   
+    align-items: center;
+   
+    justify-content: center;
+    
+    font-size: 25px;
+    font-weight: 600;
+    z-index: 30px;
+    color: #9b9b9b;
+    background: #fafafa;
+    letter-spacing: 1px;
+}
+ 
+
+
+
+
+
+.login_main {
+    margin-top: 80px;
+	background-color: #FFFFFF;
+	width: fit-content;
+	height: fit-content;
+	margin-left:200px;
+	border-radius: 1.5em;
+    box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+;
+}
+
+
+
+
+
+form.form1 {
+	
+	padding-top: 40px;
+	
+}
+
+
+
+
+.un:focus, .pass:focus {
+	border: 2px solid rgba(0, 0, 0, 0.18) ;
+	
+}
+
+.submit {
+  cursor: pointer;
+	border-radius: 5em;
+	color: #fff;
+	background: linear-gradient(to right,#d84f57, #c92f2f);
+	border: 0;
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	font-family: 'Ubuntu', sans-serif;
+	margin-left: 30%;
+	margin-bottom: 5%;
+	font-size: 18px;
+	box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
+
+
+
+
+/* .back {
+	background-color: #f2ebf3;
+} */
+
+button:disabled {
+    /* styles when the element is disabled */
+	background-color: rgb(204, 23, 23);
+	opacity: 0.5;
+}
+
+
+.seatmap{
+    display: flex;
+}
+
+.not_selected{
+    color: #d84f57;
+    text-align: center;
+    padding: 25px;
+    
+}
+
+.selected_seats{
+    color:black;
+    font-size: large;
+    
+}
+
+.submit {
+    cursor: pointer;
+      border-radius: 5em;
+      color: #fff;
+      background: linear-gradient(to right,#d84f57, #c92f2f);
+      border: 0;
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-bottom: 10px;
+      padding-top: 10px;
+      font-family: 'Ubuntu', sans-serif;
+      margin-left: 30%;
+      margin-bottom: 5%;
+      font-size: 18px;
+      box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+  }
+
+  .seatno{
+
+    padding: 0px;
+    
+  }
+  .select_card{
+      padding:20px;
+      
+  }

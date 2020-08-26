@@ -17,6 +17,7 @@ import { ChangepasswordComponent } from './changepassword/changepassword.compone
 import { WalletComponent } from './wallet/wallet.component';
 import{ ShowMyTicketComponent} from './show-my-ticket/show-my-ticket.component'
 import { SeatmapComponent } from "./seatmap/seatmap.component";
+import { BookticketComponent } from './bookticket/bookticket.component';
 
 const routes: Routes = [
   {
@@ -73,6 +74,10 @@ const routes: Routes = [
   },
   {
     path:'seatMap',component:SeatmapComponent
+  }
+  ,
+  {
+    path:'bookTicket',component:BookticketComponent
   }
 ];
 

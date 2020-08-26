@@ -18,6 +18,8 @@ export class HomepageComponent implements OnInit {
     sessionStorage.removeItem('fromCity');
     sessionStorage.removeItem('toCity');
     sessionStorage.removeItem('date');
+    sessionStorage.removeItem('fare')
+    sessionStorage.removeItem('busId')
   }  
 
   setValue(){

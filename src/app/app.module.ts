@@ -31,6 +31,7 @@ import { ChangepasswordComponent } from './changepassword/changepassword.compone
 import { WalletComponent } from './wallet/wallet.component';
 import { AdminComponent } from './admin/admin.component';
 import { SeatmapComponent } from './seatmap/seatmap.component';
+import { BookticketComponent } from './bookticket/bookticket.component';
 
 
 
@@ -56,7 +57,8 @@ import { SeatmapComponent } from './seatmap/seatmap.component';
     ChangepasswordComponent,
     WalletComponent,
     AdminComponent,
-    SeatmapComponent
+    SeatmapComponent,
+    BookticketComponent
   ],
   imports: [
     BrowserModule,
