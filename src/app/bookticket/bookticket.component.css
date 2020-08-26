@@ -142,52 +142,54 @@ div {
       box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
   }
 
+  .submit_pass
+  {
+    cursor: pointer;
+      border-radius: 5em;
+      color: #fff;
+      background: linear-gradient(to right,#d84f57, #c92f2f);
+      border: 0;
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-bottom: 10px;
+      padding-top: 10px;
+      font-family: 'Ubuntu', sans-serif;
+      margin-top:1% ;
+      margin-left: 10%;
+      margin-bottom: 5%;
+      font-size: 25px;
+      height: 40px;
+      width: 300px;
+      box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+  }
+
   .passenger_seat{
     margin-top:-10px ;
     padding-top: 0px ;
   }
-.w-9 {
-    padding-left: 65px;
-}
-.w-11 {
-  padding-left: 75px;
-  float: left;
+  button:disabled {
+    /* styles when the element is disabled */
+	background-color: rgb(204, 23, 23);
+	opacity: 0.5;
 }
 
-.w-12 {
-  padding-left: 55px;
-  float: left;
-}
 .path{
   padding-left: 118px;
 }
 
-.w-10 {
-  padding-left:55px;
-  float: left;
-}
-.p-right-10 {
-  padding-right: 20px;
-}
+.login_main {
+  margin-top: 80px;
+background-color: #FFFFFF;
+width: fit-content;
+height: fit-content;
+margin-left:200px;
+border-radius: 1.5em;
+  box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
 
-
-.lh-24 {
-  line-height: 24px;
 }
-.d-color {
-  color: #3e3e52;
-}
-
-
-.m-top-16 {
-  margin-top: 6px;
-}
-.l-color {
-  color: #7e7e8c;
-}
-.m-top-30 {
-  margin-top: 30px;
-  margin-left: 20px;
+.img_gif{
+  margin-top:2%;
+  margin-left: 20%;
 }
 *,
 :after,

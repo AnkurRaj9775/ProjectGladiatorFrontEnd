@@ -38,6 +38,7 @@ import { LastmonthrecordsandprofitComponent } from './lastmonthrecordsandprofit/
 import { MostpreferredtypeofbusesComponent } from './mostpreferredtypeofbuses/mostpreferredtypeofbuses.component';
 import { RegisteredcustomerbutnoreservationComponent } from './registeredcustomerbutnoreservation/registeredcustomerbutnoreservation.component';
 import { ReservationdetailsComponent } from './reservationdetails/reservationdetails.component';
+import { PaymentComponent } from './payment/payment.component';
 
 
 
@@ -73,7 +74,7 @@ import { ReservationdetailsComponent } from './reservationdetails/reservationdet
     MostpreferredtypeofbusesComponent,
     RegisteredcustomerbutnoreservationComponent,
     ReservationdetailsComponent,
-    
+    PaymentComponent
   ],
   imports: [
     BrowserModule,
