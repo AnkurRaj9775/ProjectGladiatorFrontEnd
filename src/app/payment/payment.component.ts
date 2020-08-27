@@ -38,7 +38,7 @@ export class PaymentComponent implements OnInit {
   ngOnInit(): void {
     this.noOfpassenger=JSON.parse(sessionStorage.getItem("seatsBooked"));
     this.customerdetails.email=sessionStorage.getItem('customerEmail')
-    console.log(this.customerdetails.email+"in payment")
+     (this.customerdetails.email+"in payment")
     this.customerdetails.contact=sessionStorage.getItem('customerContact')
     this.seatbookdetails=JSON.parse(sessionStorage.getItem("seatsBooked"));
     this.ticketdetails.busId=Number(sessionStorage.getItem("busId"));
@@ -67,17 +67,17 @@ export class PaymentComponent implements OnInit {
 
   payNow(form:NgForm)
   {
-    console.log(JSON.stringify(this.p)+"paynow")
+     (JSON.stringify(this.p)+"paynow")
     this.bookticket.customerDetails=this.customerdetails;
-    console.log(this.bookticket.customerDetails+" final")
-    console.log(JSON.stringify(this.customerdetails)+ " intermediate")
+     (this.bookticket.customerDetails+" final")
+     (JSON.stringify(this.customerdetails)+ " intermediate")
     this.bookticket.passengerDetails=this.p;
     
     this.bookticket.seatDetails=this.seatbookdetails;
     this.bookticket.ticketDetails=this.ticketdetails;
-    console.log(JSON.stringify(this.bookticket))
+     (JSON.stringify(this.bookticket))
     this.busdetails.bookMyticket(this.bookticket).subscribe(data => {
-      console.log(data);
+       (data);
       if(!data.resultStatus)
       {
         this.ticketStatus=data.resultStatus;

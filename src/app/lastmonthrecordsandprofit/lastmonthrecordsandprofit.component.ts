@@ -39,11 +39,11 @@ export class LastmonthrecordsandprofitComponent implements OnInit {
       this.data = data;
       for (let i = 0; i < this.data.length; i++) {
          this.totalProfit = this.totalProfit + (this.data.amount);
-         console.log(Number(this.data.amount));
-         console.log(this.totalProfit+" inside for");
+          (Number(this.data.amount));
+          (this.totalProfit+" inside for");
       }
-      console.log(JSON.stringify(data));
-      console.log(JSON.stringify(this.data)+" console");
+       (JSON.stringify(data));
+       (JSON.stringify(this.data)+" console");
 
     })
 

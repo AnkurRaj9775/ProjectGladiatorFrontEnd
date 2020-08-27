@@ -34,7 +34,7 @@ export class ContactUsComponent{
   constructor(public http: HttpService) {}
 
   ngOnInit() {
-    console.log(this.http.test);
+     (this.http.test);
   }
 
   
@@ -55,12 +55,12 @@ export class ContactUsComponent{
     this.http.sendEmail("http://localhost:3000/sendmail", user).subscribe(
       data => {
         let res:any = data; 
-        console.log(
+         (
           `👏 > 👏 > 👏 > 👏 ${user.name} is successfully register and mail has been sent and the message id is ${res.messageId}`
         );
       },
       err => {
-        console.log(err);
+         (err);
         this.loading = false;
         this.buttionText = "Submit";
       },() => {

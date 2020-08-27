@@ -10,12 +10,12 @@ export class LoginService {
   constructor(private http:HttpClient) { }
 
   login(login :Login):Observable<any>{
-    console.log("inside user service")
+     ("inside user service")
     return this.http.post("http://localhost:8181/login",login);
   }
 
   adminlogin(adlogin :Login):Observable<any>{
-    console.log("inside admin service")
+     ("inside admin service")
     return this.http.post("http://localhost:8181/loginAdminUser",adlogin);
   }
 }
