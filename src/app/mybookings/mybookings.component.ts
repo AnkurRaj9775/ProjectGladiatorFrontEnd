@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MyBookingsService } from "../service/my-bookings.service";
 import { ForgotPassword } from "../serviceclass/forgotpassword";
+import { CancelLoggedTicket } from "../serviceclass/CancelLoggedTicket";
 @Component({
   selector: 'app-mybookings',
   templateUrl: './mybookings.component.html',
@@ -17,6 +18,8 @@ export class MybookingsComponent implements OnInit {
    }
    bookings:any;
    status:boolean;
+   canticket:CancelLoggedTicket=new CancelLoggedTicket();
+   cancelstatus:boolean;
   ngOnInit(): void {
     this.mybook.customerId=Number(sessionStorage.getItem('customerId'));
       this.service.myBooking(this.mybook).subscribe(data =>{
@@ -34,4 +37,14 @@ export class MybookingsComponent implements OnInit {
       })
   }
 
+  cancelTicket(ticketId){
+    this.canticket.ticketNo=ticketId;
+    this.service.cancelTicket(this.canticket).subscribe(data=>{
+      this.cancelstatus=data.resultStatus;
+      if(data.resultStatus)
+      {
+        window.location.reload();
+      }
+    })
+  }
 }

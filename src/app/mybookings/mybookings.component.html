@@ -20,7 +20,7 @@
             <span><b>To City</b> :{{cp.toCity}} </span><br><br>
             <span><b>Number of Seats Booked</b> : {{cp.noOfSeatsBooked}}</span><br><br>
             <span><b>Ticket Amount</b> :{{cp.totalCost}} </span><br><br><br><br>
-            <b><button *ngIf='cp.cancelButton' class="cancelBooking" [routerLink]="['/cancellation']">Cancel Booking</button></b>
+            <b><button *ngIf='cp.cancelButton' class="cancelBooking" (click)="cancelTicket(cp.ticketId)">Cancel Booking</button></b>
         </div>
     </div>
 
