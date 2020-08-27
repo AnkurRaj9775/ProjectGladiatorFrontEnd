@@ -32,6 +32,7 @@
       <span class="error" align="center">Please Select Gender</span>
 
       <button type="submit" class="submit" align="center"  [disabled]='!registerForm.valid'>Sign Up</button>
+      <div *ngIf='registerStatus' align="center" style="color: rgb(50, 160, 50);"> Registered  Successfully !!!.Please check Your Mail.</div>
 
 
     </form>

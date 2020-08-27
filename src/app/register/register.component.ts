@@ -13,7 +13,7 @@ export class RegisterComponent implements OnInit {
   password: string;
   confirmPass="";
   customer: Customer=new Customer();
-  registerStatus:boolean=false;
+  registerStatus:string="";
 constructor(private registerService:RegisterService,private router:Router){}
 
 
@@ -22,13 +22,9 @@ constructor(private registerService:RegisterService,private router:Router){}
   registerUser(form:NgForm) {
    this.registerService.register(this.customer).subscribe(data=>{
 
-    if(!data.resultStatus)
-      {
-        this.registerStatus=data.resultStatus;
-      }
-      else{
-        this.registerStatus=data.resultStatus;
-      }
+  
+        this.registerStatus=data.message;
+    
 
    })
    form.reset();
