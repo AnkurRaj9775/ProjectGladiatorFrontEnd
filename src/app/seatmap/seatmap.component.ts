@@ -61,8 +61,7 @@ export class SeatmapComponent implements OnInit {
     }
 
     this.selectedSeatNumber = String(this.selectSeats.sort().toString().split(","));
-    console.log(this.selectedSeatNumber + "sort ho rha hai?")
-    console.log(this.selectSeats.sort() + "sort ho rha hai?")
+  
 
   }
 

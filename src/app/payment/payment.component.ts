@@ -11,13 +11,8 @@ import { BusDetailsService } from "../service/BusDetails.service";
   styleUrls: ['./payment.component.css']
 })
 export class PaymentComponent implements OnInit {
-  name:string;
-  fare:number;
-  seats:string;
-  dateOfJourney:string;
-  from:string;
-  destination:string;
-  ticketStatus:boolean=false;
+
+ 
 
   noOfpassenger = new Array<number>();
   totalMembers:number;
@@ -30,7 +25,13 @@ export class PaymentComponent implements OnInit {
   bookticket:BookTicket=new BookTicket;
   constructor(private busdetails: BusDetailsService) { }
 
-
+  name = new Array<any>();
+  fare=sessionStorage.getItem("totalFare");
+  seats=(JSON.parse(sessionStorage.getItem("seatsBooked")));
+  dateOfJourney=sessionStorage.getItem("date");
+  from=sessionStorage.getItem("fromCity");
+  destination=sessionStorage.getItem("toCity");
+  ticketStatus:boolean=false;
  
 
   ngOnInit(): void {
@@ -44,6 +45,13 @@ export class PaymentComponent implements OnInit {
     this.ticketdetails.totalCost=Number(sessionStorage.getItem("totalFare"));
     this.ticketdetails.noOfSeatsBooked=this.noOfpassenger.length;
     this.p=JSON.parse(sessionStorage.getItem("passengerdetails"));
+    // this.name=this.p.find(x=>x!==undefined).name.toString();
+    // for(let i=0;i<this.p.length;i++)
+    // {
+    //   this.name[i].push(this.p[thiname]);
+    // }
+   // this.name=this.p.filter(x => typeof x!==undefined).shift().name.toString();
+  
   }
 
 
@@ -67,6 +75,7 @@ export class PaymentComponent implements OnInit {
        
     }
   })
+  sessionStorage.clear();
 }
 
 

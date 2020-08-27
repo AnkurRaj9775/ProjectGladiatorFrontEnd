@@ -3,12 +3,12 @@
         <div  >
             <div  class="head_card"><h3>Passenger Details</h3> </div>
          <table  class="select_card">
-            <tr class='selected_seats'><td>Passenger Name</td> <td  > </td> </tr>
-            <tr class='selected_seats'><td>Fare</td> <td> </td> </tr>
-             <tr class='selected_seats'><td>Seat(s)</td> <td  > </td> </tr>
-             <tr class='selected_seats'><td>Date Of Journey</td> <td> </td> </tr>
-             <tr class='selected_seats'> <td>From</td> <td> </td> </tr>
-             <tr class='selected_seats'> <td>Destination</td> <td> </td> </tr>
+            <tr class='selected_seats'><td>Passenger Name:</td> <td  >{{name}} </td> </tr>
+            <tr class='selected_seats'><td>Fare</td> <td>{{fare}} </td> </tr>
+             <tr class='selected_seats'><td>Seat(s)</td> <td >{{seats}} </td> </tr>
+             <tr class='selected_seats'><td>Date Of Journey</td> <td>{{dateOfJourney}} </td> </tr>
+             <tr class='selected_seats'> <td>From</td> <td>{{from}} </td> </tr>
+             <tr class='selected_seats'> <td>Destination</td> <td>{{destination}} </td> </tr>
              <div > </div>
              
          </table>
@@ -39,4 +39,4 @@
             <input id="input-field" type="email" name="email" required="required" autocomplete="on" maxlength="40" placeholder="Email"/> -->
             <button (click)='payNow()' class="submit">Submit </button> 
           
-      <div *ngIf='ticketStatus'>Ticket booked Succcessfully!!!.Check email for the Details. </div>
+      <div *ngIf='ticketStatus' class="ticket_status">Ticket booked Succcessfully!!!.Check email for the Details. </div>
