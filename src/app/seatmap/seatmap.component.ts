@@ -43,7 +43,7 @@ export class SeatmapComponent implements OnInit {
       }
     }
     else {
-      console.log("else callled");
+       ("else callled");
 
       if (this.selectSeats.length == 0) {
         this.fare = Number(sessionStorage.getItem('fare'));
@@ -68,7 +68,7 @@ export class SeatmapComponent implements OnInit {
 
 
   myFunction(idin) {
-    console.log(idin + " inside func");
+     (idin + " inside func");
     document.getElementById(idin).style.backgroundColor = "yellow";
   }
   findIndex(id1) {
@@ -84,9 +84,9 @@ export class SeatmapComponent implements OnInit {
   }
 
   changeSeatColor(seatNo) {
-    console.log("called")
+     ("called")
     var x = document.getElementById(seatNo);
-    console.log(x);
+     (x);
     x.setAttribute("src", "../assets/bseat.png");
     var element = <HTMLInputElement>document.getElementById(seatNo);
 
@@ -99,16 +99,16 @@ export class SeatmapComponent implements OnInit {
   ngOnInit(): void {
     this.seatdetails.busId = Number(sessionStorage.getItem('busId'));
     this.seatdetails.dateOfJourney = String(sessionStorage.getItem('date'));
-    console.log(this.seatdetails);
+     (this.seatdetails);
     this.busdetails.noOfSeats(this.seatdetails).subscribe(data => {
       this.key = data.noOfseats;
-      console.log(data)
-      console.log(this.key)
+       (data)
+       (this.key)
       for (let i = 0; i < this.key.length; i++) {
-        console.log("for loop")
+         ("for loop")
         this.changeSeatColor(this.key[i]);
       }
-      console.log("after lop")
+       ("after lop")
     })
 
   }

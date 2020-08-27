@@ -19,16 +19,16 @@ export class SearchComponentComponent implements OnInit {
     const day1 = dateOfJourney.getDay();
     var Wday: string[] = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     var day = Wday[day1];
-    console.log(day);
+     (day);
     this.details.fromCity = sessionStorage.getItem('fromCity');
     this.details.toCity = sessionStorage.getItem('toCity');
     this.details.day=day;
     this.details.dateOfJourney = sessionStorage.getItem('date');
-    console.log(this.details.dateOfJourney);
-    console.log(this.details);
+     (this.details.dateOfJourney);
+     (this.details);
     this.busDetails.busDetails(this.details).subscribe(data => {
       this.data = data;
-      console.log(data);
+       (data);
       this.totalBus=data.length;
     })
   }

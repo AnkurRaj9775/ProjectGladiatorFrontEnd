@@ -33,22 +33,21 @@ export class BookticketComponent implements OnInit {
     this.totalMembers = this.noOfpassenger.length;
   }
 
-  bookTicket() {
-    sessionStorage.setItem('passengerdetails', JSON.stringify(this.p));
-    console.log(JSON.stringify(this.p));
-    console.log(JSON.stringify(sessionStorage.getItem('passengerdetails')));
-    sessionStorage.setItem('customerEmail', this.customerdetails.email);
-    console.log(
-      sessionStorage.getItem('customerEmail') + 'customeremail session'
-    );
-    sessionStorage.setItem('customerContact', this.customerdetails.contact);
-    this.router.navigate(['payment']);
+  bookTicket()
+  {
+   
+    
+    sessionStorage.setItem('passengerdetails',JSON.stringify(this.p));
+    sessionStorage.setItem('customerEmail',this.customerdetails.email);
+    sessionStorage.setItem('customerContact',this.customerdetails.contact );
+      this.router.navigate(['payment']);
   }
 
-  addPassenger() {
-    console.log(JSON.stringify(this.passengerdetails) + 'addpassenger');
-    console.log(this.counter + 'in');
-    if (this.noOfpassenger.length - 1 >= this.counter) {
+  addPassenger()
+  {
+    
+    
+    if(this.noOfpassenger.length-1>=this.counter){
       this.counter++;
       this.seat = this.noOfpassenger[this.counter];
       this.p.push(this.passengerdetails);
@@ -60,7 +59,6 @@ export class BookticketComponent implements OnInit {
       }
     }
 
-    console.log(JSON.stringify(this.p) + 'test');
   }
 
   isNumber(event, id, l) {

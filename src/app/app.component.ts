@@ -21,11 +21,11 @@ clearSession(){
 }
 
 ngOnInit(): void {
-  console.log(sessionStorage.getItem('customerId'))
+   (sessionStorage.getItem('customerId'))
   if(sessionStorage.getItem('customerId')===null)
   {
     this.loggedIn=true;
-    console.log(this.loggedIn);
+     (this.loggedIn);
   }
  
 }
