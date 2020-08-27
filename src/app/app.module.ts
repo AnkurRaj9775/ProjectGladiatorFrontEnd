@@ -21,15 +21,12 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { CancelComponent } from './cancel/cancel.component';
-import { RescheduleComponent } from './reschedule/reschedule.component';
-import { ShowMyTicketComponent } from './show-my-ticket/show-my-ticket.component';
 import { MyprofileComponent } from './myprofile/myprofile.component';
 import { SharedComponent } from './shared/shared.component';
 import { SearchComponentComponent } from './searchBus/searchBus.component';
 import { MybookingsComponent } from './mybookings/mybookings.component';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
 import { WalletComponent } from './wallet/wallet.component';
-
 import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
 import { SeatmapComponent } from './seatmap/seatmap.component';
 import { BookticketComponent } from './bookticket/bookticket.component';
@@ -39,7 +36,6 @@ import { MostpreferredtypeofbusesComponent } from './mostpreferredtypeofbuses/mo
 import { RegisteredcustomerbutnoreservationComponent } from './registeredcustomerbutnoreservation/registeredcustomerbutnoreservation.component';
 import { ReservationdetailsComponent } from './reservationdetails/reservationdetails.component';
 import { PaymentComponent } from './payment/payment.component';
-import { BookbuswithoutdriverComponent } from './bookbuswithoutdriver/bookbuswithoutdriver.component';
 import { AdminLoginUserComponent } from './admin-login-user/admin-login-user.component';
 import { RemoveBusComponent } from './remove-bus/remove-bus.component';
 
@@ -59,8 +55,6 @@ import { RemoveBusComponent } from './remove-bus/remove-bus.component';
     DashboardComponent,
     ContactUsComponent,
     CancelComponent,
-    RescheduleComponent,
-    ShowMyTicketComponent,
     SharedComponent,
     SearchComponentComponent,
     MyprofileComponent,
@@ -78,10 +72,10 @@ import { RemoveBusComponent } from './remove-bus/remove-bus.component';
     RegisteredcustomerbutnoreservationComponent,
     ReservationdetailsComponent,
     PaymentComponent,
-    BookbuswithoutdriverComponent,
     AdminLoginUserComponent,
     RemoveBusComponent
    
+
   ],
   imports: [
     BrowserModule,
