@@ -1,105 +1,92 @@
 import { Component, OnInit } from '@angular/core';
-import { CustomerDetails } from "../serviceclass/customerDetails";
-import { PassengerDetails } from "../serviceclass/passengerDetails";
-import { SeatBookDetails } from "../serviceclass/seatBookDetails";
-import { TicketDetails } from "../serviceclass/ticketDetails";
-import { BookTicket } from "../serviceclass/bookTicket";
-import { BusDetailsService } from "../service/BusDetails.service";
-import { Router } from "@angular/router";
+import { CustomerDetails } from '../serviceclass/customerDetails';
+import { PassengerDetails } from '../serviceclass/passengerDetails';
+import { SeatBookDetails } from '../serviceclass/seatBookDetails';
+import { TicketDetails } from '../serviceclass/ticketDetails';
+import { BookTicket } from '../serviceclass/bookTicket';
+import { BusDetailsService } from '../service/BusDetails.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-bookticket',
   templateUrl: './bookticket.component.html',
-  styleUrls: ['./bookticket.component.css']
+  styleUrls: ['./bookticket.component.css'],
 })
 export class BookticketComponent implements OnInit {
   noOfpassenger = new Array<number>();
-  totalMembers:number;
-  customerdetails :CustomerDetails=new CustomerDetails();
-  p :PassengerDetails[]=new Array<PassengerDetails>();
-  seatbookdetails :SeatBookDetails[]=new Array<SeatBookDetails>();
-  ticketdetails :TicketDetails=new TicketDetails();
-  passengerdetails :PassengerDetails=new PassengerDetails();
-  
-  bookticket:BookTicket=new BookTicket;
- 
- 
-  constructor(private router:Router ) {
-   
-  }
-  
-  
-  seat:number;
-  counter:number=0;
+  totalMembers: number;
+  customerdetails: CustomerDetails = new CustomerDetails();
+  p: PassengerDetails[] = new Array<PassengerDetails>();
+  seatbookdetails: SeatBookDetails[] = new Array<SeatBookDetails>();
+  ticketdetails: TicketDetails = new TicketDetails();
+  passengerdetails: PassengerDetails = new PassengerDetails();
+
+  bookticket: BookTicket = new BookTicket();
+
+  constructor(private router: Router) {}
+
+  seat: number;
+  counter: number = 0;
   ngOnInit(): void {
+    this.noOfpassenger = JSON.parse(sessionStorage.getItem('seatsBooked'));
+    this.seat = this.noOfpassenger[0];
 
-    this.noOfpassenger=JSON.parse(sessionStorage.getItem("seatsBooked"));
-    this.seat=this.noOfpassenger[0];
-    
-    this.totalMembers=this.noOfpassenger.length;
+    this.totalMembers = this.noOfpassenger.length;
   }
 
-  bookTicket()
-  {
-   
-    
-    sessionStorage.setItem('passengerdetails',JSON.stringify(this.p));
-    console.log(JSON.stringify(this.p))
+  bookTicket() {
+    sessionStorage.setItem('passengerdetails', JSON.stringify(this.p));
+    console.log(JSON.stringify(this.p));
     console.log(JSON.stringify(sessionStorage.getItem('passengerdetails')));
-    sessionStorage.setItem('customerEmail',this.customerdetails.email );
-    console.log(sessionStorage.getItem('customerEmail') +"customeremail session")
-    sessionStorage.setItem('customerContact',this.customerdetails.contact );
-      this.router.navigate(['payment']);
+    sessionStorage.setItem('customerEmail', this.customerdetails.email);
+    console.log(
+      sessionStorage.getItem('customerEmail') + 'customeremail session'
+    );
+    sessionStorage.setItem('customerContact', this.customerdetails.contact);
+    this.router.navigate(['payment']);
   }
 
-  addPassenger()
-  {
-    
-    
-    console.log(JSON.stringify(this.passengerdetails)+"addpassenger")
-    console.log(this.counter+"in")
-    if(this.noOfpassenger.length-1>=this.counter){
+  addPassenger() {
+    console.log(JSON.stringify(this.passengerdetails) + 'addpassenger');
+    console.log(this.counter + 'in');
+    if (this.noOfpassenger.length - 1 >= this.counter) {
       this.counter++;
-      this.seat=this.noOfpassenger[this.counter];
-        this.p.push(this.passengerdetails);
-        this.passengerdetails =new PassengerDetails();
-        if(this.counter==this.noOfpassenger.length)
-        {
-        var element = <HTMLInputElement>document.getElementById("addPass");
-       
-     element.disabled = true;
+      this.seat = this.noOfpassenger[this.counter];
+      this.p.push(this.passengerdetails);
+      this.passengerdetails = new PassengerDetails();
+      if (this.counter == this.noOfpassenger.length) {
+        var element = <HTMLInputElement>document.getElementById('addPass');
+
+        element.disabled = true;
+      }
     }
+
+    console.log(JSON.stringify(this.p) + 'test');
   }
-
-
-    
-    console.log(JSON.stringify(this.p)+"test");
-
-  }
-
 
   isNumber(event, id, l) {
-    var mobile = (<HTMLInputElement>document.getElementById(id));
+    var mobile = <HTMLInputElement>document.getElementById(id);
     var data = mobile.value;
     var key = event.key;
-    if (isNaN(key) || data.length > l)
-      event.preventDefault();
+    if (isNaN(key) || data.length > l) event.preventDefault();
   }
   manageMobile(id) {
-    var mobile = (<HTMLInputElement>document.getElementById(id));
+    var mobile = <HTMLInputElement>document.getElementById(id);
     var data = mobile.value;
-    data = data.replace(/ /g, "");
-    if (data.length <= 5)
-      mobile.value = data;
+    data = data.replace(/ /g, '');
+    if (data.length <= 5) mobile.value = data;
     else
-      mobile.value = data.substring(0, 5) + " " + data.substring(5, data.length);
+      mobile.value =
+        data.substring(0, 5) + ' ' + data.substring(5, data.length);
   }
 
   isAName(event) {
     var key = event.key;
-    if ((key >= 'a' && key <= 'z') || (key >= 'A' && key <= 'Z') || key == ' ') {
-
-    }
-    else {
+    if (
+      (key >= 'a' && key <= 'z') ||
+      (key >= 'A' && key <= 'Z') ||
+      key == ' '
+    ) {
+    } else {
       event.preventDefault();
     }
   }

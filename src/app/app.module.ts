@@ -21,8 +21,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { CancelComponent } from './cancel/cancel.component';
-import { RescheduleComponent } from './reschedule/reschedule.component';
-import { ShowMyTicketComponent } from './show-my-ticket/show-my-ticket.component';
 import { MyprofileComponent } from './myprofile/myprofile.component';
 import { SharedComponent } from './shared/shared.component';
 import { SearchComponentComponent } from './searchBus/searchBus.component';
@@ -58,8 +56,6 @@ import { AdminLoginUserComponent } from './admin-login-user/admin-login-user.com
     DashboardComponent,
     ContactUsComponent,
     CancelComponent,
-    RescheduleComponent,
-    ShowMyTicketComponent,
     SharedComponent,
     SearchComponentComponent,
     MyprofileComponent,
