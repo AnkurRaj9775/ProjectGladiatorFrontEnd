@@ -33,7 +33,7 @@ body{
     
     /* On mouse-over */
     .sidenav a:hover, .dropdown-btn:hover {
-      color: #f1f1f1;
+      color:black;
     }
     
     /* Main content */
@@ -46,7 +46,7 @@ body{
     /* Add an active class to the active dropdown button */
     .active {
       background-color: rgb(87, 0, 0);
-      color: white;
+      color:black;
     }
     
     /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */

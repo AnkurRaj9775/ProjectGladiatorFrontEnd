@@ -1,189 +1,198 @@
 * {
-    box-sizing: border-box;/*it will be a box and content will be adjusted*/
-    font-family: 'Muli', 'Baloo Da 2', 'Montserrat', sans-serif;
-  }
-  
-  body {
-    font-family: Arial;
-    padding: 10px;
-    background: #f1f1f1;
-  }
+  box-sizing: border-box;/*it will be a box and content will be adjusted*/
+  font-family: 'Muli', 'Baloo Da 2', 'Montserrat', sans-serif;
+}
 
-  .row{
-    background-attachment: fixed;
-    background-size: cover;
-    height:100vh;
-  }
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+}
+
+.row{
+  background-attachment: fixed;
+  background-size: cover;
+  height:100vh;
+}
 
 .header{
-    padding: 10px;
-    text-align: center;
-    background: white;
-    width: 80%;
-    margin: auto;
+  padding: 10px;
+  text-align: center;
+  background: white;
+  width: 80%;
+  margin: auto;
 }
+
+
+
+
+
 .topnav{
-    overflow: hidden;/*additional contrent is not dsiplayed in case of overflow */
-    background-color: darkblue;
-    width: 80%;
-    margin: auto;
+  overflow: hidden;/*additional contrent is not dsiplayed in case of overflow */
+  background-color: darkblue;
+  width: 80%;
+  margin: auto;
 }
 .topnav ul{
-    list-style-type: none;
+  list-style-type: none;
 }
 /* Style the topnav links */
 .topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px;
-    text-decoration: none;/*It will remove hyperlink(underline)*/
-    letter-spacing: 1px;
-    height: 70px;
-  }
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;/*It will remove hyperlink(underline)*/
+  letter-spacing: 1px;
+  height: 70px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
-  .main {   
-    width: 80%;
-    margin: auto;
-  }
+.main {   
+  width: 80%;
+  margin: auto;
+}
 
- .registerCard{
-  width: 50%;
-  position: relative;
-  left: -150px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  background-color: #fff;
-  padding-left: 150px;
-  padding-right: 50px;
-  padding-top:55px;
-  padding-bottom: 175px;
-  
-  display: block;
+.registerCard{
+width: 50%;
+position: relative;
+left: -150px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+background-color: #fff;
+padding-left: 150px;
+padding-right: 50px;
+padding-top:55px;
+padding-bottom: 130px;
 
- }
+display: block;
 
- h2{
-  font-family: Apercu, sans-serif;
-     color:#d84f57;
-    font-size: 2em;
-    margin-block-start: 20px;    
-    margin-inline-start: -100px;  
-    font-weight: bold;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
- }
+}
 
- h3{
-  font-family: Apercu, sans-serif;
-  color:#d84f57;
+h2{
+font-family: Apercu, sans-serif;
+   color:#d84f57;
+  font-size: 2em;
+  margin-block-start: 20px;    
+  margin-inline-start: -100px;  
   font-weight: bold;
-  font-size: 20px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
- }
+}
 
-  .column{
-    float:right;
-    width:50%;
-  }
+h3{
+font-family: Apercu, sans-serif;
+color:#d84f57;
+font-weight: bold;
+font-size: 20px;
+}
 
-  .genderStyle{
-    padding-top: 20px;
-    padding-left:10px;
-  }
+.column{
+  float:right;
+  width:50%;
+}
 
-  .genVal{
-    padding-right: 20px;
-  }
+.genderStyle{
+  padding-top: 20px;
+  padding-left:10px;
+}
 
-  .cc{
-      float: left;
-      padding: 5px;
-  }
-  img {
-    width: auto;
-    max-width: 185px;
-    height: auto; 
-  }
+.genVal{
+  padding-right: 20px;
+}
+
+.cc{
+    float: left;
+    padding: 5px;
+}
+img {
+  width: auto;
+  max-width: 185px;
+  height: auto; 
+}
 
 /* Full-width inputs */
 input[type=text], input[type=password], input[type=email], input[type=tel] {
-    width: 70%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-  }
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
 
 /* Add padding to containers */
 .container {
-    padding: 16px;
-    width: 350px;
-    margin: auto;
-  }
+  padding: 16px;
+  width: 350px;
+  margin: auto;
+}
 
-/* Set a style for all buttons */
 button {
-    background-color: rgb(139, 39, 0);
-    color: white;
-    padding: 14px 20px;
-    margin: 18px 0;
-    border: none;
-    cursor: pointer;
-    width: 70%;
-  }
-   /* Add a hover effect for buttons */
-   button:hover {
-    opacity: 0.8;
-  }
+  background-color: #d84f57;
+  color: white;
+  padding: 14px 20px;
+  margin: 18px 0;
+  border: none;
+  cursor: pointer;
+  width: 60%;
+  border-radius: 30px;
+}
+ /* Add a hover effect for buttons */
+ button:hover {
+  opacity: 0.8;
+}
 /* Extra style for the cancel button (red) */
 .cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #f44336;
-  }
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
 
 
 
-  .new-signin-header {
-    font-size: 19px;
-    font-weight: 700;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.2;
-    letter-spacing: normal;
-    color: #d84e55;
-    margin-left: 0;
-    margin-bottom: 30px;
-    margin-top: 15px;
-    text-align: center;
+.new-signin-header {
+  font-size: 19px;
+  font-weight: 700;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
+  color: #d84e55;
+  margin-left: 0;
+  margin-bottom: 30px;
+  margin-top: 15px;
+  text-align: center;
 }
 
 .error{
 
-	display: none;
+display: none;
 }
 
 input.ng-invalid.ng-touched{
-	border-color: red;
+border-color: red;
 }
 
 input.ng-invalid.ng-touched +.error{
-	display: block;
-	color: red;
-	font-weight: bold;
-	
+display: block;
+color: red;
+font-weight: bold;
+
 }
 .formError{
-  display: none;
+display: none;
 }
 input.ng-invalid.ng-submitted +.FormError{
-	display: block;
-	color: red;
-	font-weight: bold;
-	
+display: block;
+color: red;
+font-weight: bold;
+    
+                       
+}
+
+.inputField{
+  font-weight: 600;
+ 
 }
