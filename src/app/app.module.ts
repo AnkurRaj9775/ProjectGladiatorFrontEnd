@@ -29,7 +29,7 @@ import { SearchComponentComponent } from './searchBus/searchBus.component';
 import { MybookingsComponent } from './mybookings/mybookings.component';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
 import { WalletComponent } from './wallet/wallet.component';
-import { AdminComponent } from './admin/admin.component';
+
 import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
 import { SeatmapComponent } from './seatmap/seatmap.component';
 import { BookticketComponent } from './bookticket/bookticket.component';
@@ -40,7 +40,8 @@ import { RegisteredcustomerbutnoreservationComponent } from './registeredcustome
 import { ReservationdetailsComponent } from './reservationdetails/reservationdetails.component';
 import { PaymentComponent } from './payment/payment.component';
 import { BookbuswithoutdriverComponent } from './bookbuswithoutdriver/bookbuswithoutdriver.component';
-import { AdminloginComponent } from './adminlogin/adminlogin.component';
+import { AdminLoginUserComponent } from './admin-login-user/admin-login-user.component';
+
 
 
 
@@ -66,7 +67,6 @@ import { AdminloginComponent } from './adminlogin/adminlogin.component';
     MybookingsComponent,
     ChangepasswordComponent,
     WalletComponent,
-    AdminComponent,
     SeatmapComponent,
     BookticketComponent,
     AdmindashboardComponent,
@@ -78,7 +78,8 @@ import { AdminloginComponent } from './adminlogin/adminlogin.component';
     ReservationdetailsComponent,
     PaymentComponent,
     BookbuswithoutdriverComponent,
-    AdminloginComponent
+    AdminLoginUserComponent,
+   
   ],
   imports: [
     BrowserModule,

@@ -75,4 +75,32 @@ export class BookticketComponent implements OnInit {
     console.log(JSON.stringify(this.p)+"test");
 
   }
+
+
+  isNumber(event, id, l) {
+    var mobile = (<HTMLInputElement>document.getElementById(id));
+    var data = mobile.value;
+    var key = event.key;
+    if (isNaN(key) || data.length > l)
+      event.preventDefault();
+  }
+  manageMobile(id) {
+    var mobile = (<HTMLInputElement>document.getElementById(id));
+    var data = mobile.value;
+    data = data.replace(/ /g, "");
+    if (data.length <= 5)
+      mobile.value = data;
+    else
+      mobile.value = data.substring(0, 5) + " " + data.substring(5, data.length);
+  }
+
+  isAName(event) {
+    var key = event.key;
+    if ((key >= 'a' && key <= 'z') || (key >= 'A' && key <= 'Z') || key == ' ') {
+
+    }
+    else {
+      event.preventDefault();
+    }
+  }
 }
