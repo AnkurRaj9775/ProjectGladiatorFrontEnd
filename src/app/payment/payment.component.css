@@ -1,169 +1,68 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,900,700,500);
 
-body {
- background-image: url("https://assets.publishing.service.gov.uk/government/uploads/system/uploads/feature/image/54967/960-night-flight.jpg");
- background-repeat: no-repeat;
- 
- -webkit-background-size: cover;
- -moz-background-size: cover;
- -o-background-size: cover;
- background-size: cover;
- 
-}
-body {
- padding: 60px 0;
- /*background-color: rgba(178,209,229,0.7);*/
- margin: 0 auto;
- width: 600px;
-}
-.body-text {
- padding: 20px 20px 30px 20px;
- font-family: "Roboto";
- font-size: 1em;
- color: white;
- text-align: center;
- line-height: 1.2em;
-}
-.form-container {
- flex-direction: column;
- justify-content: center;
- align-items: center;
-}
-.card-wrapper {
- background-color: #6FB7E9;
- width: 100%;
- display: flex;
-
+button:disabled {
+  /* styles when the element is disabled */
+background-color: rgb(204, 23, 23);
+opacity: 0.5;
 }
 
-button{
- 
-  cursor: pointer;
-    border-radius: 5em;
-    color: #fff;
-    background: linear-gradient(to right,#d84f57, #c92f2f);
-    border: 0;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-bottom: 30px;
-    padding-top: 10px;
-    font-family: 'Ubuntu', sans-serif;
-    margin-top: 1%;
-    margin-left: 40%;
-    margin-bottom: 5%;
-    font-size: 25px;
-    height: 40px;
-    width: 300px;
-    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
-}
-.personal-information {
- background-color: #d46d74;
- color: #fff;
- padding: 1px 0;
- text-align: center;
-}
-h1 {
- font-size: 1.3em;
- font-family: "Roboto"
-}
-input {
- margin: 1px 0;
- padding-left: 3%;
- font-size: 14px;
-}
-input[type="text"]{
- display: block;
- height: 50px;
- width: 97%;
- border: none;
-}
-input[type="email"]{
- display: block;
- height: 50px;
- width: 97%;
- border: none;
-}
-input[type="submit"]{
- display: block;
- height: 60px;
- width: 100%;
- border: none;
- background-color: #3C8DC5;
- color: #fff;
- margin-top: 2px;
-  
- font-size: 0.9em;
- text-transform: uppercase;
- font-weight: bold;
- cursor: pointer;
-}
-input[type="submit"]:hover{
- background-color: #6FB7E9;
- transition: 0.3s ease;
-}
-#column-left {
- width: 46.8%;
- float: left;
- margin-bottom: 2px;
-}
-#column-right {
- width: 46.8%;
- float: right;
-}
 
-#i1{
- float: right;
-}
 
-@media only screen and (max-width: 480px){
- body {
-   width: 100%;
-   margin: 0 auto;
- }
- .form-container {
-   margin: 0 2%;
- }
- input {
-   font-size: 1em;
- }
- #input-button {
-   width: 100%;
- }
- #input-field {
-   width: 96.5%;
- }
- h1 {
-   font-size: 1.2em;
- }
- input {
-   margin: 2px 0;
- }
- input[type="submit"]{
-   height: 50px;
- }
- #column-left {
-   width: 96.5%;
-   display: block;
-   float: none;
- }
- #column-right {
-   width: 96.5%;
-   display: block;
-   float: none;
- }
-} 
 .login_main {
     margin-top: 80px;
 	background-color: #FFFFFF;
 	width: 500px;
 	height: fit-content;
-	margin-left:500px;
+	margin-left:200px;
 	border-radius: 1.5em;
     box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
-
+    width: fit-content;
+    padding-right: 80px;
+    margin-bottom: 80px;
 }
 
+.login_main1 {
+  margin-top: 80px;
+background-color: #FFFFFF;
+width: 250px;
+height: fit-content;
+margin-left:20px;
+border-radius: 1.5em;
+  box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+  width: fit-content;
+  padding-right: 80px;
+  padding-top: 40px;
+}
 
+.un {
+  width: 76%;
+  color: rgb(0, 2, 3);
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 1px;
+  background: rgba(177, 49, 49, 0.04);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+  box-sizing: border-box;
+  border: 2px solid rgba(0, 0, 0, 0.02);
+  margin-bottom: 50px;
+  margin-left: 80px;
+  text-align: center;
+  margin-bottom: 27px;
+  font-family: 'Ubuntu', sans-serif;
+  }
+
+  .pay_head{
+    margin-left:150px;
+    padding-top: 5px;
+    
+    font-size: large;
+    font-weight: 800;
+  }
+.pay_main{
+  display: flex;
+}
 .submit {
   cursor: pointer;
 	border-radius: 5em;
@@ -181,11 +80,17 @@ input[type="submit"]:hover{
 	box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
 }
 
+.ticket_status{
+  text-align: center;
+  font-weight: 200;
+  font-size: large;
+
+}
 .head_card{
     text-align: center;
     font-size: 30px;
     font-weight: 200;
-    padding: 30px;
+    padding: 10px;
 }
 
 .selected_seats{
@@ -201,4 +106,22 @@ input[type="submit"]:hover{
     margin-bottom: 30px;
     padding-bottom: 30px;
     padding-left: 50px;
+}
+
+
+.picture{
+  margin-left: 20px;
+}
+
+.bank-logos-inner-cont {
+  margin-left: 5px;
+}
+.dib {
+  display: inline-block;
+  padding-left:50px ;
+  padding-bottom:10px ;
+}
+
+.fl {
+  float: left;
 }

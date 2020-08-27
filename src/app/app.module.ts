@@ -40,6 +40,7 @@ import { RegisteredcustomerbutnoreservationComponent } from './registeredcustome
 import { ReservationdetailsComponent } from './reservationdetails/reservationdetails.component';
 import { PaymentComponent } from './payment/payment.component';
 import { BookbuswithoutdriverComponent } from './bookbuswithoutdriver/bookbuswithoutdriver.component';
+import { AdminloginComponent } from './adminlogin/adminlogin.component';
 
 
 
@@ -76,7 +77,8 @@ import { BookbuswithoutdriverComponent } from './bookbuswithoutdriver/bookbuswit
     RegisteredcustomerbutnoreservationComponent,
     ReservationdetailsComponent,
     PaymentComponent,
-    BookbuswithoutdriverComponent
+    BookbuswithoutdriverComponent,
+    AdminloginComponent
   ],
   imports: [
     BrowserModule,

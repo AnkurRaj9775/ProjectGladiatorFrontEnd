@@ -5,7 +5,7 @@ import { HomepageComponent  } from '../homepage/homepage.component';
 import { Router } from "@angular/router";
 @Component({
   selector: 'app-search-component',
-  templateUrl: './searchBust.component.html',
+  templateUrl: './searchBus.component.html',
   styleUrls: ['./searchBus.component.css']
 })
 export class SearchComponentComponent implements OnInit {
@@ -33,10 +33,11 @@ export class SearchComponentComponent implements OnInit {
     })
   }
 
-  viewSeats(busId:any,fare:any)
+  viewSeats(busId:any,fare:any,busName:any)
   {
     sessionStorage.setItem('busId',busId);
     sessionStorage.setItem('fare',fare)
+    sessionStorage.setItem('busName',busName);
     this.router.navigate(['seatMap']);
   }
 
