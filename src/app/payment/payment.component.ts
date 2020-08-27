@@ -17,7 +17,7 @@ export class PaymentComponent implements OnInit {
   dateOfJourney:string;
   from:string;
   destination:string;
-
+  ticketStatus:boolean=false;
 
   noOfpassenger = new Array<number>();
   totalMembers:number;
@@ -58,9 +58,16 @@ export class PaymentComponent implements OnInit {
     console.log(JSON.stringify(this.bookticket))
     this.busdetails.bookMyticket(this.bookticket).subscribe(data => {
       console.log(data);
-      
-    })
-  }
+      if(!data.resultStatus)
+      {
+        this.ticketStatus=data.resultStatus;
+      }
+      else{
+        this.ticketStatus=data.resultStatus;
+       
+    }
+  })
+}
 
 
 }
