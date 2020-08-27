@@ -9,14 +9,12 @@ import { LoginComponent } from "./login/login.component";
 import { ForgotPassComponent  } from "./forgot-pass/forgot-pass.component";
 import { RegisterComponent } from "./register/register.component";
 import { CancelComponent } from "./cancel/cancel.component";
-import { RescheduleComponent } from "./reschedule/reschedule.component";
 import { SearchComponentComponent } from "./searchBus/searchBus.component";
 import { MyprofileComponent } from './myprofile/myprofile.component';
 import { MybookingsComponent } from './mybookings/mybookings.component';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
 import { WalletComponent } from './wallet/wallet.component';
 import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
-import { ShowMyTicketComponent} from './show-my-ticket/show-my-ticket.component';
 import { SeatmapComponent } from "./seatmap/seatmap.component";
 import { BookticketComponent } from './bookticket/bookticket.component';
 import { FrequentlytravelledroutesComponent } from './frequentlytravelledroutes/frequentlytravelledroutes.component';
@@ -60,9 +58,6 @@ const routes: Routes = [
     path:'register',component:RegisterComponent
   },
   {
-    path:'reschedule', component:RescheduleComponent
-  },
-  {
     path:'cancellation',component:CancelComponent
   },
   {
@@ -80,9 +75,6 @@ const routes: Routes = [
   },
   {
     path:'myprofile',component:MyprofileComponent
-  },
-  {
-    path:'showMyTicket',component:ShowMyTicketComponent
   },
   {
     path:'loginAdmin',component:AdmindashboardComponent
