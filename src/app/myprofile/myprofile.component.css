@@ -8,10 +8,10 @@ body{
   position: fixed;
   z-index: 1;
   top: 10;
-  background-color:white;
+  border: 4px solid #d84f57;
   overflow-x: hidden;
   padding-top: 16px;
-  border:4px solid black;
+  border: 4px solid #d84f57;
 }
 .sidebar a {
   padding: 6px 8px 6px 16px;
@@ -44,7 +44,7 @@ body{
   max-width: 1000px;
   margin: auto;
   margin-right: 75px;
-  text-align: center;
+  text-align: left;
   font-family: arial;
   border-radius: 25px;
   padding-left: 100px;

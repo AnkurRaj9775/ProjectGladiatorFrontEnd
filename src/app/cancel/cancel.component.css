@@ -28,7 +28,6 @@ input{border:1px solid #000 !important;}
   margin-left: 30px;
   margin-right: auto;
 }
-
 .input-component .input-box{
   width: 328px;
   border-top: 10px;
@@ -58,13 +57,12 @@ input{border:1px solid #000 !important;}
   position: relative;
   left: -5px;
   top:-50px;
-
- 
 }
 
 .bg-color-d84e55 {
   background-color: #d84e55;
 }
+
 .button-comp-lbl {
   font-size: 14px;
   font-weight: 700;
@@ -83,14 +81,14 @@ input{border:1px solid #000 !important;}
   box-shadow: inset 1px 1px 0 #aaa, inset 0 -1px 0 #aaa;
 }
 
-
-
 .XCN {
   margin-bottom: 20px;
 }
+
 .Red {
   color: #d02025;
 }
+
 h2 {
   font-size: 27.5px;
   text-align: center;
@@ -108,5 +106,5 @@ h2 {
   background-attachment: fixed;
   background-size: cover;
   background-size: 100% 100%;
-  z-index:-100;
+  
 }
