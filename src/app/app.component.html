@@ -14,7 +14,7 @@
     <ul>
       <li class="bus-booking__nav-contact">
         <a class="bus-booking__about" [routerLink]="['/about']">About</a>
-        <a class="bus-booking__terms" [routerLink]="['/terms']">Terms Of Use</a>
+        <a class="bus-booking__terms" [routerLink]="['/terms']">Terms of Use</a>
         <a class="bus-booking__contact" [routerLink]="['/contact']">Contact Us</a>
         <a class="bus-booking__dashboard" [routerLink]="['/homeLink']">Home</a>
       </li>
@@ -23,12 +23,12 @@
       <li class="bus-booking__nav-signin">
         <div *ngIf='loggedIn' class="bus-booking__mb-dropdown">
           <button class="bus-booking__mb">
-            Already a member? Sign in
+            Already a member? Sign In
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="bus-booking__mb-options">
             <a class="bus-booking__mb-list" [routerLink]="['/loginCustomer']">Sign in as customer</a>
-            <a class="bus-booking__mb-list" [routerLink]="['/loginAdmin']">Sign in as admin</a>
+            <a class="bus-booking__mb-list" [routerLink]="['/adminLogin']">Sign in as admin</a>
           </div>
         </div>
         <a *ngIf='loggedIn' class="bus-booking__register" [routerLink]="['/register']">Sign Up</a>
