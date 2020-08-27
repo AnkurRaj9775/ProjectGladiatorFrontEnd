@@ -152,14 +152,14 @@ div {
       padding-left: 40px;
       padding-right: 40px;
       padding-bottom: 10px;
-      padding-top: 10px;
+      padding-top: 5px;
       font-family: 'Ubuntu', sans-serif;
-      margin-top:1% ;
+      margin-top:20px;
       margin-left: 10%;
       margin-bottom: 5%;
-      font-size: 25px;
+      font-size: 15px;
       height: 40px;
-      width: 300px;
+      width: 200px;
       box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
   }
 

@@ -1,31 +1,17 @@
-<!-- <div>
-    <div class="sidenav">
-        <button class="dropdown-btn">Add/Remove Assets
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-container">
-            <a>Add/Remove Buses</a>
-            <a>  </a>
-            <a>Add/Remove Routes</a>
-        </div>
-        <button class="dropdown-btn">Analytics
-            <i class="fa fa-caret-down"></i>
-        </button>
-       
-    </div>
+<div class="login_card">
     <div class="login_main">
-   
-        <p class="sign" align="center">Sign in</p>
+       
+        <p class="sign" align="center">Sign in as Admin</p>
         <form class="form1" #loginForm='ngForm' (ngSubmit)='loginUser(loginForm)'>
-          <input class="un"  align="center" type="email" placeholder="Username" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required name="uname" id="uname" [(ngModel)]=login.email autocomplete="off"> 
+          <input class="un"  align="center" type="email" placeholder="Username" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required name="uname" id="uname" [(ngModel)]=admin.email autocomplete="off"> 
           <span class="error" align="center">Invalid Email Id</span>
-          <input class="un"  align="center" type="password" placeholder="Password" required ngModel minlength="8" name="psw" id="psw" [(ngModel)]=login.password >
+          <input class="un"  align="center" type="password" placeholder="Password" required ngModel minlength="8" name="psw" id="psw" [(ngModel)]=admin.password >
           <span class="error" align="center">Please enter your password </span>
           <button type="submit" class="submit" align="center" [disabled]="!loginForm.valid ">Sign In</button>
-          <p  align="center"><a class="forgot" [routerLink]="['/forgetLink']">Forgot Password? </a></p>
-          <p  align="center"><a class="forgot" [routerLink]="['/adminDashboard']">Not a member? Sign up now </a></p>
+         
+
         </form>     
-        <div align="center" *ngIf='!clientstatus' class="status" > The email or password did not match our records. Please try again.</div>      
+        <div align="center" *ngIf='!loginStatus' class="status" > The email or password did not match our records. Please try again.</div>      
     </div>
 
-</div> -->
+</div>
