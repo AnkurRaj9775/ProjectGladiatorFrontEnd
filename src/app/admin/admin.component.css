@@ -1,0 +1,138 @@
+
+
+.login_main {
+
+	background-color: #FFFFFF;
+	width: 350px;
+	height: 500px;
+	margin-left:5em;
+	border-radius: 1.5em;
+	box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
+}
+
+.sign {
+	padding-top: 40px;
+	color: #3b1a4d;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: bold;
+	font-size: 30px;
+}
+
+.un {
+width: 76%;
+color: rgb(0, 2, 3);
+font-weight: 700;
+font-size: 20px;
+letter-spacing: 1px;
+background: rgba(177, 49, 49, 0.04);
+padding: 10px 20px;
+border: none;
+border-radius: 20px;
+outline: none;
+box-sizing: border-box;
+border: 2px solid rgba(0, 0, 0, 0.02);
+margin-bottom: 50px;
+margin-left: 46px;
+text-align: center;
+margin-bottom: 27px;
+font-family: 'Ubuntu', sans-serif;
+}
+
+form.form1 {
+	
+	padding-top: 40px;
+	
+}
+
+
+
+
+.un:focus, .pass:focus {
+	border: 2px solid rgba(0, 0, 0, 0.18) ;
+	
+}
+
+.submit {
+  cursor: pointer;
+	border-radius: 5em;
+	color: #fff;
+	background: linear-gradient(to right,#d84f57, #c92f2f);
+	border: 0;
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	font-family: 'Ubuntu', sans-serif;
+	margin-left: 30%;
+	margin-bottom: 5%;
+	font-size: 18px;
+	box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
+
+.forgot {
+	text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+	color: #321936;
+	padding-top: 15px;
+	font-size: 15px;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: bold;
+}
+
+a {
+	text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+	color: #E1BEE7;
+	text-decoration: none
+}
+
+/* .back {
+	background-color: #f2ebf3;
+} */
+
+button:disabled {
+    /* styles when the element is disabled */
+	background-color: rgb(204, 23, 23);
+	opacity: 0.5;
+}
+
+.login_card{
+
+	height: 500px;
+	background-image: url("/assets/bus-parked.jpg");
+	
+	background-repeat: no-repeat;
+	background-size: cover; 
+	background-position: center; 
+}
+
+.status{
+	text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+	color: #fd0606ad;
+	padding-top: 15px;
+	font-size: 15px;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: bold;
+}
+
+.error{
+
+	display: none;
+}
+
+input.ng-invalid.ng-touched{
+	border-color: red;
+}
+
+input.ng-invalid.ng-touched +.error{
+	display: block;
+	color: red;
+	font-weight: bold;
+	
+}
+.status_true{
+	color: green;
+	font: x-large;
+}
+.status_false{
+	color: red;
+	font: x-large;
+}
