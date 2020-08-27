@@ -20,6 +20,23 @@
     margin-left: 8.5%;
   
 }
+.error-view {
+  margin-bottom: 40px;
+}
+
+img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.t-center {
+  text-align: center;
+}
+.message-container {
+  display: flex;
+  justify-content: center;
+}
+
 
 .f-19{
   padding-right:10px;
@@ -204,4 +221,8 @@ float:right;
 padding-left:50px;
 
 
+}
+
+h3{
+  padding-left: 600px;
 }

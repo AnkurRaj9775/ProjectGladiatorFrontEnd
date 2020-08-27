@@ -10,65 +10,78 @@
       <a>DATE OF JOURNEY : {{this.details.dateOfJourney}}</a>
     </div>
   </div>
-  <div class="searchBus-header">
+  <div class="searchBus-header" >
     <div class="sort-sec clearfix">
       <div class="w-30 fl">
-          <span class="w-60  ">
+          <span class="w-60" >
             {{totalBus}} Buses found
           </span>
       </div>     
     </div>
   </div>
-  <div class="searchBus-card" *ngFor ="let cp of data" >
-    <ul class="bus-items" style="list-style-type: none;">
-      <div>
-        <li>           
-          <div class="clearfix">
-            <div class=" p-right-20 w-11 fl">
-              <div class="dp-time f-19 d-color f-bold">
-                {{cp.departureTime}}                 
-              </div>            
-            </div>
-            <div class="dp-time f-19 d-color f-bold">            
-              <i class="destination fa fa-map-marker"></i>              
-              {{this.details.fromCity}}             
-            </div> 
-           <span class="path">| </span>
-            <div class=" f-20 d-color disp-Inline">
-                <i class="transport fa fa-bus"></i>
-                {{cp.busName}},
-                {{cp.busType}} Seater   
-              <span class="durationPos">
-                Duration :
-                {{cp.duration}}
-              </span> 
-                <span class="farePos">
-                INR :  {{cp.fare}}
-              </span> 
-              <span class="seatsPos">
-                Seats Available: {{cp.totalSeatsAvailable}}
-              </span>
-     
-                           
-            </div>     
-            
-          <div class="path">| </div>
-            <div class="  p-right-20 w-11 fl">
-              <div class="dur lh-24">                
-                {{cp.arrivalTime}}
-                <i class="destination fa fa-map-marker"></i> 
-                 {{this.details.toCity}}
+  <div *ngIf = "totalBus > 0">
+    <div class="searchBus-card" *ngFor ="let cp of data" >
+      <ul class="bus-items" style="list-style-type: none;">
+        <div>
+          <li>           
+            <div class="clearfix">
+              <div class=" p-right-20 w-11 fl">
+                <div class="dp-time f-19 d-color f-bold">
+                  {{cp.departureTime}}                 
+                </div>            
               </div>
+              <div class="dp-time f-19 d-color f-bold">            
+                <i class="destination fa fa-map-marker"></i>              
+                {{this.details.fromCity}}             
+              </div> 
+            <span class="path">| </span>
+              <div class=" f-20 d-color disp-Inline">
+                  <i class="transport fa fa-bus"></i>
+                  {{cp.busName}},
+                  {{cp.busType}} Seater   
+                <span class="durationPos">
+                  Duration :
+                  {{cp.duration}}
+                </span> 
+                  <span class="farePos">
+                  INR :  {{cp.fare}}
+                </span> 
+                <span class="seatsPos">
+                  Seats Available: {{cp.totalSeatsAvailable}}
+                </span> 
+              </div>     
+              
+            <div class="path">| </div>
+              <div class="  p-right-20 w-11 fl">
+                <div class="dur lh-24">                
+                  {{cp.arrivalTime}}
+                  <i class="destination fa fa-map-marker"></i> 
+                  {{this.details.toCity}}
+                </div>
+              </div>
+                <div class="clearfix m-top-16">
+              <button class="button view-seats fr" (click)="viewSeats(cp.busId,cp.fare,cp.busName)"  >
+                View Seats
+              </button>
             </div>
-              <div class="clearfix m-top-16">
-            <button class="button view-seats fr" (click)="viewSeats(cp.busId,cp.fare,cp.busName)"  >
-              View Seats
-            </button>
           </div>
+          </li>
         </div>
-        </li>
+      </ul>
+    </div>
+  </div>
+  <div *ngIf="totalBus==0">
+    <div class="about-card">
+      <div class="error-view">
+        <img src="assets/busgif.gif">
+        <h3>Oops! No buses found.</h3>
+        <div class="message-container">
+         
       </div>
-    </ul>
+    </div>
+     
+    </div>
+
   </div>
 </div> 
 

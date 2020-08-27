@@ -13,7 +13,7 @@ export class HomepageComponent implements OnInit {
   toCity: string;
   date : string;
 
-
+    FromCities = ["Delhi", "Dehradun", "Meerut","Saharanpur"];
   constructor() {
     sessionStorage.removeItem('fromCity');
     sessionStorage.removeItem('toCity');
@@ -38,4 +38,9 @@ export class HomepageComponent implements OnInit {
     window.location.reload();
   }
   }
+
+
+
+
+  
 }

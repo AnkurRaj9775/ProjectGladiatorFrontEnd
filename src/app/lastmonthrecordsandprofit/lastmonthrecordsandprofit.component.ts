@@ -9,15 +9,12 @@ import{ LastMonthRecordAndProfitService } from '../service/last-month-record-and
 export class LastmonthrecordsandprofitComponent implements OnInit {
 
   dropdown: any;
-  data : any;
-  totalProfit : number=0;
-    
+  data : any;   
 
   constructor(private lastMonth: LastMonthRecordAndProfitService) 
   {
      this.dropdown = document.getElementsByClassName("dropdown-btn"); 
-    }
-
+  }
 
   ngOnInit(): void {
     for (var i = 0; i < this.dropdown.length; i++) {
@@ -32,22 +29,8 @@ export class LastmonthrecordsandprofitComponent implements OnInit {
       });
     }
     this.lastMonth.lastMonth().subscribe(data=>{
-      // this.transactionId=data.transactionId;
-      // this.amount=data.amount;
-      // this.transactionDate=data.transactiondate;
-      // this.transactionId=data.ticketId;
-      this.data = data;
-      for (let i = 0; i < this.data.length; i++) {
-         this.totalProfit = this.totalProfit + (this.data.amount);
-         console.log(Number(this.data.amount));
-         console.log(this.totalProfit+" inside for");
-      }
-      console.log(JSON.stringify(data));
-      console.log(JSON.stringify(this.data)+" console");
-
+        this.data = data;
     })
-
-
   }
   
 }
