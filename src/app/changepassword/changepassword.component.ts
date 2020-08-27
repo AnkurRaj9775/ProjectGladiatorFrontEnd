@@ -19,15 +19,6 @@ export class ChangepasswordComponent implements OnInit {
     }
   }
 
-  myFunction() {
-    var x = document.getElementById("myInput");
-    if (x.type === "password") {
-      x.type = "text";
-    } else {
-      x.type = "password";
-    }
-  }
-
   changePasswordFunction(){
     this.password.customerId=Number(sessionStorage.getItem('customerId'));
     this.changePassword.changePassword(this.password).subscribe(data=>{
