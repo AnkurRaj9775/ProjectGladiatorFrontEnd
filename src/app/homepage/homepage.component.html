@@ -9,7 +9,7 @@
       <div class="fl search-box clearfix">
         <span class="fl flaticon-urban icon"> </span>
         <div>
-          <input
+          <!---<input
             type="text"
             id="src"
             class="db"
@@ -18,14 +18,30 @@
             autocomplete="off"
             placeholder="FROM"
                 [(ngModel)]="fromCity"
-          />      
+          />
+          --->
+          <input
+            list="source"
+            id="src"
+            class="db"
+            data-message="Please enter a source city"
+            tabindex="1"
+            autocomplete="off"
+            placeholder="FROM"
+                [(ngModel)]="fromCity"                   
+          >
+          <datalist id="source">
+            <option value="Delhi">
+            <option value="Meerut">
+            <option value="Saharanpur">
+          </datalist>      
           </div>
       </div>
       <!-- <span class="flaticon-double-arrow clearfix"  id="togglebtn" > </span> -->
       <div class="fl search-box clearfix">
         <span class="fl flaticon-urban icon"> </span>
         <div>
-          <input
+          <!---<input
             type="text"
             id="dest"
             class="db"
@@ -34,8 +50,28 @@
             autocomplete="off"
             placeholder="TO"
                 [(ngModel)]="toCity"
-          />
-       </div>
+
+                   
+          /> 
+          --->
+
+          <input
+            list="dst"
+            id="dest"
+            class="db"
+            data-message="Please enter a destination city"
+            tabindex="2"
+            autocomplete="off"
+            placeholder="TO"
+                [(ngModel)]="toCity"                   
+          >
+        
+          <datalist id="dst">
+              <option value="Dehradun">
+              <option value="Meerut">
+              <option value="Saharanpur">
+          </datalist>          
+        </div>
       </div>
       <div class="fl search-box date-box flaticon-005-calendar">
         <span class="fl flaticon-005-calendar icon"> </span>
@@ -61,6 +97,8 @@
     </div>
   </section>
 </div>
+
+
 
 <div class="main-body">
   <div class="HeroMain">
@@ -103,3 +141,5 @@
     </div>
   </div>
 </div>
+
+

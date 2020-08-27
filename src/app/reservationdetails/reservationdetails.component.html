@@ -24,35 +24,29 @@
     <div class="main">
         <h3>Reservation details of customers.</h3>
 
-        <button class="card">Daily</button><br><br>
-        <!-- div class="card" *ngFor="let c of customers">
-            <div>Customer ID is: {{c.customerId}}</div>
+        <button class="card" (click)='reserveDaily()'>Daily</button><br><br>
+        <div class="card" *ngFor="let c of daily">
+            <div>Passenger ID  is: {{c.passengerId}}</div>
             <div>Name  is: {{c.name}}</div>
-            <div>Email is:{{c.email}}</div>
-            <div>Password  is: {{c.password}}</div>
-            <div>Contact  is: {{c.contact}}</div>
             <div>Age  is: {{c.age}}</div>
-            <div>Gender  is: {{c.gender}}</div>            
-        </div> -->
-        <button class="card">Weekly</button><br><br>
-        <!-- div class="card" *ngFor="let c of customers">
-            <div>Customer ID is: {{c.customerId}}</div>
+            <div>Gender  is: {{c.gender}}</div>    
+            <div>Ticket ID is: {{c.ticketId}}</div>
+        </div>
+        <button class="card" (click)='reserveWeekly()' >Weekly</button><br><br>
+        <div class="card" *ngFor="let c of weekly">  
+            <div>Passenger ID  is: {{c.passengerId}}</div>
             <div>Name  is: {{c.name}}</div>
-            <div>Email is:{{c.email}}</div>
-            <div>Password  is: {{c.password}}</div>
-            <div>Contact  is: {{c.contact}}</div>
             <div>Age  is: {{c.age}}</div>
-            <div>Gender  is: {{c.gender}}</div>            
-        </div> -->
-        <button class="card">Monthly</button><br><br>
-        <!-- div class="card" *ngFor="let c of customers">
-            <div>Customer ID is: {{c.customerId}}</div>
+            <div>Gender  is: {{c.gender}}</div>    
+            <div>Ticket ID is: {{c.ticketId}}</div>         
+        </div>
+        <button class="card" (click)='reserveMonthly()'>Monthly</button><br><br>
+        <div class="card" *ngFor="let c of monthly">
+            <div>Passenger ID  is: {{c.passengerId}}</div>
             <div>Name  is: {{c.name}}</div>
-            <div>Email is:{{c.email}}</div>
-            <div>Password  is: {{c.password}}</div>
-            <div>Contact  is: {{c.contact}}</div>
             <div>Age  is: {{c.age}}</div>
-            <div>Gender  is: {{c.gender}}</div>            
-        </div> -->
+            <div>Gender  is: {{c.gender}}</div>    
+            <div>Ticket ID is: {{c.ticketId}}</div>     
+        </div>
     </div>
 </body>

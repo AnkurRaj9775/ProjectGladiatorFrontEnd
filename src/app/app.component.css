@@ -19,6 +19,10 @@
 }
 
 
+.app__row{
+   /* margin-bottom:60px; */
+}
+
 
 .header ul {
   list-style-type: none;

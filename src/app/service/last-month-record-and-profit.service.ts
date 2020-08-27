@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -8,9 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class LastMonthRecordAndProfitService {
 
-  constructor(private http:HttpClient) {
-      
-}
+  constructor(private http:HttpClient) {}
 lastMonth():Observable<any>{
   return this.http.get("http://localhost:8181/previousTransaction");
 }
