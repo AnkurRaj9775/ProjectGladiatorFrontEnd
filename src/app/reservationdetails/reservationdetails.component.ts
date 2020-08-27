@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ReservationDetailsService } from '../service/reservation-details.service';
+
 
 @Component({
   selector: 'app-reservationdetails',
@@ -8,8 +10,14 @@ import { Component, OnInit } from '@angular/core';
 export class ReservationdetailsComponent implements OnInit {
 
   dropdown: any;
+  daily : any;
+  weekly: any;
+  monthly: any;
 
-  constructor() { this.dropdown = document.getElementsByClassName("dropdown-btn"); }
+  constructor(private registerService: ReservationDetailsService) 
+  { 
+    this.dropdown = document.getElementsByClassName("dropdown-btn"); 
+  }
 
 
   ngOnInit(): void {
@@ -25,4 +33,28 @@ export class ReservationdetailsComponent implements OnInit {
       });
     }
   }
+    reserveDaily(){
+      console.log("in daily method");
+      this.registerService.reservationDetails().subscribe(data=>{
+        console.log(JSON.stringify(data));
+                this.daily = data;
+        console.log(JSON.stringify(this.daily));
+      })
+   }
+
+   reserveWeekly(){
+    this.registerService.reservationDetailsWeekly().subscribe(data=>{
+      this.weekly = data;
+    })
+   }
+
+   reserveMonthly(){
+    this.registerService.reservationDetailsMonthly().subscribe(data=>{
+      this.monthly = data;
+    })
+   }
+    
+
+
+  
 }

@@ -124,6 +124,7 @@ label.db {
   letter-spacing: 0 !important;
   line-height: 15px;
 }
+
 .db {
   display: block;
   border: none;
@@ -145,7 +146,6 @@ label {
 .date-box {
   width: 220px!important;
 }
-
 
 #calendar{
   width: 200px;
