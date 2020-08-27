@@ -12,13 +12,14 @@
     <div class="main">
         <h2>Wallet</h2>
         <div class="card">
+            <IMG SRC="../assets/wallet.gif" width="400px" height="200px" style="float: left; margin-right: 100px;"><br>
             <h2 class="head"><i class="fa fa-credit-card"></i> Your Wallet Balance :
                 <span class="walletAmount"><i class="fa fa-inr"></i> {{walletBalance}}</span><br>
             </h2>
             <h3 class="subhead">
                 <label for="addMoneyToWallet">Add Money to Wallet : </label>
                 <input class="input" type="number" min="1" id="addMoney" name="addMoney" placeholder="Enter Amount"
-                    style="text-align: center;" [(ngModel)]='amount' />
+                    style="text-align: center;" [(ngModel)]='amount' /><br><br>
                 <button (click)="addBalance()">ADD</button>
             </h3>
             <h3 class="message">{{message}}</h3>
