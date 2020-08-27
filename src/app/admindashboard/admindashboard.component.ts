@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-admindashboard',
@@ -9,7 +10,12 @@ export class AdmindashboardComponent implements OnInit {
 
   dropdown:any;
 
-  constructor() {  this.dropdown = document.getElementsByClassName("dropdown-btn"); }
+  constructor(private router:Router) {  this.dropdown = document.getElementsByClassName("dropdown-btn"); 
+  if(!sessionStorage.getItem('customerId')){
+    this.router.navigate(['homeLink']);
+    }
+
+}
 
 
 ngOnInit(): void {
@@ -24,6 +30,10 @@ ngOnInit(): void {
     }
   });
 }
+if(sessionStorage.getItem('justOnce')=="false"){
+  sessionStorage.setItem('justOnce',"true");
+  window.location.reload();
   }
 
+}
 }

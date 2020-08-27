@@ -33,7 +33,7 @@
         </div>
         <a *ngIf='loggedIn' class="bus-booking__register" [routerLink]="['/register']">Sign Up</a>
         <div class="bus-booking__mb-dropdown">
-          <button class="bus-booking__mb">
+          <button *ngIf='loggedIn' class="bus-booking__mb">
             Manage Booking
             <i class="fa fa-caret-down"></i>
           </button>
@@ -51,16 +51,16 @@
 
           <div class="bus-booking__user-options">
             <ul class="config-list">
-              <li class="bus-booking__user-list" [routerLink]="['/myprofile']">
+              <li *ngIf='!adminLoggedIn' class="bus-booking__user-list" [routerLink]="['/myprofile']">
                 My Profile
               </li>
-              <li class="bus-booking__user-list" [routerLink]="['/mybookings']">
+              <li *ngIf='!adminLoggedIn' class="bus-booking__user-list" [routerLink]="['/mybookings']">
                 My Bookings
               </li>
-              <li class="bus-booking__user-list" [routerLink]="['/changepassword']">
+              <li *ngIf='!adminLoggedIn' class="bus-booking__user-list" [routerLink]="['/changepassword']">
                 Change Password
               </li>
-              <li class="bus-booking__user-list" [routerLink]="['/wallet']">
+              <li *ngIf='!adminLoggedIn' class="bus-booking__user-list" [routerLink]="['/wallet']">
                 Wallet
               </li>
               <li (click)='clearSession()' class="bus-booking__user-list" [routerLink]="['/homeLink']">

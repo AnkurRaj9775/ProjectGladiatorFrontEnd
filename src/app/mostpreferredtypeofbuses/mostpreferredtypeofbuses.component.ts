@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AdmindashboardService } from '../service/admindashboard.service';
 import { MostPreferredType } from '../serviceclass/mostPreferredType';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-mostpreferredtypeofbuses',
@@ -13,9 +14,12 @@ export class MostpreferredtypeofbusesComponent implements OnInit {
   dropdown: any;
   bus:MostPreferredType=new MostPreferredType();
 
-  constructor(private showPreferredBus:AdmindashboardService)
-   { this.dropdown = document.getElementsByClassName("dropdown-btn"); }
-
+  constructor(private showPreferredBus:AdmindashboardService,private router:Router)
+   { this.dropdown = document.getElementsByClassName("dropdown-btn"); 
+   if(!sessionStorage.getItem('customerId')){
+    this.router.navigate(['homeLink']);
+    }
+   }
 
   ngOnInit(): void {
 

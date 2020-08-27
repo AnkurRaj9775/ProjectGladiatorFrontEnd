@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ReservationDetailsService } from '../service/reservation-details.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-reservationdetails',
@@ -12,8 +13,12 @@ export class ReservationdetailsComponent implements OnInit {
   weekly: any;
   monthly: any;
 
-  constructor(private registerService: ReservationDetailsService) {
+  constructor(private registerService: ReservationDetailsService,private router:Router) {
     this.dropdown = document.getElementsByClassName('dropdown-btn');
+    if(!sessionStorage.getItem('customerId')){
+      this.router.navigate(['homeLink']);
+      }
+
   }
 
   ngOnInit(): void {

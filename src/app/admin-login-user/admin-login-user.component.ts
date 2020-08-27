@@ -28,7 +28,8 @@ export class AdminLoginUserComponent implements OnInit {
       }
       else{
         this.clientstatus=data.resultStatus;
-
+    sessionStorage.setItem('boolean',"true")
+    sessionStorage.setItem('customerId',"admin");
     sessionStorage.setItem('justOnce',"false"); 
       this.router.navigate(['loginAdmin']);
       }

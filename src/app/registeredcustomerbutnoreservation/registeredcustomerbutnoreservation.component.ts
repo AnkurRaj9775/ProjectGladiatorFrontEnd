@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LastMonthRecordAndProfitService } from '../service/last-month-record-and-profit.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-registeredcustomerbutnoreservation',
@@ -10,7 +11,12 @@ export class RegisteredcustomerbutnoreservationComponent implements OnInit {
  
   dropdown: any;
   customers: any;
-  constructor(private lastMonth: LastMonthRecordAndProfitService) { this.dropdown = document.getElementsByClassName("dropdown-btn"); }
+  constructor(private lastMonth: LastMonthRecordAndProfitService,private router:Router) { this.dropdown = document.getElementsByClassName("dropdown-btn"); 
+  if(!sessionStorage.getItem('customerId')){
+    this.router.navigate(['loginCustomer']);
+    }
+
+}
 
 
   ngOnInit(): void {

@@ -20,6 +20,7 @@ export class ChangepasswordComponent implements OnInit {
   }
 
   changePasswordFunction(){
+    console.log(this.password)
     this.password.customerId=Number(sessionStorage.getItem('customerId'));
     this.changePassword.changePassword(this.password).subscribe(data=>{
      this.message=data.status;

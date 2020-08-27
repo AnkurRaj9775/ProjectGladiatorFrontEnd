@@ -8,7 +8,7 @@ import { Component,OnInit } from '@angular/core';
 export class AppComponent implements OnInit{
   title = 'ProjectGladiator';
 loggedIn:boolean=false;
-
+adminLoggedIn:boolean=false;
 constructor(){
   this.ngOnInit();
   
@@ -21,11 +21,14 @@ clearSession(){
 }
 
 ngOnInit(): void {
-   (sessionStorage.getItem('customerId'))
+   
   if(sessionStorage.getItem('customerId')===null)
   {
     this.loggedIn=true;
-     (this.loggedIn);
+     
+  }
+  if(sessionStorage.getItem('boolean')!==null){
+    this.adminLoggedIn=true;
   }
  
 }

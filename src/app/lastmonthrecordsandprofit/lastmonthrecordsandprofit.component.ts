@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import{ LastMonthRecordAndProfitService } from '../service/last-month-record-and-profit.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-lastmonthrecordsandprofit',
@@ -11,9 +12,12 @@ export class LastmonthrecordsandprofitComponent implements OnInit {
   dropdown: any;
   data : any;   
 
-  constructor(private lastMonth: LastMonthRecordAndProfitService) 
+  constructor(private lastMonth: LastMonthRecordAndProfitService,private router:Router) 
   {
      this.dropdown = document.getElementsByClassName("dropdown-btn"); 
+     if(!sessionStorage.getItem('customerId')){
+      this.router.navigate(['homeLink']);
+    }
   }
 
   ngOnInit(): void {
