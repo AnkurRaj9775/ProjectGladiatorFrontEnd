@@ -35,8 +35,29 @@ body {
  display: flex;
 
 }
+
+button{
+ 
+  cursor: pointer;
+    border-radius: 5em;
+    color: #fff;
+    background: linear-gradient(to right,#d84f57, #c92f2f);
+    border: 0;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 30px;
+    padding-top: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    margin-top: 1%;
+    margin-left: 40%;
+    margin-bottom: 5%;
+    font-size: 25px;
+    height: 40px;
+    width: 300px;
+    box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
 .personal-information {
- background-color: #3C8DC5;
+ background-color: #d46d74;
  color: #fff;
  padding: 1px 0;
  text-align: center;
@@ -94,6 +115,12 @@ input[type="submit"]:hover{
  float: right;
 }
 
+button:disabled {
+  /* styles when the element is disabled */
+background-color: rgb(204, 23, 23);
+opacity: 0.5;
+}
+
 @media only screen and (max-width: 480px){
  body {
    width: 100%;
@@ -136,17 +163,42 @@ input[type="submit"]:hover{
 	background-color: #FFFFFF;
 	width: 500px;
 	height: fit-content;
-	margin-left:500px;
+	margin-left:450px;
 	border-radius: 1.5em;
     box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.14);
-
+    width: fit-content;
+    padding-right: 80px;
 }
 
+
+.submit {
+  cursor: pointer;
+	border-radius: 5em;
+	color: #fff;
+	background: linear-gradient(to right,#d84f57, #c92f2f);
+	border: 0;
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	font-family: 'Ubuntu', sans-serif;
+	margin-left: 45%;
+	margin-bottom: 5%;
+	font-size: 18px;
+	box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+}
+
+.ticket_status{
+  text-align: center;
+  font-weight: 400;
+  font-size: large;
+
+}
 .head_card{
     text-align: center;
-    font-size: larger;
+    font-size: 30px;
     font-weight: 200;
-    padding: 10px;
+    padding: 30px;
 }
 
 .selected_seats{
@@ -155,8 +207,11 @@ input[type="submit"]:hover{
     font-weight: 100;
     padding: 10px;
     margin-left:100px;
+    padding-bottom: 20px;
 }
 .select_card{
     margin-left: 20px;
     margin-bottom: 30px;
+    padding-bottom: 30px;
+    padding-left: 50px;
 }

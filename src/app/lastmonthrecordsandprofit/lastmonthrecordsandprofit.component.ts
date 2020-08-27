@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import{ LastMonthRecordAndProfitService } from '../service/last-month-record-and-profit.service';
 
 @Component({
   selector: 'app-lastmonthrecordsandprofit',
@@ -8,8 +9,14 @@ import { Component, OnInit } from '@angular/core';
 export class LastmonthrecordsandprofitComponent implements OnInit {
 
   dropdown: any;
+  data : any;
+  totalProfit : number=0;
+    
 
-  constructor() { this.dropdown = document.getElementsByClassName("dropdown-btn"); }
+  constructor(private lastMonth: LastMonthRecordAndProfitService) 
+  {
+     this.dropdown = document.getElementsByClassName("dropdown-btn"); 
+    }
 
 
   ngOnInit(): void {
@@ -24,6 +31,25 @@ export class LastmonthrecordsandprofitComponent implements OnInit {
         }
       });
     }
-  }
+    this.lastMonth.lastMonth().subscribe(data=>{
+      // this.transactionId=data.transactionId;
+      // this.amount=data.amount;
+      // this.transactionDate=data.transactiondate;
+      // this.transactionId=data.ticketId;
+      this.data = data;
+      for (let i = 0; i < this.data.length; i++) {
+         this.totalProfit = this.totalProfit + (this.data.amount);
+         console.log(Number(this.data.amount));
+         console.log(this.totalProfit+" inside for");
+      }
+      console.log(JSON.stringify(data));
+      console.log(JSON.stringify(this.data)+" console");
 
+    })
+
+
+  }
+  
 }
+
+

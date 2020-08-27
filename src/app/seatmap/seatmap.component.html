@@ -65,14 +65,22 @@
         <table *ngIf='fare!=0' class="select_card">
             <tr class='selected_seats'><td>Seat(s)</td> <td  >{{selectedSeatNumber}} </td> </tr>
             <tr class='selected_seats'><td>Fare</td> <td>{{fare}} </td> </tr>
-            <tr class='selected_seats'> <td>ToTal</td> <td>{{totalFare}} </td> </tr>
+            <tr class='selected_seats'> <td>Total Amount:</td> <td>{{totalFare}} </td> </tr>
             <div *ngIf='limit'> {{limitExceeds}}</div>
             <button type="submit" class="submit" (click)='storeSeatDetails()'> Continue</button>
         </table>
         
-       </div>
-            
-        </div>
-    
+       </div>   
+     </div>
+   
+    </div>
 
+    <div class="legend">     
+       
+        <p>Seat available</p> 
+        <img class="seatButton" src="../assets/bseat.png" alt="seat background">
+        <p>Seat selected</p> 
+        <img class="seatButtonAvailable" src="../assets/bseat.png" alt="seat background">
+        <p>Seat not available</p> 
+        <img class="seatButtonSelected" src="../assets/bseat.png" alt="seat background">
     </div>

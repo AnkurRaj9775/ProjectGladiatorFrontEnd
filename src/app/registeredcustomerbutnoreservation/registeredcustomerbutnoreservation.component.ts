@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LastMonthRecordAndProfitService } from '../service/last-month-record-and-profit.service';
 
 @Component({
   selector: 'app-registeredcustomerbutnoreservation',
@@ -8,8 +9,8 @@ import { Component, OnInit } from '@angular/core';
 export class RegisteredcustomerbutnoreservationComponent implements OnInit {
  
   dropdown: any;
-
-  constructor() { this.dropdown = document.getElementsByClassName("dropdown-btn"); }
+  customers: any;
+  constructor(private lastMonth: LastMonthRecordAndProfitService) { this.dropdown = document.getElementsByClassName("dropdown-btn"); }
 
 
   ngOnInit(): void {
@@ -24,5 +25,13 @@ export class RegisteredcustomerbutnoreservationComponent implements OnInit {
         }
       });
     }
+    this.lastMonth.noReservationCustomer().subscribe(data=>{
+       this.customers= data;
+    })
+
+
   }
+
+
+
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BusDetailsService } from "../service/BusDetails.service";
 import { SeatDetails } from '../serviceclass/SeatDetails';
 import { Router } from '@angular/router';
+import { stringify } from '@angular/compiler/src/util';
 @Component({
   selector: 'app-seatmap',
   templateUrl: './seatmap.component.html',
@@ -59,11 +60,10 @@ export class SeatmapComponent implements OnInit {
         this.limit = true;
       }
     }
-
-    this.selectedSeatNumber = String(this.selectSeats.sort().toString().split(","));
-    console.log(this.selectedSeatNumber + "sort ho rha hai?")
-    console.log(this.selectSeats.sort() + "sort ho rha hai?")
-
+    // this.selectSeats.sort((a,b)=>a-b)
+    // this.selectedSeatNumber = String(this.selectSeats.sort().toString().split(","));
+  
+    this.selectedSeatNumber = (String(this.selectSeats.sort((a,b)=>a-b)));
   }
 
 

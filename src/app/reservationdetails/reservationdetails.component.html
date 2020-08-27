@@ -5,15 +5,15 @@
         </button>
         <div class="dropdown-container">
             <a>Add/Remove Buses</a>
-            <a>Add/Remove Drivers</a>
+            <a>  </a>
             <a>Add/Remove Routes</a>
         </div>
         <button class="dropdown-btn">Analytics
             <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-container">
-            <a [routerLink]="['/frequentlytravelledroutes']">Frequently travelled routes</a>
-            <a [routerLink]="['/lastmonthrecordsandprofit']">Last month record and profits</a>
+            <!-- <a [routerLink]="['/frequentlytravelledroutes']">Frequently travelled routes</a> -->
+            <a [routerLink]="['/lastmonthrecordsandprofit']">Last month record </a>
             <a [routerLink]="['/mostpreferredtypeofbuses']">Most preferred types of buses</a>
             <a [routerLink]="['/registeredcustomerbutnoreservation']">Customer who have registered but not made any
                 reservation</a>
@@ -23,10 +23,37 @@
     </div>
 
     <div class="main">
-        <h3>Reservartion details of customers.</h3>
+        <h3>Reservation details of customers.</h3>
 
         <button class="card">Daily</button><br><br>
+        <!-- div class="card" *ngFor="let c of customers">
+            <div>Customer ID is: {{c.customerId}}</div>
+            <div>Name  is: {{c.name}}</div>
+            <div>Email is:{{c.email}}</div>
+            <div>Password  is: {{c.password}}</div>
+            <div>Contact  is: {{c.contact}}</div>
+            <div>Age  is: {{c.age}}</div>
+            <div>Gender  is: {{c.gender}}</div>            
+        </div> -->
         <button class="card">Weekly</button><br><br>
+        <!-- div class="card" *ngFor="let c of customers">
+            <div>Customer ID is: {{c.customerId}}</div>
+            <div>Name  is: {{c.name}}</div>
+            <div>Email is:{{c.email}}</div>
+            <div>Password  is: {{c.password}}</div>
+            <div>Contact  is: {{c.contact}}</div>
+            <div>Age  is: {{c.age}}</div>
+            <div>Gender  is: {{c.gender}}</div>            
+        </div> -->
         <button class="card">Monthly</button><br><br>
+        <!-- div class="card" *ngFor="let c of customers">
+            <div>Customer ID is: {{c.customerId}}</div>
+            <div>Name  is: {{c.name}}</div>
+            <div>Email is:{{c.email}}</div>
+            <div>Password  is: {{c.password}}</div>
+            <div>Contact  is: {{c.contact}}</div>
+            <div>Age  is: {{c.age}}</div>
+            <div>Gender  is: {{c.gender}}</div>            
+        </div> -->
     </div>
 </body>

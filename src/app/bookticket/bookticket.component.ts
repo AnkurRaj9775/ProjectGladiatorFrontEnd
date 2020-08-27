@@ -42,11 +42,12 @@ export class BookticketComponent implements OnInit {
   {
    
     
-    sessionStorage.setItem("passengerdetails",JSON.stringify(this.p));
+    sessionStorage.setItem('passengerdetails',JSON.stringify(this.p));
     console.log(JSON.stringify(this.p))
-    console.log(JSON.stringify(sessionStorage.getItem("passengerdetails")));
-    sessionStorage.setItem("customerEmail",this.customerdetails.email );
-    sessionStorage.setItem("customerContact",this.customerdetails.contact );
+    console.log(JSON.stringify(sessionStorage.getItem('passengerdetails')));
+    sessionStorage.setItem('customerEmail',this.customerdetails.email );
+    console.log(sessionStorage.getItem('customerEmail') +"customeremail session")
+    sessionStorage.setItem('customerContact',this.customerdetails.contact );
       this.router.navigate(['payment']);
   }
 
@@ -61,13 +62,14 @@ export class BookticketComponent implements OnInit {
       this.seat=this.noOfpassenger[this.counter];
         this.p.push(this.passengerdetails);
         this.passengerdetails =new PassengerDetails();
-    }
-     else{
-       console.log("inside else")
-      var element = <HTMLInputElement>document.getElementById("addPass");
+        if(this.counter==this.noOfpassenger.length)
+        {
+        var element = <HTMLInputElement>document.getElementById("addPass");
        
      element.disabled = true;
-     }
+    }
+  }
+
 
     
     console.log(JSON.stringify(this.p)+"test");
