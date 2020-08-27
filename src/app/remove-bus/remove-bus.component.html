@@ -5,30 +5,33 @@
         </button>
         <div class="dropdown-container">
             <a [routerLink]="['/removebus']">Add/Remove Buses</a>
-     
+           
         </div>
         <button class="dropdown-btn">Analytics
             <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-container">
             <!-- <a [routerLink]="['/frequentlytravelledroutes']">Frequently travelled routes</a> -->
-            <a [routerLink]="['/lastmonthrecordsandprofit']">Last month record  s</a>
+            <a [routerLink]="['/lastmonthrecordsandprofit']">Last month record </a>
             <a [routerLink]="['/mostpreferredtypeofbuses']">Most preferred types of buses</a>
             <a [routerLink]="['/registeredcustomerbutnoreservation']">Customer who have registered but not made any reservation</a>
             <a [routerLink]="['/reservationdetails']">Reservation details of customers (daily, weekly, monthly basis)</a>
+        </div>        
+    </div>
+    <div class="main">
+        <h4 class="last">Bus Details:</h4>
+        <div class="card"  *ngFor="let cp of buses" >
+            <div>Bus ID :{{cp.busId}} </div>
+            <div>Total Seat:{{cp.totalSeat}} </div>
+            <div>Bus Name : {{cp.busName}}</div>
+            <div>Bus PlateNumber : {{cp.busPlateNumber}}</div>
+            <div>Bus Type : {{cp.busType}} </div>
+            <div>Status : {{cp.busStatus}}</div>
+            <button *ngIf='cp.busStatus=="active"' (click)='remove(cp.busId)' type="submit" class="un"  > Remove Bus</button>
+            <button *ngIf='cp.busStatus=="inactive"' (click)='add(cp.busId)' type="submit" > Add Bus</button>
+            
         </div>
+            <!-- <h4>Last month profit is:{{totalProfit}}</h4> -->
     </div>
 
-    <div class="main">
-        <h3>List of registered customers, but have no reservations yet.</h3>
-        <div class="card" *ngFor="let c of customers">
-            <div>Customer ID is: {{c.customerId}}</div>
-            <div>Name  is: {{c.name}}</div>
-            <div>Email is:{{c.email}}</div>
-            <div>Password  is: {{c.password}}</div>
-            <div>Contact  is: {{c.contact}}</div>
-            <div>Age  is: {{c.age}}</div>
-            <div>Gender  is: {{c.gender}}</div>            
-        </div>
-    </div>
 </body>
