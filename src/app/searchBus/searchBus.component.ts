@@ -5,7 +5,7 @@ import { HomepageComponent  } from '../homepage/homepage.component';
 import { Router } from "@angular/router";
 @Component({
   selector: 'app-search-component',
-  templateUrl: './searchBust.component.html',
+  templateUrl: './searchBus.component.html',
   styleUrls: ['./searchBus.component.css']
 })
 export class SearchComponentComponent implements OnInit {
