@@ -26,6 +26,7 @@ import { RegisteredcustomerbutnoreservationComponent } from './registeredcustome
 import { ReservationdetailsComponent } from './reservationdetails/reservationdetails.component';
 import { PaymentComponent } from './payment/payment.component';
 import { BookbuswithoutdriverComponent } from './bookbuswithoutdriver/bookbuswithoutdriver.component';
+import { AdminComponent } from "./admin/admin.component";
 import { AdminloginComponent } from './adminlogin/adminlogin.component';
 
 const routes: Routes = [
@@ -117,7 +118,7 @@ const routes: Routes = [
     path:'bookbuswithoutdriver',component:BookbuswithoutdriverComponent
   },
   {
-    path:'adminLogin',component:AdminloginComponent
+    path:'adminLogin',component: AdminComponent
   }
 ];
 

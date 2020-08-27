@@ -1,43 +1,54 @@
-<div>
+<div class="pay_main">
     <div class="login_main">
         <div  >
             <div  class="head_card"><h3>Passenger Details</h3> </div>
          <table  class="select_card">
             <tr class='selected_seats'><td>Passenger Name:</td> <td  >{{name}} </td> </tr>
-            <tr class='selected_seats'><td>Fare</td> <td>{{fare}} </td> </tr>
-             <tr class='selected_seats'><td>Seat(s)</td> <td >{{seats}} </td> </tr>
-             <tr class='selected_seats'><td>Date Of Journey</td> <td>{{dateOfJourney}} </td> </tr>
-             <tr class='selected_seats'> <td>From</td> <td>{{from}} </td> </tr>
-             <tr class='selected_seats'> <td>Destination</td> <td>{{destination}} </td> </tr>
-             <tr class='selected_seats'> <td>Bus Name</td> <td>{{busName}} </td> </tr>
+            <tr class='selected_seats'><td>Total Fare:</td> <td>{{fare}} </td> </tr>
+             <tr class='selected_seats'><td>Seat(s):</td> <td >{{seats}} </td> </tr>
+             <tr class='selected_seats'><td>Date Of Journey:</td> <td>{{dateOfJourney}} </td> </tr>
+             <tr class='selected_seats'> <td>From:</td> <td>{{from}} </td> </tr>
+             <tr class='selected_seats'> <td>Destination:</td> <td>{{destination}} </td> </tr>
+             <tr class='selected_seats'> <td>Bus Name:</td> <td>{{busName}} </td> </tr>
              <div > </div>
              
          </table>
-         
+        
         </div>
              
          </div>
-  </div>
-    <div class="body-text" align="center">Write your name in the right fields. Also write your  card number. By clicking CCV field card will turn.</div>
-    
-    <form>
-      <div class="form-container">
-        <div class="personal-information">
-          <h1>Payment Information</h1>
-        </div> <!-- end of personal-information -->
-             <form #payForm='ngForm' (ngSubmit)='payNow(payForm)'>
-            <input id="column-left" type="text" required name="first-name"  placeholder="Enter First Name"/>
-            <input id="column-right" type="text" required name="last-name" placeholder="Enter Surname"/>
-            <input id="input-field" type="text" required name="number" placeholder="Enter Card Number"/>
-            <input id="column-left" type="text" required name="expiry" placeholder="MM / YY"/>
-            <input id="column-right" type="text"  required name="cvc" placeholder="Enter CVV"/>
-              
-            <div class="card-wrapper"></div>
+
+
+
+    <div>
+      <div class="login_main1">
+        <h1 class="pay_head"> Payment Information </h1>
+        <form #payForm='ngForm' (ngSubmit)='payNow(payForm)'>
+          <input id="column-left" class="un" type="text" required name="first-name"  placeholder="Enter First Name" ngModel /><br/>
+          <input id="column-right" type="text" class="un" required name="last-name" placeholder="Enter Surname" ngModel /><br/>
+          <input id="input-field" type="text" class="un" required name="number" placeholder="Enter Card Number" ngModel /><br/>
+          <input id="column-left" type="text" class="un" required name="expiry" placeholder="MM / YY" ngModel /><br/>
+          <input id="column-right" type="text" class="un" required name="cvc" placeholder="Enter CVV" ngModel /><br/>
+            
   
-            <!-- <input id="input-field" type="text" name="streetaddress" required="required" autocomplete="on" maxlength="45" placeholder="Streed Address"/>
-            <input id="column-left" type="text" name="city" required="required" autocomplete="on" maxlength="20" placeholder="City"/>
-            <input id="column-right" type="text" name="zipcode" required="required" autocomplete="on" pattern="[0-9]*" maxlength="5" placeholder="ZIP code"/>
-            <input id="input-field" type="email" name="email" required="required" autocomplete="on" maxlength="40" placeholder="Email"/> -->
-            <button class="submit" [disabled]="!payForm.valid ">Submit </button> 
-          </form>
-      <div *ngIf='ticketStatus' class="ticket_status">Ticket booked Succcessfully!!!.Check email for the Details. </div>
+
+          <!-- <input id="input-field" type="text" name="streetaddress" required="required" autocomplete="on" maxlength="45" placeholder="Streed Address"/>
+          <input id="column-left" type="text" name="city" required="required" autocomplete="on" maxlength="20" placeholder="City"/>
+          <input id="column-right" type="text" name="zipcode" required="required" autocomplete="on" pattern="[0-9]*" maxlength="5" placeholder="ZIP code"/>
+          <input id="input-field" type="email" name="email" required="required" autocomplete="on" maxlength="40" placeholder="Email"/> -->
+          <button class="submit" [disabled]="!payForm.valid ">Submit </button> 
+          
+        </form>
+        <div *ngIf='ticketStatus' class="ticket_status">Ticket booked Succcessfully!!!.Check email for the Details. </div>
+       
+    </div>
+
+   
+  </div>
+
+  <div>
+
+    
+  </div>
+
+  

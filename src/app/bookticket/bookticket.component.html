@@ -8,15 +8,16 @@
     <div class="searchBus-card">
 
         <div>
-            <input class="un" type="email" id="email" name="email" placeholder="Enter Email" [(ngModel)]='customerdetails.email'>
-            <input class="un" type="text" id="number" name="number" placeholder="Enter Contact Number" [(ngModel)]='customerdetails.contact'>
-
+            <input class="un" type="email" id="email" name="email" placeholder="Enter Email" [(ngModel)]='customerdetails.email' pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" autocomplete="off">
+            <span class="error" align="center">Invalid Email Id</span>
+            <input class="un" type="text" name="userMobile" id="userMobile" placeholder="Enter Contact Number" (keypress)='isNumber($event,"userMobile",10)' (keyup)='manageMobile("userMobile")' value="" minlength="11" [(ngModel)]='customerdetails.contact' autocomplete="off" >
+            
             <div class="searchBus-card-nested"  >
                 <ul class="bus-items" style="list-style-type: none;">
                     <li>
                     <h3 class="passenger_seat">Passenger For Seat Number :{{seat}} </h3>
-                <input class="un1" type="text" id="pname" name="pname" placeholder="Enter Passenger Name" [(ngModel)]='passengerdetails.name'><br />
-                <input class="un1" type="number" id="age" name="age" placeholder="Enter Age" [(ngModel)]='passengerdetails.age' ><br />
+                <input class="un1" type="text" id="pname" name="pname" placeholder="Enter Passenger Name" [(ngModel)]='passengerdetails.name' autocomplete="off" (keypress)='isAName($event)'><br />
+                <input class="un1" type="number" id="age" name="age" placeholder="Enter Age" [(ngModel)]='passengerdetails.age'autocomplete="off" max="80"  min="1"><br />
 
                 <div class="genderStyle">Gender</div><br />
                 <input type="radio" value="male" name="gender"  class="genderStyle" required [(ngModel)]='passengerdetails.gender'> Male
