@@ -25,7 +25,7 @@ export class WalletComponent implements OnInit {
   }
 
   //this.walletAmount.customerId=Number(sessionStorage.getItem('customerId'));   
-  //console.log(this.walletAmount.customerId);
+  // (this.walletAmount.customerId);
 
   ngOnInit(): void {
 
@@ -36,6 +36,7 @@ export class WalletComponent implements OnInit {
     }
     )
   }
+
 
   public addBalance() {
     

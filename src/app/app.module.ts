@@ -29,7 +29,6 @@ import { SearchComponentComponent } from './searchBus/searchBus.component';
 import { MybookingsComponent } from './mybookings/mybookings.component';
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
 import { WalletComponent } from './wallet/wallet.component';
-
 import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
 import { SeatmapComponent } from './seatmap/seatmap.component';
 import { BookticketComponent } from './bookticket/bookticket.component';
@@ -39,7 +38,6 @@ import { MostpreferredtypeofbusesComponent } from './mostpreferredtypeofbuses/mo
 import { RegisteredcustomerbutnoreservationComponent } from './registeredcustomerbutnoreservation/registeredcustomerbutnoreservation.component';
 import { ReservationdetailsComponent } from './reservationdetails/reservationdetails.component';
 import { PaymentComponent } from './payment/payment.component';
-import { BookbuswithoutdriverComponent } from './bookbuswithoutdriver/bookbuswithoutdriver.component';
 import { AdminLoginUserComponent } from './admin-login-user/admin-login-user.component';
 
 
@@ -77,9 +75,7 @@ import { AdminLoginUserComponent } from './admin-login-user/admin-login-user.com
     RegisteredcustomerbutnoreservationComponent,
     ReservationdetailsComponent,
     PaymentComponent,
-    BookbuswithoutdriverComponent,
-    AdminLoginUserComponent,
-   
+    AdminLoginUserComponent
   ],
   imports: [
     BrowserModule,

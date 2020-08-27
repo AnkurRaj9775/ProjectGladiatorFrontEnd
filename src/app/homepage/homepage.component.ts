@@ -31,7 +31,7 @@ export class HomepageComponent implements OnInit {
   ngOnInit(): void {
    
     let today = new Date().toISOString().split('T')[0];
-    console.log(today);
+     (today);
   document.getElementsByName("trip-start")[0].setAttribute('min', today);
   if(sessionStorage.getItem('justOnce')=="false"){
     sessionStorage.setItem('justOnce',"true");

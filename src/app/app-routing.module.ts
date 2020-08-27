@@ -25,7 +25,6 @@ import { MostpreferredtypeofbusesComponent } from './mostpreferredtypeofbuses/mo
 import { RegisteredcustomerbutnoreservationComponent } from './registeredcustomerbutnoreservation/registeredcustomerbutnoreservation.component';
 import { ReservationdetailsComponent } from './reservationdetails/reservationdetails.component';
 import { PaymentComponent } from './payment/payment.component';
-import { BookbuswithoutdriverComponent } from './bookbuswithoutdriver/bookbuswithoutdriver.component';
 import { AdminLoginUserComponent } from "./admin-login-user/admin-login-user.component";
 
 
@@ -113,9 +112,6 @@ const routes: Routes = [
   ,
   {
     path:'payment',component:PaymentComponent
-  },
-  {
-    path:'bookbuswithoutdriver',component:BookbuswithoutdriverComponent
   },
   {
     path:'adminloginUser',component:AdminLoginUserComponent
