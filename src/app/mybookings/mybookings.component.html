@@ -11,16 +11,16 @@
 
     <div class="main">
         <h2>My Bookings</h2>
-        <div class="card">
+        <div class="card" *ngFor ="let cp of bookings">
             <IMG SRC="../assets/booking.gif" width="400px" height="300px" style="float: left;"><br>
-            <span><b>Ticket Number</b> : </span><br><br>
-            <span><b>Date of Journey</b> : </span><br><br>
-            <span><b>Date of Booking</b> : </span><br><br>
-            <span><b>From City</b> : </span><br><br>
-            <span><b>To City</b> : </span><br><br>
-            <span><b>Number of Seats Booked</b> : </span><br><br>
-            <span><b>Ticket Amount</b> : </span><br><br><br><br>
-            <b><button class="cancelBooking" [routerLink]="['/cancellation']">Cancel Booking</button></b>
+            <span><b>Ticket Number</b> :{{cp.ticketId}} </span><br><br>
+            <span><b>Date of Journey</b> :{{cp.dateOfJourney}} </span><br><br>
+            <span><b>Date of Booking</b> :{{cp.dateOfBooking}} </span><br><br>
+            <span><b>From City</b> :{{cp.fromCity}} </span><br><br>
+            <span><b>To City</b> :{{cp.toCity}} </span><br><br>
+            <span><b>Number of Seats Booked</b> : {{cp.noOfSeatsBooked}}</span><br><br>
+            <span><b>Ticket Amount</b> :{{cp.totalCost}} </span><br><br><br><br>
+            <b><button *ngIf='cp.cancelButton' class="cancelBooking" [routerLink]="['/cancellation']">Cancel Booking</button></b>
         </div>
     </div>
 
