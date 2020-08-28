@@ -12,7 +12,7 @@ export class ChangepasswordComponent implements OnInit {
 
   password:ChangePassword=new ChangePassword();
   message:string;
-
+  confirmPass="";
   constructor(private changePassword:DashboardService,private router:Router) { 
     if(sessionStorage.getItem('customerId')==null){
       this.router.navigate(['loginCustomer']);
@@ -30,4 +30,13 @@ export class ChangepasswordComponent implements OnInit {
   ngOnInit(): void {
   }
 
+
+  confirmPassword(): boolean {
+    if (this.password.newPassword == this.confirmPass){
+     
+      return true;      
+    }
+    return false;
+  
+  }
 }
