@@ -99,11 +99,10 @@ export class SeatmapComponent implements OnInit {
   ngOnInit(): void {
     this.seatdetails.busId = Number(sessionStorage.getItem('busId'));
     this.seatdetails.dateOfJourney = String(sessionStorage.getItem('date'));
-     (this.seatdetails);
+    
     this.busdetails.noOfSeats(this.seatdetails).subscribe(data => {
       this.key = data.noOfseats;
-       (data)
-       (this.key)
+       
       for (let i = 0; i < this.key.length; i++) {
          ("for loop")
         this.changeSeatColor(this.key[i]);
